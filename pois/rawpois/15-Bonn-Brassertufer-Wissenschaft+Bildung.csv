@@ -1,10 +1,12 @@
 filters	page_title	page_id	page_namespace
+"Geotags (50.8518,6.078)
+Page Hits (count: 1784)"	Liste öffentlicher Bücherschränke	4309514	0
 "Geotags (50.7034,7.13917)
 Page Hits (count: 1636)"	Bundesministerium für Bildung und Forschung	29000	0
 "Geotags (50.7277,7.10929)
 Page Hits (count: 1458)"	Bundeszentrale für politische Bildung	140469	0
-"Geotags (50.8518,6.078)
-Page Hits (count: 806)"	Liste öffentlicher Bücherschränke	4309514	0
+"Geotags (50.7022,7.13484)
+Page Hits (count: 1259)"	Friedrich-Ebert-Stiftung	179939	0
 "Geotags (50.7002,7.14862)
 Page Hits (count: 567)"	Deutscher Akademischer Austauschdienst	204602	0
 "Geotags (50.704,7.15108)
@@ -33,5 +35,3 @@ Page Hits (count: 46)"	Wissenschaftszentrum Bonn	6503125	0
 Page Hits (count: 35)"	Schänzchen (Bonn)	1693785	0
 "Geotags (50.7245,7.10063)
 Page Hits (count: 19)"	Adolf-Clarenbach-Haus	4575655	0
-"Geotags (50.7022,7.13484)
-Page Hits (count: HTTPConnectionPool(host='stats.grok.se', port=80): Pool is closed.)"	Friedrich-Ebert-Stiftung	179939	0

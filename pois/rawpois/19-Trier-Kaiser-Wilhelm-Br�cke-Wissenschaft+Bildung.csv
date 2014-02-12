@@ -1,6 +1,8 @@
 filters	page_title	page_id	page_namespace
 "Geotags (49.7674,6.63029)
 Page Hits (count: 327)"	Hochschule Trier	124776	0
+"Geotags (49.7564,6.64639)
+Page Hits (count: 114)"	Auguste-Viktoria-Gymnasium Trier	251650	0
 "Geotags (49.7514,6.63469)
 Page Hits (count: 74)"	Humboldt-Gymnasium Trier	5425525	0
 "Geotags (49.7388,6.65203)
@@ -9,5 +11,3 @@ Page Hits (count: 71)"	Deutsche Richterakademie	876656	0
 Page Hits (count: 57)"	Priesterseminar Trier	6033101	0
 "Geotags (49.7572,6.64528)
 Page Hits (count: 57)"	Welschnonnenkirche (Trier)	2984638	0
-"Geotags (49.7564,6.64639)
-Page Hits (count: HTTPConnectionPool(host='stats.grok.se', port=80): Pool is closed.)"	Auguste-Viktoria-Gymnasium Trier	251650	0

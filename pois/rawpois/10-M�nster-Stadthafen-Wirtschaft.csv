@@ -1,6 +1,8 @@
 filters	page_title	page_id	page_namespace
 "Geotags (51.9908,7.62083)
 Page Hits (count: 365)"	Provinzial NordWest	2422386	0
+"Geotags (51.9656,7.6216)
+Page Hits (count: 171)"	Pinkus Müller	696981	0
 "Geotags (51.9534,7.61397)
 Page Hits (count: 152)"	Ärzteversorgung Westfalen-Lippe	6452766	0
 "Geotags (51.9874,7.63389)
@@ -11,5 +13,3 @@ Page Hits (count: 85)"	Museum für Lackkunst	1448274	0
 Page Hits (count: 70)"	European Research Center for Information Systems	898787	0
 "Geotags (51.9748,7.6038)
 Page Hits (count: 38)"	Institut für Informations-, Telekommunikations- und Medienrecht	1028222	0
-"Geotags (51.9656,7.6216)
-Page Hits (count: HTTPConnectionPool(host='stats.grok.se', port=80): Pool is closed.)"	Pinkus Müller	696981	0
