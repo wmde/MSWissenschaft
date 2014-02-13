@@ -1,3 +1,2 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.7388,6.65203)
-Page Hits (count: 71)"	Deutsche Richterakademie	876656	0
+page_title,latitude,longitude,hitcount
+Deutsche Richterakademie,49.7388,6.65203,71

@@ -1,9 +1,5 @@
-filters	page_title	page_id	page_namespace
-"Geotags (53.1407,8.21879)
-Page Hits (count: 696)"	Oldenburgische Landesbank	767365	0
-"Geotags (53.723,7.36565)
-Page Hits (count: 92)"	Liste der niedersächsischen Seehäfen	6103285	0
-"Geotags (53.1162,8.25883)
-Page Hits (count: 67)"	Floragard	4725644	0
-"Geotags (53.1489,8.2)
-Page Hits (count: 33)"	Berufsakademie für IT und Wirtschaft Oldenburg	5570719	0
+page_title,latitude,longitude,hitcount
+Oldenburgische Landesbank,53.1407,8.21879,696
+Liste der niedersächsischen Seehäfen,53.723,7.36565,92
+Floragard,53.1162,8.25883,67
+Berufsakademie für IT und Wirtschaft Oldenburg,53.1489,8.2,33

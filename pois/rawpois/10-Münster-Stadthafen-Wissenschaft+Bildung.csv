@@ -1,41 +1,34 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.8518,6.078)
-Page Hits (count: 1784)"	Liste öffentlicher Bücherschränke	4309514	0
-"Geotags (51.9637,7.61306)
-Page Hits (count: 523)"	Fürstbischöfliches Schloss Münster	282341	0
-"Geotags (51.9553,7.65972)
-Page Hits (count: 160)"	Institut der Feuerwehr Nordrhein-Westfalen	3502653	0
-"Geotags (51.9628,7.62083)
-Page Hits (count: 121)"	Universitäts- und Landesbibliothek Münster	3434710	0
-"Geotags (51.96,7.61722)
-Page Hits (count: 119)"	Gymnasium Paulinum Münster	1085922	0
-"Geotags (51.9631,7.62986)
-Page Hits (count: 97)"	Haus der Niederlande	1043600	0
-"Geotags (51.9612,7.62511)
-Page Hits (count: 92)"	Collegium Borromaeum Münster	3928315	0
-"Geotags (51.9647,7.62208)
-Page Hits (count: 87)"	Diözesanbibliothek Münster	1894217	0
-"Geotags (51.9631,7.63056)
-Page Hits (count: 87)"	Stadtbücherei Münster	3590148	0
-"Geotags (51.9504,7.60769)
-Page Hits (count: 74)"	Pädagogische Hochschule Westfalen-Lippe	4184402	0
-"Geotags (51.9372,7.59361)
-Page Hits (count: 70)"	Friedensschule Münster	5486572	0
-"Geotags (51.9672,7.6313)
-Page Hits (count: 64)"	Adolph-Kolping-Berufskolleg	7008313	0
-"Geotags (51.9629,7.62869)
-Page Hits (count: 61)"	Pascal-Gymnasium Münster	4973889	0
-"Geotags (51.9612,7.62344)
-Page Hits (count: 59)"	Bibelmuseum Münster	1578006	0
-"Geotags (51.9561,7.60194)
-Page Hits (count: 59)"	Katholische Akademie Franz-Hitze-Haus	860404	0
-"Geotags (51.9658,7.62906)
-Page Hits (count: 56)"	Hildegardisschule Münster	6849558	0
-"Geotags (51.9909,7.61569)
-Page Hits (count: 50)"	Lettisches Gymnasium Münster	1733931	0
-"Geotags (51.9571,7.63311)
-Page Hits (count: 35)"	Schwarze Witwe (Archiv)	6006645	0
-"Geotags (51.9619,7.59306)
-Page Hits (count: 33)"	Overberg-Kolleg	2400844	0
-"Geotags (51.9656,7.62333)
-Page Hits (count: 6)"	Observantenkirche (Münster)	5531074	0
+page_title,latitude,longitude,hitcount
+Liste öffentlicher Bücherschränke,50.8518,6.078,1784
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Fürstbischöfliches Schloss Münster,51.9637,7.61306,523
+Fachhochschule Münster,51.961,7.60809,479
+LWL-Museum für Naturkunde,51.9494,7.59111,224
+Institut der Feuerwehr Nordrhein-Westfalen,51.9553,7.65972,160
+Philosophisch-Theologische Hochschule Münster,51.9601,7.64778,124
+Universitäts- und Landesbibliothek Münster,51.9628,7.62083,121
+Gymnasium Paulinum Münster,51.96,7.61722,119
+Haus der Niederlande,51.9631,7.62986,97
+Collegium Borromaeum Münster,51.9612,7.62511,92
+Diözesanbibliothek Münster,51.9647,7.62208,87
+Stadtbücherei Münster,51.9631,7.63056,87
+Max-Planck-Institut für molekulare Biomedizin,51.9681,7.59111,86
+Pädagogische Hochschule Westfalen-Lippe,51.9504,7.60769,74
+European Research Center for Information Systems,51.9759,7.60181,70
+Friedensschule Münster,51.9372,7.59361,70
+Geologisch-Paläontologisches Museum Münster,51.9615,7.62314,66
+Adolph-Kolping-Berufskolleg,51.9672,7.6313,64
+CeNTech,51.9692,7.59278,64
+Pascal-Gymnasium Münster,51.9629,7.62869,61
+Bibelmuseum Münster,51.9612,7.62344,59
+Katholische Akademie Franz-Hitze-Haus,51.9561,7.60194,59
+Hildegardisschule Münster,51.9658,7.62906,56
+Lettisches Gymnasium Münster,51.9909,7.61569,50
+Mineralogisches Museum Münster,51.9617,7.61389,50
+"Verein für Geschichte und Altertumskunde Westfalens, Abt. Münster",51.9632,7.63533,46
+Schwarze Witwe (Archiv),51.9571,7.63311,35
+LWL-Institut für westfälische Regionalgeschichte,51.9646,7.63632,33
+Overberg-Kolleg,51.9619,7.59306,33
+Stern-Apotheke (Münster),51.9567,7.62634,22
+Geomuseum Münster,51.9614,7.62364,19
+Observantenkirche (Münster),51.9656,7.62333,6

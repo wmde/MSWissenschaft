@@ -1,3 +1,2 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.7062,9.26928)
-Page Hits (count: 213)"	Daniel Hechter Paris	5806596	0
+page_title,latitude,longitude,hitcount
+Daniel Hechter Paris,49.7062,9.26928,213

@@ -1,15 +1,8 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (52.3864,13.0257)
-Page Hits (count: 307)"	Zentrum für Militärgeschichte und Sozialwissenschaften der Bundeswehr	7807394	0
-"Geotags (52.396,13.0581)
-Page Hits (count: 136)"	Zentrum für Zeithistorische Forschung	3345298	0
-"Geotags (52.4005,13.0523)
-Page Hits (count: 130)"	Gedenkstätte Lindenstraße 54/55	4710107	0
-"Geotags (52.4011,13.0119)
-Page Hits (count: 55)"	Potsdam Centrum für Politik und Management	6983360	0
-"Geotags (52.3977,13.0587)
-Page Hits (count: 35)"	Deserteurdenkmal (Bonn/Potsdam)	4714116	0
-"Geotags (52.4184,13.0638)
-Page Hits (count: 23)"	Lepsiushaus Potsdam	6575420	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Zentrum für Militärgeschichte und Sozialwissenschaften der Bundeswehr,52.3864,13.0257,307
+Zentrum für Zeithistorische Forschung,52.396,13.0581,136
+Gedenkstätte Lindenstraße 54/55,52.4005,13.0523,130
+Potsdam Centrum für Politik und Management,52.4011,13.0119,55
+Deserteurdenkmal (Bonn/Potsdam),52.3977,13.0587,35
+Lepsiushaus Potsdam,52.4184,13.0638,23

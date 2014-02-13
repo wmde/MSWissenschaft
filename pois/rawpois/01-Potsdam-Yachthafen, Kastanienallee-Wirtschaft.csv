@@ -1,7 +1,4 @@
-filters	page_title	page_id	page_namespace
-"Geotags (52.3806,13.0643)
-Page Hits (count: 291)"	Potsdam-Institut für Klimafolgenforschung	1184391	0
-"Geotags (52.3802,13.0179)
-Page Hits (count: 130)"	Luftschiffhafen Potsdam	2618494	0
-"Geotags (52.4061,13.0734)
-Page Hits (count: 122)"	Institute for Advanced Sustainability Studies	4200067	0
+page_title,latitude,longitude,hitcount
+Potsdam-Institut für Klimafolgenforschung,52.3806,13.0643,291
+Luftschiffhafen Potsdam,52.3802,13.0179,130
+Institute for Advanced Sustainability Studies,52.4061,13.0734,122

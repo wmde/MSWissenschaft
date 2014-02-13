@@ -1,7 +1,7 @@
-filters	page_title	page_id	page_namespace
-"Geotags (48.998,12.0957)
-Page Hits (count: 66)"	Universitätsbibliothek Regensburg	2782526	0
-"Geotags (49.028,12.09)
-Page Hits (count: 46)"	Max-Buchhauser-Garten	1590042	0
-"Geotags (49.0178,12.0746)
-Page Hits (count: 39)"	Kloster Sankt Fidelis	1331095	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Universitätsbibliothek Regensburg,48.998,12.0957,66
+Institut Papst Benedikt XVI.,49.0186,12.0891,57
+Max-Buchhauser-Garten,49.028,12.09,46
+Kloster Sankt Fidelis,49.0178,12.0746,39
+Naturkundemuseum Ostbayern,49.0221,12.0827,38

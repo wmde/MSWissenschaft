@@ -1,5 +1,3 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (49.7393,6.62708)
-Page Hits (count: 72)"	Konrad-Adenauer-Brücke (Trier)	1315978	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Konrad-Adenauer-Brücke (Trier),49.7393,6.62708,72

@@ -1,13 +1,7 @@
-filters	page_title	page_id	page_namespace
-"Geotags (53.0759,8.80731)
-Page Hits (count: 16514)"	Bremen	554	0
-"Geotags (53.0759,8.8073)
-Page Hits (count: 1331)"	Bremer Roland	1133226	0
-"Geotags (53.0758,8.80722)
-Page Hits (count: 795)"	Liste der Verwaltungseinheiten in Bremen	3221637	0
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (53.0592,8.8525)
-Page Hits (count: 96)"	Karl-Carstens-Brücke	2002967	0
-"Geotags (53.0775,8.79861)
-Page Hits (count: 82)"	Bürgermeister-Smidt-Brücke	6575953	0
+page_title,latitude,longitude,hitcount
+Bremen,53.0759,8.80731,16514
+Bremer Roland,53.0759,8.8073,1331
+Liste der Verwaltungseinheiten in Bremen,53.0758,8.80722,795
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Karl-Carstens-Brücke,53.0592,8.8525,96
+Bürgermeister-Smidt-Brücke,53.0775,8.79861,82

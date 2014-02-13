@@ -1,7 +1,4 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.045,8.325)
-Page Hits (count: 4300)"	Ausländische Militärbasen in Deutschland	1268664	0
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (49.8836,10.9242)
-Page Hits (count: 283)"	Fränkischer Tag	1406015	0
+page_title,latitude,longitude,hitcount
+Ausländische Militärbasen in Deutschland,50.045,8.325,4300
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Fränkischer Tag,49.8836,10.9242,283

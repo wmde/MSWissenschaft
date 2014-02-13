@@ -1,9 +1,5 @@
-filters	page_title	page_id	page_namespace
-"Geotags (53.0986,7.36639)
-Page Hits (count: 2249)"	Meyer Werft	141355	0
-"Geotags (39.275,-76.5845)
-Page Hits (count: 1867)"	Liste von Seehäfen	683454	0
-"Geotags (53.723,7.36565)
-Page Hits (count: 92)"	Liste der niedersächsischen Seehäfen	6103285	0
-"Geotags (53.0858,7.36528)
-Page Hits (count: 47)"	Bokel (Papenburg)	3400353	0
+page_title,latitude,longitude,hitcount
+Meyer Werft,53.0986,7.36639,2249
+Liste von Seehäfen,39.275,-76.5845,1867
+Liste der niedersächsischen Seehäfen,53.723,7.36565,92
+Bokel (Papenburg),53.0858,7.36528,47

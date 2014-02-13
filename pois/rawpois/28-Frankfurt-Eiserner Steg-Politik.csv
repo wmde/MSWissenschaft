@@ -1,29 +1,15 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.1072,8.665)
-Page Hits (count: 3461)"	Rhein-Main-Gebiet	4390	0
-"Geotags (50.1168,8.65321)
-Page Hits (count: 2249)"	Institut für vergleichende Irrelevanz	6776594	0
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (50.1184,8.65385)
-Page Hits (count: 441)"	Institut für Sozialforschung	81214	0
-"Geotags (50.1117,8.68583)
-Page Hits (count: 250)"	Württemberger Hof	658139	0
-"Geotags (50.1171,8.67871)
-Page Hits (count: 232)"	Landwirtschaftliche Rentenbank	1071613	0
-"Geotags (50.1142,8.67972)
-Page Hits (count: 192)"	Café Milani	658067	0
-"Geotags (50.1224,8.63848)
-Page Hits (count: 171)"	Deutsches Institut für Internationale Pädagogische Forschung	681716	0
-"Geotags (50.1075,8.66083)
-Page Hits (count: 111)"	Planungsverband Ballungsraum Frankfurt/Rhein-Main	355750	0
-"Geotags (50.1111,8.66972)
-Page Hits (count: 105)"	Westendhall	1128722	0
-"Geotags (50.1168,8.68525)
-Page Hits (count: 97)"	Frankfurter Engel	2884616	0
-"Geotags (50.1156,8.64504)
-Page Hits (count: 86)"	Institut für sozial-ökologische Forschung	3111254	0
-"Geotags (50.1139,8.67833)
-Page Hits (count: 77)"	Pariser Hof	1106497	0
-"Geotags (50.1174,8.68378)
-Page Hits (count: 32)"	AIDS-Memorial (Frankfurt am Main)	2910017	0
+page_title,latitude,longitude,hitcount
+Rhein-Main-Gebiet,50.1072,8.665,3461
+Institut für vergleichende Irrelevanz,50.1168,8.65321,2249
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Institut für Sozialforschung,50.1184,8.65385,441
+Württemberger Hof,50.1117,8.68583,250
+Landwirtschaftliche Rentenbank,50.1171,8.67871,232
+Café Milani,50.1142,8.67972,192
+Deutsches Institut für Internationale Pädagogische Forschung,50.1224,8.63848,171
+Planungsverband Ballungsraum Frankfurt/Rhein-Main,50.1075,8.66083,111
+Westendhall,50.1111,8.66972,105
+Frankfurter Engel,50.1168,8.68525,97
+Institut für sozial-ökologische Forschung,50.1156,8.64504,86
+Pariser Hof,50.1139,8.67833,77
+AIDS-Memorial (Frankfurt am Main),50.1174,8.68378,32

@@ -1,13 +1,8 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.7674,6.63029)
-Page Hits (count: 327)"	Hochschule Trier	124776	0
-"Geotags (49.7564,6.64639)
-Page Hits (count: 114)"	Auguste-Viktoria-Gymnasium Trier	251650	0
-"Geotags (49.7514,6.63469)
-Page Hits (count: 74)"	Humboldt-Gymnasium Trier	5425525	0
-"Geotags (49.7388,6.65203)
-Page Hits (count: 71)"	Deutsche Richterakademie	876656	0
-"Geotags (49.7533,6.64)
-Page Hits (count: 57)"	Priesterseminar Trier	6033101	0
-"Geotags (49.7572,6.64528)
-Page Hits (count: 57)"	Welschnonnenkirche (Trier)	2984638	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Hochschule Trier,49.7674,6.63029,327
+Auguste-Viktoria-Gymnasium Trier,49.7564,6.64639,114
+Humboldt-Gymnasium Trier,49.7514,6.63469,74
+Deutsche Richterakademie,49.7388,6.65203,71
+Priesterseminar Trier,49.7533,6.64,57
+Welschnonnenkirche (Trier),49.7572,6.64528,57

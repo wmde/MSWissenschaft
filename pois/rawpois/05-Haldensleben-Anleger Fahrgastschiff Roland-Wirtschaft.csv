@@ -1,3 +1,2 @@
-filters	page_title	page_id	page_namespace
-"Geotags (52.2783,11.4256)
-Page Hits (count: 193)"	IFA-Rotorion Holding	5650309	0
+page_title,latitude,longitude,hitcount
+IFA-Rotorion Holding,52.2783,11.4256,193

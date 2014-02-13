@@ -1,31 +1,26 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.8518,6.078)
-Page Hits (count: 1784)"	Liste öffentlicher Bücherschränke	4309514	0
-"Geotags (51.4891,7.406)
-Page Hits (count: 348)"	International School of Management	1664610	0
-"Geotags (51.5165,7.46093)
-Page Hits (count: 172)"	Stadt- und Landesbibliothek Dortmund	1299490	0
-"Geotags (51.4937,7.40761)
-Page Hits (count: 157)"	Fraunhofer-Institut für Materialfluss und Logistik	1844273	0
-"Geotags (51.4897,7.40981)
-Page Hits (count: 111)"	Max-Planck-Institut für molekulare Physiologie	1226714	0
-"Geotags (51.4928,7.41691)
-Page Hits (count: 97)"	Universitätsbibliothek Dortmund	906216	0
-"Geotags (51.5158,7.46733)
-Page Hits (count: 87)"	Handwerkskammer Dortmund	6890838	0
-"Geotags (51.5109,7.43354)
-Page Hits (count: 69)"	Werkkunstschule Dortmund	3450579	0
-"Geotags (51.5165,7.45982)
-Page Hits (count: 52)"	Institut für Zeitungsforschung	1042264	0
-"Geotags (51.5106,7.38361)
-Page Hits (count: 51)"	Westfälisches Schulmuseum	908203	0
-"Geotags (51.4969,7.472)
-Page Hits (count: 43)"	Mondo mio!	2713424	0
-"Geotags (51.495,7.41916)
-Page Hits (count: 39)"	Fachhochschulbibliothek Dortmund	1706344	0
-"Geotags (51.4891,7.406)
-Page Hits (count: 34)"	IT-Center Dortmund	2723024	0
-"Geotags (51.5172,7.46339)
-Page Hits (count: 34)"	Volkshochschule Dortmund	554167	0
-"Geotags (51.517,7.46572)
-Page Hits (count: 31)"	Orchesterzentrum NRW	1295157	0
+page_title,latitude,longitude,hitcount
+DELTA,51.4923,7.40814,5385
+Liste öffentlicher Bücherschränke,50.8518,6.078,1784
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+International School of Management,51.4891,7.406,348
+Halden im Ruhrgebiet,51.5412,6.9978,315
+Stadt- und Landesbibliothek Dortmund,51.5165,7.46093,172
+Fraunhofer-Institut für Materialfluss und Logistik,51.4937,7.40761,157
+Museum für Naturkunde (Dortmund),51.5358,7.45778,128
+Sozialforschungsstelle Dortmund,51.549,7.46441,119
+Max-Planck-Institut für molekulare Physiologie,51.4897,7.40981,111
+Universitätsbibliothek Dortmund,51.4928,7.41691,97
+Handwerkskammer Dortmund,51.5158,7.46733,87
+Adler Apotheke (Dortmund),51.514,7.46672,86
+Leibniz-Institut für Analytische Wissenschaften,51.4906,7.46251,74
+Werkkunstschule Dortmund,51.5109,7.43354,69
+WAM – Die Medienakademie,51.5323,7.47379,62
+Institut für Zeitungsforschung,51.5165,7.45982,52
+Westfälisches Schulmuseum,51.5106,7.38361,51
+Sozialforschungsstelle an der Universität Münster,51.549,7.46441,44
+Mondo mio!,51.4969,7.472,43
+Fachhochschulbibliothek Dortmund,51.495,7.41916,39
+IT-Center Dortmund,51.4891,7.406,34
+Volkshochschule Dortmund,51.5172,7.46339,34
+Orchesterzentrum NRW,51.517,7.46572,31
+Volkssternwarte Dortmund,51.4939,7.47606,23

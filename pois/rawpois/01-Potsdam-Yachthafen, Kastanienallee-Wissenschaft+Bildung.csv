@@ -1,45 +1,26 @@
-filters	page_title	page_id	page_namespace
-"Geotags (52.4012,13.0158)
-Page Hits (count: 1161)"	Neues Palais	194222	0
-"Geotags (52.4011,13.0119)
-Page Hits (count: 1004)"	Universität Potsdam	84909	0
-"Geotags (52.3789,13.0636)
-Page Hits (count: 645)"	Einsteinturm	157483	0
-"Geotags (52.3864,13.0257)
-Page Hits (count: 504)"	Militärgeschichtliches Forschungsamt	561842	0
-"Geotags (52.4126,13.0509)
-Page Hits (count: 307)"	Fachhochschule Potsdam	220501	0
-"Geotags (52.3864,13.0257)
-Page Hits (count: 307)"	Zentrum für Militärgeschichte und Sozialwissenschaften der Bundeswehr	7807394	0
-"Geotags (52.3806,13.0643)
-Page Hits (count: 291)"	Potsdam-Institut für Klimafolgenforschung	1184391	0
-"Geotags (52.3826,13.0644)
-Page Hits (count: 196)"	Deutsches GeoForschungsZentrum	80860	0
-"Geotags (52.4011,13.0119)
-Page Hits (count: 150)"	Abraham-Geiger-Kolleg	68390	0
-"Geotags (52.4039,13.0593)
-Page Hits (count: 144)"	Helmholtz-Gymnasium Potsdam	2810386	0
-"Geotags (52.396,13.0581)
-Page Hits (count: 136)"	Zentrum für Zeithistorische Forschung	3345298	0
-"Geotags (52.3966,13.0573)
-Page Hits (count: 130)"	Moses Mendelssohn Zentrum für europäisch-jüdische Studien	1912193	0
-"Geotags (52.4061,13.0734)
-Page Hits (count: 122)"	Institute for Advanced Sustainability Studies	4200067	0
-"Geotags (52.407,13.0541)
-Page Hits (count: 116)"	MSB Medical School Berlin	7394206	0
-"Geotags (52.3819,13.0206)
-Page Hits (count: 113)"	Sportschule Potsdam „Friedrich Ludwig Jahn“	5051698	0
-"Geotags (52.382,13.0322)
-Page Hits (count: 92)"	Evangelisches Gymnasium Hermannswerder	1777353	0
-"Geotags (52.4085,12.973)
-Page Hits (count: 92)"	Universitätsbibliothek Potsdam	4138128	0
-"Geotags (52.4011,13.0119)
-Page Hits (count: 55)"	Potsdam Centrum für Politik und Management	6983360	0
-"Geotags (52.3889,13.0133)
-Page Hits (count: 54)"	Montessori-Oberschule Potsdam	1489862	0
-"Geotags (52.4072,13.0518)
-Page Hits (count: 36)"	Fachschule für Foto- und Medientechnik	5876401	0
-"Geotags (52.4143,13.0467)
-Page Hits (count: 16)"	Bibliothek der Fachhochschule Potsdam	7734354	0
-"Geotags (52.3958,13.0579)
-Page Hits (count: 14)"	Königliche Ingenieurakademie (Potsdam)	7268260	0
+page_title,latitude,longitude,hitcount
+Neues Palais,52.4012,13.0158,1161
+Universität Potsdam,52.4011,13.0119,1004
+Einsteinturm,52.3789,13.0636,645
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Militärgeschichtliches Forschungsamt,52.3864,13.0257,504
+Fachhochschule Potsdam,52.4126,13.0509,307
+Zentrum für Militärgeschichte und Sozialwissenschaften der Bundeswehr,52.3864,13.0257,307
+Potsdam-Institut für Klimafolgenforschung,52.3806,13.0643,291
+Liste von Erhebungen in Brandenburg,51.6127,14.5781,239
+Deutsches GeoForschungsZentrum,52.3826,13.0644,196
+Abraham-Geiger-Kolleg,52.4011,13.0119,150
+Helmholtz-Gymnasium Potsdam,52.4039,13.0593,144
+Zentrum für Zeithistorische Forschung,52.396,13.0581,136
+Moses Mendelssohn Zentrum für europäisch-jüdische Studien,52.3966,13.0573,130
+Institute for Advanced Sustainability Studies,52.4061,13.0734,122
+MSB Medical School Berlin,52.407,13.0541,116
+Sportschule Potsdam „Friedrich Ludwig Jahn“,52.3819,13.0206,113
+Evangelisches Gymnasium Hermannswerder,52.382,13.0322,92
+Universitätsbibliothek Potsdam,52.4085,12.973,92
+Helmertturm,52.3601,13.0653,85
+Potsdam Centrum für Politik und Management,52.4011,13.0119,55
+Montessori-Oberschule Potsdam,52.3889,13.0133,54
+Fachschule für Foto- und Medientechnik,52.4072,13.0518,36
+Bibliothek der Fachhochschule Potsdam,52.4143,13.0467,16
+Königliche Ingenieurakademie (Potsdam),52.3958,13.0579,14

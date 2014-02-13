@@ -1,3 +1,2 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612

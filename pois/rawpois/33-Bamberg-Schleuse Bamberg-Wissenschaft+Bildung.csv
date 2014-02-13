@@ -1,17 +1,12 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.8939,10.8867)
-Page Hits (count: 829)"	Otto-Friedrich-Universität Bamberg	137188	0
-"Geotags (49.8916,10.8821)
-Page Hits (count: 184)"	Staatsbibliothek Bamberg	2449780	0
-"Geotags (49.8875,10.9013)
-Page Hits (count: 137)"	Ottonianum (Bamberg)	1062069	0
-"Geotags (49.8863,10.8889)
-Page Hits (count: 86)"	E.T.A. Hoffmann-Gymnasium Bamberg	2099139	0
-"Geotags (49.892,10.8784)
-Page Hits (count: 77)"	Aufseesianum (Bamberg)	1125008	0
-"Geotags (49.8886,10.8803)
-Page Hits (count: 74)"	Theresianum (Bamberg)	3550116	0
-"Geotags (49.9083,10.9056)
-Page Hits (count: 65)"	Dientzenhofer-Gymnasium Bamberg	1340441	0
-"Geotags (49.8872,10.9019)
-Page Hits (count: 44)"	Priesterseminar Bamberg	2435057	0
+page_title,latitude,longitude,hitcount
+Otto-Friedrich-Universität Bamberg,49.8939,10.8867,829
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Staatsbibliothek Bamberg,49.8916,10.8821,184
+Ottonianum (Bamberg),49.8875,10.9013,137
+Naturkunde-Museum (Bamberg),49.8944,10.8883,92
+E.T.A. Hoffmann-Gymnasium Bamberg,49.8863,10.8889,86
+Aufseesianum (Bamberg),49.892,10.8784,77
+Theresianum (Bamberg),49.8886,10.8803,74
+Dientzenhofer-Gymnasium Bamberg,49.9083,10.9056,65
+Dr.-Remeis-Sternwarte,49.8846,10.8881,48
+Priesterseminar Bamberg,49.8872,10.9019,44

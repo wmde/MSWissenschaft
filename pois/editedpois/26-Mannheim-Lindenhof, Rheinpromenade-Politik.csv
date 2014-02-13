@@ -1,17 +1,9 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.4438,8.47565)
-Page Hits (count: 1753)"	Metropolregion Rhein-Neckar	262911	0
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (49.4818,8.44614)
-Page Hits (count: 602)"	Die Rheinpfalz	451114	0
-"Geotags (49.4982,8.5027)
-Page Hits (count: 571)"	Mannheimer Morgen	677570	0
-"Geotags (49.4907,8.47784)
-Page Hits (count: 409)"	Collini-Center	1436128	0
-"Geotags (49.4811,8.45639)
-Page Hits (count: 162)"	Konrad-Adenauer-Brücke (Ludwigshafen am Rhein–Mannheim)	1232390	0
-"Geotags (49.4897,8.44556)
-Page Hits (count: 159)"	Kurt-Schumacher-Brücke (Mannheim)	1282459	0
-"Geotags (49.4914,8.48175)
-Page Hits (count: 81)"	Friedrich-Ebert-Brücke (Mannheim)	1212416	0
+page_title,latitude,longitude,hitcount
+Metropolregion Rhein-Neckar,49.4438,8.47565,1753
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Die Rheinpfalz,49.4818,8.44614,602
+Mannheimer Morgen,49.4982,8.5027,571
+Collini-Center,49.4907,8.47784,409
+Konrad-Adenauer-Brücke (Ludwigshafen am Rhein–Mannheim),49.4811,8.45639,162
+Kurt-Schumacher-Brücke (Mannheim),49.4897,8.44556,159
+Friedrich-Ebert-Brücke (Mannheim),49.4914,8.48175,81

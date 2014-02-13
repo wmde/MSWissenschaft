@@ -1,79 +1,40 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.1094,8.67414)
-Page Hits (count: 10517)"	Europäische Zentralbank	50786	0
-"Geotags (50.114,8.66934)
-Page Hits (count: 7514)"	Deutsche Bank	3828320	0
-"Geotags (50.1339,8.65972)
-Page Hits (count: 3150)"	Deutsche Bundesbank	1021	0
-"Geotags (48.7171,9.36747)
-Page Hits (count: 2757)"	Liste deutscher Kraftwerke	2922812	0
-"Geotags (50.101,8.641)
-Page Hits (count: 1758)"	Adlerwerke	265531	0
-"Geotags (50.125,8.6675)
-Page Hits (count: 1613)"	I.G.-Farben-Haus	51569	0
-"Geotags (50.1153,8.67778)
-Page Hits (count: 1548)"	Frankfurter Wertpapierbörse	230704	0
-"Geotags (50.1167,8.68223)
-Page Hits (count: 1114)"	SEB AG	435314	0
-"Geotags (50.1094,8.65194)
-Page Hits (count: 1081)"	Europaviertel (Frankfurt am Main)	436219	0
-"Geotags (50.1122,8.67194)
-Page Hits (count: 1026)"	Landesbank Hessen-Thüringen	1070102	0
-"Geotags (50.1136,8.66806)
-Page Hits (count: 933)"	Deutsche-Bank-Hochhaus	538237	0
-"Geotags (50.1096,8.69741)
-Page Hits (count: 888)"	Frankfurt School of Finance & Management	2175542	0
-"Geotags (50.1151,8.63633)
-Page Hits (count: 866)"	Finanz Informatik	3701704	0
-"Geotags (50.1106,8.6625)
-Page Hits (count: 709)"	Westendstraße 1	400377	0
-"Geotags (50.1152,8.64182)
-Page Hits (count: 513)"	Deutsche Bank Privat- und Geschäftskunden	1468809	0
-"Geotags (50.0972,8.62972)
-Page Hits (count: 439)"	Tenovis	383789	0
-"Geotags (50.1044,8.67528)
-Page Hits (count: 419)"	Museum für Kommunikation Frankfurt	4468865	0
-"Geotags (50.1018,8.66513)
-Page Hits (count: 348)"	Europäische Aufsichtsbehörde für das Versicherungswesen und die betriebliche Altersversorgung	5745551	0
-"Geotags (50.1154,8.68056)
-Page Hits (count: 325)"	Fernmeldehochhaus	3186829	0
-"Geotags (50.0996,8.66778)
-Page Hits (count: 320)"	AEG-Hochhaus	5402888	0
-"Geotags (50.1144,8.6425)
-Page Hits (count: 283)"	IBC (Frankfurt am Main)	405119	0
-"Geotags (50.1193,8.65645)
-Page Hits (count: 268)"	Deutsche Zentrale für Tourismus	3413216	0
-"Geotags (50.1298,8.62219)
-Page Hits (count: 238)"	Industriehof (Frankfurt am Main)	886632	0
-"Geotags (50.1108,8.68194)
-Page Hits (count: 233)"	Salzhaus (Frankfurt am Main)	1240175	0
-"Geotags (50.1171,8.67871)
-Page Hits (count: 232)"	Landwirtschaftliche Rentenbank	1071613	0
-"Geotags (50.0809,8.62826)
-Page Hits (count: 197)"	Bürostadt Niederrad	2075183	0
-"Geotags (50.117,8.63616)
-Page Hits (count: 165)"	City West (Frankfurt am Main)	1098608	0
-"Geotags (50.1113,8.68153)
-Page Hits (count: 163)"	Alte Börse (Frankfurt am Main)	4296066	0
-"Geotags (50.112,8.67466)
-Page Hits (count: 157)"	Deutsche Bank IBCF	4001515	0
-"Geotags (50.1329,8.6816)
-Page Hits (count: 155)"	Ehemalige Oberfinanzdirektion Frankfurt am Main	5387932	0
-"Geotags (50.1259,8.65199)
-Page Hits (count: 152)"	Zeppelinallee	5313385	0
-"Geotags (50.1107,8.62976)
-Page Hits (count: 137)"	Zeppelinstein	4793562	0
-"Geotags (50.1143,8.68152)
-Page Hits (count: 108)"	Hauptpost Frankfurt am Main	5700834	0
-"Geotags (50.1156,8.64504)
-Page Hits (count: 86)"	Institut für sozial-ökologische Forschung	3111254	0
-"Geotags (50.1165,8.72808)
-Page Hits (count: 71)"	Honda Bank	7839988	0
-"Geotags (50.123,8.72954)
-Page Hits (count: 68)"	Aufbereitungs- und Verwertungsanlage für Trümmerschutt	4606545	0
-"Geotags (50.1008,8.68983)
-Page Hits (count: 61)"	Eisenbahnunfälle in Frankfurt (Main) Süd	7466370	0
-"Geotags (50.1276,8.66553)
-Page Hits (count: 56)"	Institute for Law and Finance	5107158	0
-"Geotags (50.1092,8.68255)
-Page Hits (count: 20)"	Bernusbau	7792476	0
+page_title,latitude,longitude,hitcount
+Europäische Zentralbank,50.1094,8.67414,10517
+Deutsche Bank,50.114,8.66934,7514
+Deutsche Bundesbank,50.1339,8.65972,3150
+Liste deutscher Kraftwerke,48.7171,9.36747,2757
+Adlerwerke,50.101,8.641,1758
+I.G.-Farben-Haus,50.125,8.6675,1613
+Frankfurter Wertpapierbörse,50.1153,8.67778,1548
+SEB AG,50.1167,8.68223,1114
+Europaviertel (Frankfurt am Main),50.1094,8.65194,1081
+Landesbank Hessen-Thüringen,50.1122,8.67194,1026
+Deutsche-Bank-Hochhaus,50.1136,8.66806,933
+Frankfurt School of Finance & Management,50.1096,8.69741,888
+Finanz Informatik,50.1151,8.63633,866
+Westendstraße 1,50.1106,8.6625,709
+Deutsche Bank Privat- und Geschäftskunden,50.1152,8.64182,513
+Tenovis,50.0972,8.62972,439
+Museum für Kommunikation Frankfurt,50.1044,8.67528,419
+Europäische Aufsichtsbehörde für das Versicherungswesen und die betriebliche Altersversorgung,50.1018,8.66513,348
+Fernmeldehochhaus,50.1154,8.68056,325
+AEG-Hochhaus,50.0996,8.66778,320
+IBC (Frankfurt am Main),50.1144,8.6425,283
+Deutsche Zentrale für Tourismus,50.1193,8.65645,268
+Industriehof (Frankfurt am Main),50.1298,8.62219,238
+Salzhaus (Frankfurt am Main),50.1108,8.68194,233
+Landwirtschaftliche Rentenbank,50.1171,8.67871,232
+Bürostadt Niederrad,50.0809,8.62826,197
+City West (Frankfurt am Main),50.117,8.63616,165
+Alte Börse (Frankfurt am Main),50.1113,8.68153,163
+Deutsche Bank IBCF,50.112,8.67466,157
+Ehemalige Oberfinanzdirektion Frankfurt am Main,50.1329,8.6816,155
+Zeppelinallee,50.1259,8.65199,152
+Zeppelinstein,50.1107,8.62976,137
+Hauptpost Frankfurt am Main,50.1143,8.68152,108
+Institut für sozial-ökologische Forschung,50.1156,8.64504,86
+Honda Bank,50.1165,8.72808,71
+Aufbereitungs- und Verwertungsanlage für Trümmerschutt,50.123,8.72954,68
+Eisenbahnunfälle in Frankfurt (Main) Süd,50.1008,8.68983,61
+Institute for Law and Finance,50.1276,8.66553,56
+Bernusbau,50.1092,8.68255,20

@@ -1,37 +1,33 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.8518,6.078)
-Page Hits (count: 1784)"	Liste öffentlicher Bücherschränke	4309514	0
-"Geotags (50.7034,7.13917)
-Page Hits (count: 1636)"	Bundesministerium für Bildung und Forschung	29000	0
-"Geotags (50.7277,7.10929)
-Page Hits (count: 1458)"	Bundeszentrale für politische Bildung	140469	0
-"Geotags (50.7022,7.13484)
-Page Hits (count: 1259)"	Friedrich-Ebert-Stiftung	179939	0
-"Geotags (50.7002,7.14862)
-Page Hits (count: 567)"	Deutscher Akademischer Austauschdienst	204602	0
-"Geotags (50.704,7.15108)
-Page Hits (count: 161)"	Forschungszentrum caesar	5189838	0
-"Geotags (50.7324,7.10815)
-Page Hits (count: 117)"	Collegium Albertinum (Konvikt)	914199	0
-"Geotags (50.7268,7.08663)
-Page Hits (count: 99)"	Universitäts- und Landesbibliothek Bonn	3246854	0
-"Geotags (50.7091,7.12524)
-Page Hits (count: 96)"	Friedrich-Ebert-Gymnasium Bonn	1402250	0
-"Geotags (50.7021,7.13483)
-Page Hits (count: 87)"	Bibliothek der Friedrich-Ebert-Stiftung Bonn	1355136	0
-"Geotags (50.7025,7.1348)
-Page Hits (count: 75)"	Archiv der sozialen Demokratie	262127	0
-"Geotags (50.7441,7.0859)
-Page Hits (count: 65)"	Ludwig-Erhard-Berufskolleg	6415169	0
-"Geotags (50.7276,7.09818)
-Page Hits (count: 61)"	Volkssternwarte Bonn	688168	0
-"Geotags (50.725,7.09209)
-Page Hits (count: 60)"	Mineralogisches Museum der Universität Bonn	4576326	0
-"Geotags (50.7365,7.10064)
-Page Hits (count: 49)"	Martin Bucer Seminar	3710132	0
-"Geotags (50.6995,7.14987)
-Page Hits (count: 46)"	Wissenschaftszentrum Bonn	6503125	0
-"Geotags (50.7428,7.10494)
-Page Hits (count: 35)"	Schänzchen (Bonn)	1693785	0
-"Geotags (50.7245,7.10063)
-Page Hits (count: 19)"	Adolf-Clarenbach-Haus	4575655	0
+page_title,latitude,longitude,hitcount
+Liste öffentlicher Bücherschränke,50.8518,6.078,1784
+Bundesministerium für Gesundheit (Deutschland),50.7202,7.06183,1709
+Bundesministerium für Bildung und Forschung,50.7034,7.13917,1636
+Bundeszentrale für politische Bildung,50.7277,7.10929,1458
+Deutsche Forschungsgemeinschaft,50.6994,7.14777,1301
+Friedrich-Ebert-Stiftung,50.7022,7.13484,1259
+Bundesinstitut für Arzneimittel und Medizinprodukte,50.706,7.1367,1041
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Deutscher Akademischer Austauschdienst,50.7002,7.14862,567
+Museum Koenig,50.7221,7.1135,484
+Institut zur Zukunft der Arbeit,50.7301,7.10936,301
+Forschungszentrum caesar,50.704,7.15108,161
+Arithmeum,50.7306,7.10492,140
+Collegium Albertinum (Konvikt),50.7324,7.10815,117
+Max-Planck-Institut für Mathematik,50.7347,7.09861,110
+Max-Planck-Institut für Radioastronomie,50.7302,7.06967,105
+Universitäts- und Landesbibliothek Bonn,50.7268,7.08663,99
+Friedrich-Ebert-Gymnasium Bonn,50.7091,7.12524,96
+Deutsche Gesellschaft für Regulatory Affairs,50.7228,7.11204,92
+Bibliothek der Friedrich-Ebert-Stiftung Bonn,50.7021,7.13483,87
+Max-Planck-Institut zur Erforschung von Gemeinschaftsgütern,50.717,7.1265,77
+Archiv der sozialen Demokratie,50.7025,7.1348,75
+Ludwig-Erhard-Berufskolleg,50.7441,7.0859,65
+Volkssternwarte Bonn,50.7276,7.09818,61
+Mineralogisches Museum der Universität Bonn,50.725,7.09209,60
+Martin Bucer Seminar,50.7365,7.10064,49
+Wissenschaftszentrum Bonn,50.6995,7.14987,46
+Schänzchen (Bonn),50.7428,7.10494,35
+Verein von Altertumsfreunden im Rheinlande,50.732,7.09262,33
+Adolf-Clarenbach-Haus,50.7245,7.10063,19
+Biohistoricum,50.7221,7.1135,18
+Deutsche Zentralbibliothek der Landbauwissenschaften,50.7269,7.08665,14

@@ -1,5 +1,3 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.358,7.59944)
-Page Hits (count: 166)"	Deinhard	1431471	0
-"Geotags (50.3586,7.60472)
-Page Hits (count: 76)"	Pegelhaus (Koblenz)	6320477	0
+page_title,latitude,longitude,hitcount
+Deinhard,50.358,7.59944,166
+Pegelhaus (Koblenz),50.3586,7.60472,76

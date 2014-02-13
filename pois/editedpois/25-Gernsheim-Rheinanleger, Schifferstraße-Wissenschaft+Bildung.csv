@@ -1,3 +1,2 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.7547,8.49486)
-Page Hits (count: 84)"	Gymnasium Gernsheim	2122402	0
+page_title,latitude,longitude,hitcount
+Gymnasium Gernsheim,49.7547,8.49486,84

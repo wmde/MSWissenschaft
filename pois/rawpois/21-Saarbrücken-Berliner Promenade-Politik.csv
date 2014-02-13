@@ -1,7 +1,4 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.2083,6.965)
-Page Hits (count: 189)"	Goldene Bremm	321333	0
-"Geotags (49.2544,7.04167)
-Page Hits (count: 94)"	Institut für Rechtsinformatik (Saarbrücken)	631510	0
-"Geotags (49.2307,7.00741)
-Page Hits (count: 46)"	Frauengenderbibliothek Saar	8017870	0
+page_title,latitude,longitude,hitcount
+Goldene Bremm,49.2083,6.965,189
+Institut für Rechtsinformatik (Saarbrücken),49.2544,7.04167,94
+Frauengenderbibliothek Saar,49.2307,7.00741,46

@@ -1,21 +1,12 @@
-filters	page_title	page_id	page_namespace
-"Geotags (53.1375,8.21639)
-Page Hits (count: 124)"	Niedersächsisches Landesmuseum für Kunst und Kulturgeschichte	1506872	0
-"Geotags (53.1444,8.21472)
-Page Hits (count: 96)"	Horst-Janssen-Museum	870808	0
-"Geotags (53.1469,8.215)
-Page Hits (count: 85)"	Landesbibliothek Oldenburg	260235	0
-"Geotags (53.1337,8.21949)
-Page Hits (count: 70)"	Landesmuseum für Natur und Mensch	2871655	0
-"Geotags (53.1473,8.17902)
-Page Hits (count: 63)"	Universitätsbibliothek Oldenburg	3912707	0
-"Geotags (53.1308,8.20248)
-Page Hits (count: 57)"	Helene-Lange-Schule (Oldenburg)	4372098	0
-"Geotags (53.1497,8.23278)
-Page Hits (count: 49)"	Bundestechnologiezentrum für Elektro- und Informationstechnik	6968220	0
-"Geotags (53.1445,8.2147)
-Page Hits (count: 40)"	Stadtmuseum Oldenburg	7798460	0
-"Geotags (53.1489,8.2)
-Page Hits (count: 33)"	Berufsakademie für IT und Wirtschaft Oldenburg	5570719	0
-"Geotags (53.1467,8.1798)
-Page Hits (count: 31)"	Studentenwerk Oldenburg	5673468	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Niedersächsisches Landesmuseum für Kunst und Kulturgeschichte,53.1375,8.21639,124
+Horst-Janssen-Museum,53.1444,8.21472,96
+Landesbibliothek Oldenburg,53.1469,8.215,85
+Landesmuseum für Natur und Mensch,53.1337,8.21949,70
+Universitätsbibliothek Oldenburg,53.1473,8.17902,63
+Helene-Lange-Schule (Oldenburg),53.1308,8.20248,57
+Bundestechnologiezentrum für Elektro- und Informationstechnik,53.1497,8.23278,49
+Stadtmuseum Oldenburg,53.1445,8.2147,40
+Berufsakademie für IT und Wirtschaft Oldenburg,53.1489,8.2,33
+Studentenwerk Oldenburg,53.1467,8.1798,31

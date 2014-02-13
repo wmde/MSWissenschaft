@@ -1,25 +1,13 @@
-filters	page_title	page_id	page_namespace
-"Geotags (51.4781,13.8783)
-Page Hits (count: 8931)"	BASF	17365	0
-"Geotags (48.7171,9.36747)
-Page Hits (count: 2757)"	Liste deutscher Kraftwerke	2922812	0
-"Geotags (49.495,8.43625)
-Page Hits (count: 477)"	Kesselwagenexplosion in der BASF	955867	0
-"Geotags (49.4795,8.50252)
-Page Hits (count: 464)"	Carl-Benz-Stadion	312690	0
-"Geotags (49.496,8.43217)
-Page Hits (count: 386)"	Friedrich-Engelhorn-Hochhaus	729586	0
-"Geotags (49.4841,8.43685)
-Page Hits (count: 279)"	ISOVER	3856650	0
-"Geotags (49.4956,8.42889)
-Page Hits (count: 269)"	Werkfeuerwehr BASF	1214502	0
-"Geotags (49.4827,8.46594)
-Page Hits (count: 248)"	Mannheim Business School	2555424	0
-"Geotags (49.4845,8.44339)
-Page Hits (count: 219)"	BASF IT Services	2322564	0
-"Geotags (49.4747,8.49531)
-Page Hits (count: 159)"	CropEnergies	2649699	0
-"Geotags (49.4867,8.46149)
-Page Hits (count: 64)"	Rheinische Creditbank	121892	0
-"Geotags (49.4921,8.42694)
-Page Hits (count: 47)"	Feierabendhaus der BASF	6543446	0
+page_title,latitude,longitude,hitcount
+BASF,51.4781,13.8783,8931
+Liste deutscher Kraftwerke,48.7171,9.36747,2757
+Kesselwagenexplosion in der BASF,49.495,8.43625,477
+Carl-Benz-Stadion,49.4795,8.50252,464
+Friedrich-Engelhorn-Hochhaus,49.496,8.43217,386
+ISOVER,49.4841,8.43685,279
+Werkfeuerwehr BASF,49.4956,8.42889,269
+Mannheim Business School,49.4827,8.46594,248
+BASF IT Services,49.4845,8.44339,219
+CropEnergies,49.4747,8.49531,159
+Rheinische Creditbank,49.4867,8.46149,64
+Feierabendhaus der BASF,49.4921,8.42694,47

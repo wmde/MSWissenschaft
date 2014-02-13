@@ -1,33 +1,26 @@
-filters	page_title	page_id	page_namespace
-"Geotags (53.1067,8.845)
-Page Hits (count: 494)"	Universum Bremen	417627	0
-"Geotags (53.1003,8.85694)
-Page Hits (count: 401)"	OHB	1647419	0
-"Geotags (53.0833,8.81861)
-Page Hits (count: 169)"	Hermann-Böse-Gymnasium	559154	0
-"Geotags (53.1087,8.85361)
-Page Hits (count: 144)"	Staats- und Universitätsbibliothek Bremen	3262745	0
-"Geotags (53.0844,8.79609)
-Page Hits (count: 122)"	Hochschule für Öffentliche Verwaltung Bremen	2894784	0
-"Geotags (53.0726,8.81023)
-Page Hits (count: 100)"	Institut für niederdeutsche Sprache	1141410	0
-"Geotags (53.1104,8.85103)
-Page Hits (count: 81)"	Marum (Universität Bremen)	3689692	0
-"Geotags (53.1103,8.8475)
-Page Hits (count: 79)"	Max-Planck-Institut für marine Mikrobiologie	1256820	0
-"Geotags (53.093,8.81688)
-Page Hits (count: 63)"	Landesinstitut für Schule (Bremen)	6565218	0
-"Geotags (53.1031,8.85946)
-Page Hits (count: 58)"	Hochschule für internationale Wirtschaft und Logistik	4758188	0
-"Geotags (53.0727,8.81462)
-Page Hits (count: 57)"	Gerhard-Marcks-Haus	6413856	0
-"Geotags (53.1002,8.85839)
-Page Hits (count: 50)"	Leibniz-Institut für Präventionsforschung und Epidemiologie	1790622	0
-"Geotags (53.0849,8.7958)
-Page Hits (count: 43)"	Erwachsenenschule Bremen	2099463	0
-"Geotags (53.0697,8.80778)
-Page Hits (count: 32)"	Olbers-Gesellschaft	2579579	0
-"Geotags (53.1086,8.85162)
-Page Hits (count: 32)"	Studentenwerk Bremen	5454352	0
-"Geotags (53.0783,8.81913)
-Page Hits (count: 26)"	Remberti-Schule	3072448	0
+page_title,latitude,longitude,hitcount
+Liste der dicksten Mammutbäume in Deutschland,50.8072,6.08246,876
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Universum Bremen,53.1067,8.845,494
+OHB,53.1003,8.85694,401
+Übersee-Museum,53.0833,8.81056,193
+Hermann-Böse-Gymnasium,53.0833,8.81861,169
+Staats- und Universitätsbibliothek Bremen,53.1087,8.85361,144
+Hochschule für Öffentliche Verwaltung Bremen,53.0844,8.79609,122
+Focke-Windkanal,53.0806,8.816,103
+Institut für niederdeutsche Sprache,53.0726,8.81023,100
+Marum (Universität Bremen),53.1104,8.85103,81
+Max-Planck-Institut für marine Mikrobiologie,53.1103,8.8475,79
+Leibniz-Zentrum für Marine Tropenökologie,53.1078,8.84597,73
+MeVis Medical Solutions,53.1041,8.85995,71
+Landesinstitut für Schule (Bremen),53.093,8.81688,63
+Bremer Institut für Kanada- und Québec-Studien,53.1086,8.85162,58
+Hochschule für internationale Wirtschaft und Logistik,53.1031,8.85946,58
+Gerhard-Marcks-Haus,53.0727,8.81462,57
+Leibniz-Institut für Präventionsforschung und Epidemiologie,53.1002,8.85839,50
+Raths-Apotheke (Bremen),53.076,8.80668,47
+Erwachsenenschule Bremen,53.0849,8.7958,43
+Olbers-Gesellschaft,53.0697,8.80778,32
+Studentenwerk Bremen,53.1086,8.85162,32
+Remberti-Schule,53.0783,8.81913,26
+Geologischer Dienst für Bremen,53.1105,8.85044,14

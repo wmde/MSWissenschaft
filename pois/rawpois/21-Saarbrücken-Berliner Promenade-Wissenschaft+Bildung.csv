@@ -1,11 +1,8 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.2357,6.97561)
-Page Hits (count: 277)"	Hochschule für Technik und Wirtschaft des Saarlandes	614576	0
-"Geotags (49.2508,7.03583)
-Page Hits (count: 91)"	Hermann-Neuberger-Sportschule	3204703	0
-"Geotags (49.2567,7.04)
-Page Hits (count: 74)"	Leibniz-Institut für Neue Materialien	1866559	0
-"Geotags (49.2533,7.03889)
-Page Hits (count: 60)"	Saarländische Universitäts- und Landesbibliothek	4658038	0
-"Geotags (49.2522,6.96298)
-Page Hits (count: 43)"	Katholische Hochschule für Soziale Arbeit	3845049	0
+page_title,latitude,longitude,hitcount
+Hochschule für Technik und Wirtschaft des Saarlandes,49.2357,6.97561,277
+Institut für Rechtsinformatik (Saarbrücken),49.2544,7.04167,94
+Hermann-Neuberger-Sportschule,49.2508,7.03583,91
+Leibniz-Institut für Neue Materialien,49.2567,7.04,74
+Saarländische Universitäts- und Landesbibliothek,49.2533,7.03889,60
+Frauengenderbibliothek Saar,49.2307,7.00741,46
+Katholische Hochschule für Soziale Arbeit,49.2522,6.96298,43

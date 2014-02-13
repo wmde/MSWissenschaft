@@ -1,37 +1,19 @@
-filters	page_title	page_id	page_namespace
-"Geotags (51.4933,7.40699)
-Page Hits (count: 660)"	H-Bahn	10970	0
-"Geotags (51.53,7.4675)
-Page Hits (count: 589)"	Dortmunder Actien-Brauerei	629099	0
-"Geotags (51.5021,7.48364)
-Page Hits (count: 451)"	ThyssenKrupp Uhde	1116091	0
-"Geotags (51.4984,7.42045)
-Page Hits (count: 429)"	DASA – Arbeitswelt Ausstellung	379545	0
-"Geotags (51.514,7.4589)
-Page Hits (count: 355)"	Thier-Galerie	6546046	0
-"Geotags (51.4891,7.406)
-Page Hits (count: 348)"	International School of Management	1664610	0
-"Geotags (51.5056,7.48578)
-Page Hits (count: 293)"	Dortmunder Stadtwerke	435683	0
-"Geotags (51.5088,7.44007)
-Page Hits (count: 229)"	Rothe Erde (ThyssenKrupp)	1720580	0
-"Geotags (51.5165,7.47263)
-Page Hits (count: 203)"	Bank für Kirche und Diakonie	2573704	0
-"Geotags (51.5278,7.49083)
-Page Hits (count: 160)"	Hoeschpark	226717	0
-"Geotags (51.5297,7.48306)
-Page Hits (count: 133)"	Hoesch-Museum	1460198	0
-"Geotags (51.514,7.43291)
-Page Hits (count: 133)"	Union, AG für Bergbau, Eisen- und Stahl-Industrie	416819	0
-"Geotags (51.5143,7.43759)
-Page Hits (count: 110)"	HSP Hoesch Spundwand und Profil	2191140	0
-"Geotags (51.5076,7.3954)
-Page Hits (count: 94)"	Jaeger Ausbau	6202296	0
-"Geotags (51.5158,7.46733)
-Page Hits (count: 87)"	Handwerkskammer Dortmund	6890838	0
-"Geotags (51.5148,7.46444)
-Page Hits (count: 43)"	Heinrich August Schulte	7551940	0
-"Geotags (51.5032,7.48056)
-Page Hits (count: 38)"	Westfälisches Wirtschaftsarchiv	6343434	0
-"Geotags (51.537,7.48088)
-Page Hits (count: 26)"	Haltepunkt Dortmund-Hoesch	1819623	0
+page_title,latitude,longitude,hitcount
+H-Bahn,51.4933,7.40699,660
+Dortmunder Actien-Brauerei,51.53,7.4675,589
+ThyssenKrupp Uhde,51.5021,7.48364,451
+DASA – Arbeitswelt Ausstellung,51.4984,7.42045,429
+Thier-Galerie,51.514,7.4589,355
+International School of Management,51.4891,7.406,348
+Dortmunder Stadtwerke,51.5056,7.48578,293
+Rothe Erde (ThyssenKrupp),51.5088,7.44007,229
+Bank für Kirche und Diakonie,51.5165,7.47263,203
+Hoeschpark,51.5278,7.49083,160
+Hoesch-Museum,51.5297,7.48306,133
+"Union, AG für Bergbau, Eisen- und Stahl-Industrie",51.514,7.43291,133
+HSP Hoesch Spundwand und Profil,51.5143,7.43759,110
+Jaeger Ausbau,51.5076,7.3954,94
+Handwerkskammer Dortmund,51.5158,7.46733,87
+Heinrich August Schulte,51.5148,7.46444,43
+Westfälisches Wirtschaftsarchiv,51.5032,7.48056,38
+Haltepunkt Dortmund-Hoesch,51.537,7.48088,26

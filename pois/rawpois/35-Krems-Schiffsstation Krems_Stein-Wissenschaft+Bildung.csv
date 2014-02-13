@@ -1,5 +1,3 @@
-filters	page_title	page_id	page_namespace
-"Geotags (48.4078,15.585)
-Page Hits (count: 305)"	Universität für Weiterbildung Krems	993416	0
-"Geotags (48.2075,16.3735)
-Page Hits (count: 67)"	Kirchliche Pädagogische Hochschule Wien/Krems	6254015	0
+page_title,latitude,longitude,hitcount
+Universität für Weiterbildung Krems,48.4078,15.585,305
+Kirchliche Pädagogische Hochschule Wien/Krems,48.2075,16.3735,67

@@ -1,65 +1,32 @@
-filters	page_title	page_id	page_namespace
-"Geotags (48.21,16.3631)
-Page Hits (count: 2964)"	Jugendmedienkommission	2103204	0
-"Geotags (48.2347,16.4169)
-Page Hits (count: 1074)"	Vienna International Centre	72108	0
-"Geotags (48.2347,16.4169)
-Page Hits (count: 915)"	Internationale Atomenergie-Organisation	23056	0
-"Geotags (48.2161,16.3541)
-Page Hits (count: 832)"	Oesterreichische Nationalbank	510571	0
-"Geotags (48.2186,16.3686)
-Page Hits (count: 467)"	Bundesministerium für Landesverteidigung und Sport	267338	0
-"Geotags (48.2107,16.3861)
-Page Hits (count: 342)"	Bundesministerium für Verkehr, Innovation und Technologie	417512	0
-"Geotags (48.1817,16.3921)
-Page Hits (count: 284)"	Bundesdenkmalamt	582668	0
-"Geotags (48.2044,16.3678)
-Page Hits (count: 257)"	Palais Erzherzog Albrecht	817493	0
-"Geotags (48.2139,16.3578)
-Page Hits (count: 244)"	Liste der Korps der Österreichisch-Ungarischen Armee	4875993	0
-"Geotags (48.2333,16.3842)
-Page Hits (count: 229)"	Österreichische Industrieholding	320323	0
-"Geotags (48.2219,16.3761)
-Page Hits (count: 221)"	WienTourismus	4225226	0
-"Geotags (48.2087,16.3774)
-Page Hits (count: 220)"	Klosterstudie	6752483	0
-"Geotags (48.2458,16.4333)
-Page Hits (count: 192)"	Albert-Schultz-Eishalle	4244267	0
-"Geotags (48.2108,16.3833)
-Page Hits (count: 180)"	Franz-Joseph-Kaserne	1212265	0
-"Geotags (48.2061,16.3789)
-Page Hits (count: 138)"	Palais Erzherzog Wilhelm	3990913	0
-"Geotags (48.2158,16.3839)
-Page Hits (count: 124)"	Türkischer Tempel	1521311	0
-"Geotags (48.2425,16.3532)
-Page Hits (count: 99)"	Maria-Theresien-Schlössel (Wien Hofzeile)	5389459	0
-"Geotags (48.2156,16.4139)
-Page Hits (count: 63)"	Erzherzog-Albrecht-Kaserne	1185976	0
-"Geotags (48.2122,16.3694)
-Page Hits (count: 54)"	Verband Österreichischer Zeitungen	4345913	0
-"Geotags (48.2058,16.3788)
-Page Hits (count: 52)"	Verband Österreichischer Privatsender	4371992	0
-"Geotags (48.2204,16.3538)
-Page Hits (count: 49)"	Österreichische Forschungsförderungsgesellschaft	895167	0
-"Geotags (48.2117,16.3577)
-Page Hits (count: 41)"	Wirtschaftsagentur Wien. Ein Fonds der Stadt Wien	3691143	0
-"Geotags (48.2093,16.3563)
-Page Hits (count: 36)"	Verband der Öffentlichen Wirtschaft und Gemeinwirtschaft Österreichs	2200247	0
-"Geotags (48.2201,16.3799)
-Page Hits (count: 35)"	Augartenspitz	5807682	0
-"Geotags (48.2126,16.3643)
-Page Hits (count: 34)"	Heinrich-Jasomirgott-Brunnen	4561751	0
-"Geotags (48.2081,16.3697)
-Page Hits (count: 34)"	Palais Bartolotti-Partenfeld	1212601	0
-"Geotags (48.2197,16.4083)
-Page Hits (count: 32)"	Erzherzog-Wilhelm-Kaserne	1185951	0
-"Geotags (48.2128,16.3682)
-Page Hits (count: 31)"	Bibliothek von unten	5858852	0
-"Geotags (48.2086,16.3772)
-Page Hits (count: 31)"	Palais Albrecht	2168787	0
-"Geotags (48.2122,16.3756)
-Page Hits (count: 23)"	Österreichisches Institut für Raumplanung	2001164	0
-"Geotags (48.2386,16.3495)
-Page Hits (count: 16)"	Josef-Wiedermann-Hof	5730304	0
-Geotags (48.2157,16.3703)	Finnische Botschaft in Wien	6687273	0
-Geotags (48.2492,16.3517)	Saudi-arabische Botschaft in Wien	6689130	0
+page_title,latitude,longitude,hitcount
+Jugendmedienkommission,48.21,16.3631,2964
+Vienna International Centre,48.2347,16.4169,1074
+Internationale Atomenergie-Organisation,48.2347,16.4169,915
+Oesterreichische Nationalbank,48.2161,16.3541,832
+Bundesministerium für Landesverteidigung und Sport,48.2186,16.3686,467
+"Bundesministerium für Verkehr, Innovation und Technologie",48.2107,16.3861,342
+Bundesdenkmalamt,48.1817,16.3921,284
+Palais Erzherzog Albrecht,48.2044,16.3678,257
+Liste der Korps der Österreichisch-Ungarischen Armee,48.2139,16.3578,244
+Österreichische Industrieholding,48.2333,16.3842,229
+WienTourismus,48.2219,16.3761,221
+Klosterstudie,48.2087,16.3774,220
+Albert-Schultz-Eishalle,48.2458,16.4333,192
+Franz-Joseph-Kaserne,48.2108,16.3833,180
+Palais Erzherzog Wilhelm,48.2061,16.3789,138
+Türkischer Tempel,48.2158,16.3839,124
+Maria-Theresien-Schlössel (Wien Hofzeile),48.2425,16.3532,99
+Erzherzog-Albrecht-Kaserne,48.2156,16.4139,63
+Verband Österreichischer Zeitungen,48.2122,16.3694,54
+Verband Österreichischer Privatsender,48.2058,16.3788,52
+Österreichische Forschungsförderungsgesellschaft,48.2204,16.3538,49
+Wirtschaftsagentur Wien. Ein Fonds der Stadt Wien,48.2117,16.3577,41
+Verband der Öffentlichen Wirtschaft und Gemeinwirtschaft Österreichs,48.2093,16.3563,36
+Augartenspitz,48.2201,16.3799,35
+Heinrich-Jasomirgott-Brunnen,48.2126,16.3643,34
+Palais Bartolotti-Partenfeld,48.2081,16.3697,34
+Erzherzog-Wilhelm-Kaserne,48.2197,16.4083,32
+Bibliothek von unten,48.2128,16.3682,31
+Palais Albrecht,48.2086,16.3772,31
+Österreichisches Institut für Raumplanung,48.2122,16.3756,23
+Josef-Wiedermann-Hof,48.2386,16.3495,16

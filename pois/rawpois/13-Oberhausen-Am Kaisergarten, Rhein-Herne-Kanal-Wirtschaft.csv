@@ -1,3 +1,2 @@
-filters	page_title	page_id	page_namespace
-"Geotags (51.4917,6.87667)
-Page Hits (count: 1778)"	Centro	271961	0
+page_title,latitude,longitude,hitcount
+Centro,51.4917,6.87667,1778

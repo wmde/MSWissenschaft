@@ -1,7 +1,4 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.7919,9.91501)
-Page Hits (count: 242)"	Würzburger Hofbräu	2468183	0
-"Geotags (49.7961,9.92583)
-Page Hits (count: 228)"	Pegel Würzburg	2329232	0
-"Geotags (49.7703,9.91439)
-Page Hits (count: 166)"	Kneipp-Werke	6802341	0
+page_title,latitude,longitude,hitcount
+Würzburger Hofbräu,49.7919,9.91501,242
+Pegel Würzburg,49.7961,9.92583,228
+Kneipp-Werke,49.7703,9.91439,166

@@ -1,5 +1,5 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.0449,10.2102)
-Page Hits (count: 300)"	Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt	1180367	0
-"Geotags (50.0444,10.2113)
-Page Hits (count: 19)"	Bibliothek der Hochschule Würzburg-Schweinfurt	6728712	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Hochschule für angewandte Wissenschaften Würzburg-Schweinfurt,50.0449,10.2102,300
+Naturkundliches Museum (Schweinfurt),50.0436,10.2372,32
+Bibliothek der Hochschule Würzburg-Schweinfurt,50.0444,10.2113,19

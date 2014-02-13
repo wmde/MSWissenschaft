@@ -1,15 +1,8 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.2,7.01889)
-Page Hits (count: 5296)"	Peugeot	67552	0
-"Geotags (49.2357,6.97561)
-Page Hits (count: 277)"	Hochschule für Technik und Wirtschaft des Saarlandes	614576	0
-"Geotags (49.2395,6.99341)
-Page Hits (count: 167)"	Landesbank Saar	1489780	0
-"Geotags (49.2544,7.04167)
-Page Hits (count: 94)"	Institut für Rechtsinformatik (Saarbrücken)	631510	0
-"Geotags (49.2273,6.99895)
-Page Hits (count: 92)"	Ministerium für Wirtschaft, Arbeit, Energie und Verkehr (Saarland)	8103472	0
-"Geotags (49.2282,6.98784)
-Page Hits (count: 31)"	Röchling-Kapelle	8063976	0
-"Geotags (49.2406,7.02086)
-Page Hits (count: 30)"	Villa Europa	7524228	0
+page_title,latitude,longitude,hitcount
+Peugeot,49.2,7.01889,5296
+Hochschule für Technik und Wirtschaft des Saarlandes,49.2357,6.97561,277
+Landesbank Saar,49.2395,6.99341,167
+Institut für Rechtsinformatik (Saarbrücken),49.2544,7.04167,94
+"Ministerium für Wirtschaft, Arbeit, Energie und Verkehr (Saarland)",49.2273,6.99895,92
+Röchling-Kapelle,49.2282,6.98784,31
+Villa Europa,49.2406,7.02086,30

@@ -1,13 +1,7 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (51.4562,6.72368)
-Page Hits (count: 182)"	Friedrich-Ebert-Brücke (Duisburg)	979121	0
-"Geotags (51.4444,6.74556)
-Page Hits (count: 162)"	Karl-Lehr-Brücke	3674939	0
-"Geotags (51.4383,6.77239)
-Page Hits (count: 131)"	Duisburger Institut für Sprach- und Sozialforschung	501239	0
-"Geotags (51.4307,6.7998)
-Page Hits (count: 130)"	NRW School of Governance	1683629	0
-"Geotags (51.439,6.77085)
-Page Hits (count: 35)"	Kindertagesstätte Hansegracht	3922386	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Friedrich-Ebert-Brücke (Duisburg),51.4562,6.72368,182
+Karl-Lehr-Brücke,51.4444,6.74556,162
+Duisburger Institut für Sprach- und Sozialforschung,51.4383,6.77239,131
+NRW School of Governance,51.4307,6.7998,130
+Kindertagesstätte Hansegracht,51.439,6.77085,35

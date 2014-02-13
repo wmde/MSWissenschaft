@@ -1,15 +1,8 @@
-filters	page_title	page_id	page_namespace
-"Geotags (49.35,8.15)
-Page Hits (count: 612)"	Liste der kreisfreien Städte in Deutschland	30223	0
-"Geotags (51.9874,7.63389)
-Page Hits (count: 100)"	Landwirtschaftskammer Nordrhein-Westfalen	1803710	0
-"Geotags (51.9603,7.6339)
-Page Hits (count: 71)"	Paul Wulf	2720003	0
-"Geotags (51.9624,7.63603)
-Page Hits (count: 66)"	Landschaftsversammlung Westfalen-Lippe	2460364	0
-"Geotags (51.9621,7.61925)
-Page Hits (count: 45)"	Zentralinstitut für Raumplanung	36978	0
-"Geotags (51.9564,7.62931)
-Page Hits (count: 43)"	Westfälisch-Lippischer Landwirtschaftsverband	3327944	0
-"Geotags (51.9571,7.63311)
-Page Hits (count: 35)"	Schwarze Witwe (Archiv)	6006645	0
+page_title,latitude,longitude,hitcount
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Landwirtschaftskammer Nordrhein-Westfalen,51.9874,7.63389,100
+Paul Wulf,51.9603,7.6339,71
+Landschaftsversammlung Westfalen-Lippe,51.9624,7.63603,66
+Zentralinstitut für Raumplanung,51.9621,7.61925,45
+Westfälisch-Lippischer Landwirtschaftsverband,51.9564,7.62931,43
+Schwarze Witwe (Archiv),51.9571,7.63311,35

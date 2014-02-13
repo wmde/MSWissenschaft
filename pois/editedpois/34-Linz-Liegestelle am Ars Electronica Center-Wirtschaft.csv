@@ -1,28 +1,14 @@
-filters	page_title	page_id	page_namespace
-"Geotags (48.2933,14.2906)
-Page Hits (count: 290)"	Energie AG Oberösterreich	3400954	0
-"Geotags (48.2807,14.3094)
-Page Hits (count: 286)"	Linz AG	1031737	0
-"Geotags (48.3036,14.2833)
-Page Hits (count: 189)"	Landestheater Linz	1439054	0
-"Geotags (48.2783,14.3175)
-Page Hits (count: 156)"	Eisenwerke Oberdonau	7233068	0
-"Geotags (48.3039,14.3056)
-Page Hits (count: 145)"	Allgemeines Krankenhaus der Stadt Linz	1746967	0
-"Geotags (48.3218,14.2919)
-Page Hits (count: 98)"	Oberösterreich Tourismus	6656247	0
-"Geotags (48.2969,14.2892)
-Page Hits (count: 96)"	Oberösterreichischer Verkehrsverbund	1630394	0
-"Geotags (48.2933,14.2906)
-Page Hits (count: 89)"	Power Tower (Linz)	4038284	0
-"Geotags (48.3361,14.3226)
-Page Hits (count: 74)"	Linz Center of Mechatronics	6195135	0
-"Geotags (48.3189,14.3111)
-Page Hits (count: 71)"	Österreichische Schiffswerften AG	1840431	0
-"Geotags (48.3039,14.2848)
-Page Hits (count: 43)"	OÖ Landesholding	7528770	0
-"Geotags (48.2969,14.2892)
-Page Hits (count: 29)"	OÖ Verkehrsholding	7535269	0
-"Geotags (48.3003,14.2915)
-Page Hits (count: 25)"	O.Ö. Energiesparverband	1635237	0
-Geotags (48.3218,14.2919)	Interessentenbeitragsstelle	7528022	0
+page_title,latitude,longitude,hitcount
+Energie AG Oberösterreich,48.2933,14.2906,290
+Linz AG,48.2807,14.3094,286
+Landestheater Linz,48.3036,14.2833,189
+Eisenwerke Oberdonau,48.2783,14.3175,156
+Allgemeines Krankenhaus der Stadt Linz,48.3039,14.3056,145
+Oberösterreich Tourismus,48.3218,14.2919,98
+Oberösterreichischer Verkehrsverbund,48.2969,14.2892,96
+Power Tower (Linz),48.2933,14.2906,89
+Linz Center of Mechatronics,48.3361,14.3226,74
+Österreichische Schiffswerften AG,48.3189,14.3111,71
+OÖ Landesholding,48.3039,14.2848,43
+OÖ Verkehrsholding,48.2969,14.2892,29
+O.Ö. Energiesparverband,48.3003,14.2915,25

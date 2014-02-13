@@ -1,21 +1,13 @@
-filters	page_title	page_id	page_namespace
-"Geotags (50.3636,7.55917)
-Page Hits (count: 884)"	Universität Koblenz-Landau	41623	0
-"Geotags (50.336,7.56957)
-Page Hits (count: 576)"	Hochschule Koblenz	3838515	0
-"Geotags (50.3381,7.61903)
-Page Hits (count: 240)"	Zentrum Innere Führung	309962	0
-"Geotags (50.3595,7.5993)
-Page Hits (count: 144)"	Görres-Gymnasium (Koblenz)	1274259	0
-"Geotags (50.354,7.59599)
-Page Hits (count: 132)"	Max-von-Laue-Gymnasium	1937711	0
-"Geotags (50.355,7.59568)
-Page Hits (count: 127)"	Eichendorff-Gymnasium (Koblenz)	2716397	0
-"Geotags (50.3588,7.59622)
-Page Hits (count: 104)"	Stadtbibliothek Koblenz	858008	0
-"Geotags (50.3525,7.61472)
-Page Hits (count: 79)"	Feuerwehr- und Katastrophenschutzschule Rheinland-Pfalz	6767468	0
-"Geotags (50.3492,7.58889)
-Page Hits (count: 72)"	Rheinische Landesbibliothek Koblenz	312500	0
-"Geotags (50.3491,7.5961)
-Page Hits (count: 63)"	Dr. Zimmermannsche Wirtschaftsschule	6127982	0
+page_title,latitude,longitude,hitcount
+Universität Koblenz-Landau,50.3636,7.55917,884
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Hochschule Koblenz,50.336,7.56957,576
+Zentrum Innere Führung,50.3381,7.61903,240
+Görres-Gymnasium (Koblenz),50.3595,7.5993,144
+Max-von-Laue-Gymnasium,50.354,7.59599,132
+Eichendorff-Gymnasium (Koblenz),50.355,7.59568,127
+Stadtbibliothek Koblenz,50.3588,7.59622,104
+Feuerwehr- und Katastrophenschutzschule Rheinland-Pfalz,50.3525,7.61472,79
+Rheinische Landesbibliothek Koblenz,50.3492,7.58889,72
+Landesuntersuchungsamt Rheinland-Pfalz,50.3435,7.58986,71
+Dr. Zimmermannsche Wirtschaftsschule,50.3491,7.5961,63

@@ -1,19 +1,13 @@
-filters	page_title	page_id	page_namespace
-"Geotags (51.4292,6.80083)
-Page Hits (count: 1799)"	Universität Duisburg-Essen	31115	0
-"Geotags (51.454,6.71578)
-Page Hits (count: 557)"	Psychotherapeutisches Institut Bergerhausen	7425537	0
-"Geotags (51.4288,6.77013)
-Page Hits (count: 132)"	Museum DKM	4172222	0
-"Geotags (51.4307,6.7998)
-Page Hits (count: 130)"	NRW School of Governance	1683629	0
-"Geotags (51.4403,6.77028)
-Page Hits (count: 116)"	Atlantis Kindermuseum	1039225	0
-"Geotags (51.4325,6.76653)
-Page Hits (count: 106)"	Stadtbibliothek Duisburg	2161666	0
-"Geotags (51.4317,6.78722)
-Page Hits (count: 78)"	Friedrich-Albert-Lange-Berufskolleg	1833452	0
-"Geotags (51.4304,6.76536)
-Page Hits (count: 59)"	Skulpturenpark am Lehmbruck-Museum	6136870	0
-"Geotags (51.4553,6.71779)
-Page Hits (count: 42)"	Schulschiff Rhein	5843355	0
+page_title,latitude,longitude,hitcount
+Universität Duisburg-Essen,51.4292,6.80083,1799
+Liste der kreisfreien Städte in Deutschland,49.35,8.15,612
+Psychotherapeutisches Institut Bergerhausen,51.454,6.71578,557
+Halden im Ruhrgebiet,51.5412,6.9978,315
+Museum DKM,51.4288,6.77013,132
+Duisburger Institut für Sprach- und Sozialforschung,51.4383,6.77239,131
+NRW School of Governance,51.4307,6.7998,130
+Atlantis Kindermuseum,51.4403,6.77028,116
+Stadtbibliothek Duisburg,51.4325,6.76653,106
+Friedrich-Albert-Lange-Berufskolleg,51.4317,6.78722,78
+Skulpturenpark am Lehmbruck-Museum,51.4304,6.76536,59
+Schulschiff Rhein,51.4553,6.71779,42
