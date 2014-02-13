@@ -44,6 +44,7 @@ def aggregaterow(row, index):
                  'maxresults': 55 }
         for k in cat: 
             if k!='name': query[k]= cat[k]
+        #~ station= row['Station'].decode('utf-
         aggregatefoo(query, row['Station'], index, row['Adresse'], cat['name'])
 
 
