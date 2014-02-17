@@ -23,6 +23,9 @@ def aggregatefoo(query, station, stationindex, address, category, maxresults):
         writer.writeheader()
         for line in res.iter_lines():
             obj= json.loads(line)
+            if 'exception' in obj:
+                os.unlink(filename)
+                raise RuntimeError('ALG Backend Error:\n%s' % obj['exception'])
             if 'flaws' in obj:
                 count= None
                 latitude= None
@@ -42,13 +45,14 @@ def aggregatefoo(query, station, stationindex, address, category, maxresults):
                 if latitude!=None and longitude!=None and count!=None:
                     writer.writerow( { 'latitude': latitude, 'longitude': longitude, 'page_title': page_title, 'hitcount': count } )
                     i+= 1
-                    if i>=maxresults: return
+                    if i>=maxresults: return i
             #~ elif 'progress' in obj:
                 #~ prog= obj['progress'].split('/')
                 #~ rel= float(prog[0])*10/float(prog[1])
                 #~ s= ''.join(['.']*int(rel))
                 #~ sys.stdout.write("\r%s" % s)
                 #~ sys.stdout.flush()
+    return i
     
 def aggregaterow(row, index):
     empty= True
@@ -60,6 +64,7 @@ def aggregaterow(row, index):
     center= [ (float(bbox[0])+float(bbox[2]))/2, (float(bbox[1])+float(bbox[3]))/2 ]
     geoq= "geobbox#%s,%s,4" % (center[1], center[0])
     for cat in [ 
+                { 'name': 'Kultur', 'query': '%s; +Kultur' % geoq, 'querydepth': 4 },
                 { 'name': 'Wirtschaft', 'query': '%s; +Wirtschaft' % geoq, 'querydepth': 4 },
                 { 'name': 'Politik', 'query': '%s; +Politik' % geoq, 'querydepth': 4 },
                 { 'name': 'Wissenschaft+Bildung', 'query': 'Wissenschaft; Bildung; +%s' % (geoq), 'querydepth': 4 },
@@ -74,7 +79,8 @@ def aggregaterow(row, index):
                  }
         for k in cat: 
             if k!='name': query[k]= cat[k]
-        aggregatefoo(query, row['Station'], index, row['Adresse'], cat['name'], 55)
+        count= aggregatefoo(query, row['Station'], index, row['Adresse'], cat['name'], 55)
+        if count is not None: print("%s results." % count)
 
 
 if __name__ == '__main__':
