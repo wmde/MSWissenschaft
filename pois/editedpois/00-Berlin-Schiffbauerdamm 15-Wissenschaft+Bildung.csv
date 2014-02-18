@@ -1,8 +1,13 @@
 page_title,latitude,longitude,hitcount
-
+Wikimedia Deutschland,52.495,13.38,3000
+Open Knowledge Foundation,52,49,13.4,2999
 Charité,52.5269,13.3772,2713
+Freie Universität Berlin,52.453056,13.290556, 1520
+Humboldt-Universität zu Berlin,52.518056,13.393333, 1519
 Hochschule für Wirtschaft und Recht Berlin,52.4853,13.3378,1514
 Robert Koch-Institut,52.5392,13.3472,933
+Universität der Künste Berlin,52.508056,13.331111,900
+Technische Universität Berlin,52.511944,13.326389,888
 Staatsbibliothek zu Berlin,52.5064,13.3703,877
 Museum für Naturkunde (Berlin),52.5302,13.3792,848
 Deutsches Institut für Wirtschaftsforschung,52.5122,13.3887,793
@@ -19,32 +24,6 @@ Wissenschaftszentrum Berlin für Sozialforschung,52.5064,13.3658,299
 Mediadesign Hochschule,52.5036,13.3961,260
 Urania (Berlin),52.5014,13.3481,259
 Universitätsbibliothek der Humboldt-Universität zu Berlin,52.5183,13.3867,251
-Deutsches Herzzentrum Berlin,52.5422,13.3469,242
-Berliner Medizinhistorisches Museum,52.5236,13.3789,218
 
 
-Zeiss-Großplanetarium,52.543,13.428,211
-Brecht-Haus (Berlin),52.5289,13.3847,190
-Pépinière,52.5289,13.3744,188
-Zentralbibliothek der TU und UdK Berlin,52.5103,13.3306,182
-Maison de France,52.5023,13.3249,152
-Deutsches Institut für Urbanistik,52.5074,13.3888,148
-Anatomisches Theater der Tierarzneischule,52.525,13.3816,147
-Langenbeck-Virchow-Haus,52.5229,13.3908,132
-Mendelssohn-Gesellschaft,52.5144,13.395,131
-Architekturmuseum der Technischen Universität Berlin,52.5136,13.3239,113
-Berliner Aquarium Unter den Linden,52.517,13.3834,103
-Plamannsche Erziehungsanstalt,52.5005,13.3877,93
-Königliches Wilhelms-Gymnasium (Berlin),52.5105,13.3732,91
-Bauakademie,52.5158,13.3992,87
-Jüdische Mädchenschule (Berlin),52.5264,13.3945,84
-Berliner Journalisten-Schule,52.5245,13.4121,83
-Ministerium für Volksbildung (DDR),52.516,13.3814,82
-Berliner Künstlerprogramm des DAAD,52.5074,13.3888,79
-Friedrich-Wilhelms-Gymnasium (Berlin),52.5057,13.3894,76
-Theologisches Konvikt Berlin,52.5289,13.3908,76
-Rat für Sozial- und Wirtschaftsdaten,52.5122,13.3887,73
-WissenschaftsForum Berlin,52.5135,13.3936,71
-Landesdenkmalamt Berlin,52.5164,13.4108,68
-Luisengymnasium Berlin,52.526,13.3511,67
-Berliner Informationszentrum für Transatlantische Sicherheit,52.5365,13.4209,65
+
