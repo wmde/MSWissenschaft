@@ -7,6 +7,7 @@ import csv
 import MySQLdb, MySQLdb.cursors 
 
 POIDIR= '../pois/editedpois'
+PIERDESCFILE= '../pois/Geokoordinaten Stationen MS Wissenschaft.csv'
 SQL_DEFAULTS_FILE= '~/.my.cnf'
 SQL_DB= 'mswissenschaft_map'
 SQL_POITABLE= 'poi'
@@ -47,8 +48,14 @@ def create_pier_table(cursor, tablename):
     cursor.execute("""CREATE TABLE %s (
                         pier_name VARBINARY(255),
                         pier_id INT,
+                        pier_latitude DOUBLE,
+                        pier_longitude DOUBLE,
+                        pier_date_start VARBINARY(10),
+                        pier_date_end VARBINARY(10),
                         UNIQUE KEY(pier_name),
-                        UNIQUE KEY(pier_id)
+                        UNIQUE KEY(pier_id),
+                        KEY(pier_date_start),
+                        KEY(pier_date_end)
                          )""" % tablename)
 
 def overwrite_table(createfun, cursor, tablename):
@@ -117,6 +124,17 @@ def importpois():
     overwrite_table(create_pier_table, cursor, "%s_new" % SQL_PIERTABLE)
     for i in piers:
         cursor.execute('INSERT INTO %s_new' % SQL_PIERTABLE + '(pier_name, pier_id) VALUES (%s, %s)', (piers[i], i))
+    
+    print("reading pier info")
+    with open(PIERDESCFILE) as f:
+        reader= csv.DictReader(f)
+        def fmtdate(d):
+            m= re.match('([0-9]+)\.([0-9]+)\.([0-9]+)', d.strip())
+            return '%04s-%02s-%02s' % (m.group(3), m.group(2), m.group(1))
+        for row in reader:
+            cmd= ('UPDATE %s_new ' % SQL_PIERTABLE) + "SET pier_latitude=%s, pier_longitude=%s, pier_date_start=%s, pier_date_end=%s WHERE pier_name LIKE %s"
+            #~ print(cmd)
+            cursor.execute(cmd, (float(row['Breite']), float(row['Laenge']), fmtdate(row['Datum Ankunft']), fmtdate(row['Datum Abreise']), row['Station']+'-%'))
     
     print("renaming tables")
     move_table(cursor, SQL_POITABLE+'_new', SQL_POITABLE)
