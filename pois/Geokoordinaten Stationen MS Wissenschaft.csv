@@ -1,41 +1,41 @@
-Station;Adresse;Koordinaten
-Berlin;Schiffbauerdamm 15;13.37,52.53,13.39,52.51
-Potsdam;Yachthafen, Kastanienallee;13.02,52.39,13.04,52.38
-Magdeburg;Wissenschaftshafen;11.65,52.15,11.67,52.13
-Magdeburg;Am Petriförder, Weiße Flotte;11.64,52.14,11.66,52.13
-Dessau;Liegestelle am Kornhaus;12.21,51.86,12.23,51.85
-Haldensleben;Anleger Fahrgastschiff Roland;11.39,52.29,11.42,52.27
-Bremen;Liegestelle “Tiefer”;8.8,53.08,8.82,53.07
-Nienburg;Linke Weserseite, oberhalb der Weserbrücke;9.19,52.65,9.21,52.64
-Oldenburg;Alter Stadthafen;8.22,53.15,8.24,53.13
-Papenburg;Liegestelle im Devernhafen;7.36,53.1,7.39,53.08
-Münster;Stadthafen;7.63,51.96,7.65,51.95
-Datteln;Liegehafen Hubertusstraße;7.35,51.66,7.37,51.65
-Dortmund;Stadthafen;7.43,51.53,7.45,51.52
-Oberhausen;Am Kaisergarten, Rhein-Herne-Kanal;6.85,51.5,6.87,51.49
-Duisburg;Innenhafen;6.75,51.44,6.77,51.43
-Bonn;Brassertufer;7.1,50.74,7.12,50.73
-Bonn;Stresemannufer;7.12,50.73,7.14,50.71
-Andernach;Rheinpromenade, Konrad-Adenauer-Allee;7.39,50.45,7.41,50.44
-Cochem;Cond, Stadionstraße;7.16,50.15,7.18,50.14
-Trier;Kaiser-Wilhelm-Brücke;6.62,49.77,6.64,49.76
-Mettlach;Anleger an der Oktavienstraße;6.58,49.5,6.6,49.49
-Saarbrücken;Berliner Promenade;6.98,49.24,7,49.23
-Saarburg;Städtische Liegestelle unter der Saarbrücke;6.55,49.61,6.56,49.6
-Bernkastel-Kues;Uferpromenade, Bahnhofstraße;7.06,49.92,7.08,49.91
-Koblenz;Peter-Altmeier-Ufer;7.59,50.37,7.61,50.36
-Gernsheim;Rheinanleger, Schifferstraße;8.46,49.76,8.49,49.75
-Mannheim;Lindenhof, Rheinpromenade;8.45,49.48,8.47,49.47
-Wiesbaden;Biebrich-Rheingaustraße;8.23,50.04,8.25,50.03
-Frankfurt;Eiserner Steg;8.67,50.11,8.69,50.1
-Miltenberg;Liegestelle am Minigolfplatz;9.25,49.71,9.27,49.7
-Lohr;Am Mainkai;9.57,50,9.59,49.99
-Würzburg;Viehmarkt, Dreikronenstraße;9.91,49.81,9.93,49.79
-Schweinfurt;Am unteren Marienbach;10.23,50.05,10.25,50.04
-Bamberg;Schleuse Bamberg;10.9,49.89,10.92,49.87
-Linz;Liegestelle am Ars Electronica Center;14.28,48.32,14.3,48.3
-Krems;Schiffsstation Krems/Stein;15.58,48.41,15.6,48.4
-Wien;Handelskai;16.38,48.25,16.4,48.23
-Deggendorf;Städtischer Anleger;12.94,48.83,12.96,48.82
-Regensburg;Werftstraße, Anleger “Wili”;12.1,49.03,12.12,49.01
-Forchheim;Main-Donau-Kanal, Austraße;11.04,49.74,11.06,49.72
+Station,Adresse,Laenge,Breite,Datum Ankunft,Datum Abreise
+Berlin,Schiffbauerdamm 15,52.52,13.38,06.05.2014, 11.05.2014 
+Potsdam,"Yachthafen, Kastanienallee",52.385,13.03,12.05.2014, 14.05.2014 
+Magdeburg,Wissenschaftshafen,52.14,11.66,16.05.2014, 17.05.2014 
+Magdeburg,"Am Petriförder, Weiße Flotte",52.135,11.65,18.05.2014, 19.05.2014 
+Dessau,Liegestelle am Kornhaus,51.855,12.22,20.05.2014, 22.05.2014 
+Haldensleben,Anleger Fahrgastschiff Roland,52.28,11.405,23.05.2014, 25.05.2014 
+Bremen,Liegestelle “Tiefer”,53.075,8.81,30.05.2014, 01.06.2014 
+Nienburg,"Linke Weserseite, oberhalb der Weserbrücke",52.645,9.2,03.06.2014, 05.06.2014 
+Oldenburg,Alter Stadthafen,53.14,8.23,07.06.2014, 08.06.2014 
+Papenburg,Liegestelle im Devernhafen,53.09,7.375,10.06.2014, 12.06.2014 
+Münster,Stadthafen,51.955,7.64,14.06.2014, 16.06.2014 
+Datteln,Liegehafen Hubertusstraße,51.655,7.36,17.06.2014, 19.06.2014 
+Dortmund,Stadthafen,51.525,7.44,20.06.2014, 23.06.2014 
+Oberhausen,"Am Kaisergarten, Rhein-Herne-Kanal",51.495,6.86,24.06.2014, 26.06.2014 
+Duisburg,Innenhafen,51.435,6.76,27.06.2014, 29.06.2014 
+Bonn,Brassertufer,50.735,7.11,30.06.2014, 02.07.2014 
+Bonn,Stresemannufer,50.72,7.13,03.07.2014, 03.07.2014 
+Andernach,"Rheinpromenade, Konrad-Adenauer-Allee",50.445,7.4,04.07.2014, 06.07.2014 
+Cochem,"Cond, Stadionstraße",50.145,7.17,07.07.2014, 09.07.2014 
+Trier,Kaiser-Wilhelm-Brücke,49.765,6.63,11.07.2014, 13.07.2014 
+Mettlach,Anleger an der Oktavienstraße,49.495,6.59,14.07.2014, 16.07.2014 
+Saarbrücken,Berliner Promenade,49.235,6.99,17.07.2014, 23.07.2014 
+Saarburg,Städtische Liegestelle unter der Saarbrücke,49.605,6.555,24.07.2014, 25.07.2014 
+Bernkastel-Kues,"Uferpromenade, Bahnhofstraße",49.915,7.07,26.07.2014, 27.07.2014 
+Koblenz,Peter-Altmeier-Ufer,50.365,7.6,29.07.2014, 31.07.2014 
+Gernsheim,"Rheinanleger, Schifferstraße",49.755,8.475,01.08.2014, 03.08.2014 
+Mannheim,"Lindenhof, Rheinpromenade",49.475,8.46,04.08.2014, 07.08.2014 
+Wiesbaden,Biebrich-Rheingaustraße,50.035,8.24,08.08.2014, 11.08.2014 
+Frankfurt,Eiserner Steg,50.105,8.68,12.08.2014, 14.08.2014 
+Miltenberg,Liegestelle am Minigolfplatz,49.705,9.26,15.08.2014, 17.08.2014 
+Lohr,Am Mainkai,49.995,9.58,18.08.2014, 20.08.2014 
+Würzburg,"Viehmarkt, Dreikronenstraße",49.8,9.92,21.08.2014, 24.08.2014 
+Schweinfurt,Am unteren Marienbach,50.045,10.24,26.08.2014, 28.08.2014 
+Bamberg,Schleuse Bamberg,49.88,10.91,29.08.2014, 31.08.2014 
+Linz,Liegestelle am Ars Electronica Center,48.31,14.29,04.09.2014, 07.09.2014 
+Krems,Schiffsstation Krems/Stein,48.405,15.59,09.09.2014, 11.09.2014 
+Wien,Handelskai,48.24,16.39,12.09.2014, 16.09.2014 
+Deggendorf,Städtischer Anleger,48.825,12.95,19.09.2014, 21.09.2014 
+Regensburg,"Werftstraße, Anleger “Wili”",49.02,12.11,22.09.2014, 24.09.2014 
+Forchheim,"Main-Donau-Kanal, Austraße",49.73,11.05,26.09.2014, 28.09.2014 
