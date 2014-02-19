@@ -9,9 +9,9 @@ import MySQLdb, MySQLdb.cursors
 POIDIR= '../pois/editedpois'
 SQL_DEFAULTS_FILE= '~/.my.cnf'
 SQL_DB= 'mswissenschaft_map'
-SQL_POITABLE= 'pois'
-SQL_CATEGORYTABLE= 'categories'
-SQL_PIERTABLE= 'piers'
+SQL_POITABLE= 'poi'
+SQL_CATEGORYTABLE= 'category'
+SQL_PIERTABLE= 'pier'
 
 ## refresh POI data from git repo
 def refreshpois():
@@ -24,31 +24,31 @@ def create_poi_table(cursor, tablename):
                         latitude DOUBLE,
                         longitude DOUBLE,
                         hitcount INT,
-                        pier INT,
-                        mapcategory INT,
+                        pier_id INT,
+                        category_id INT,
                         KEY(page_title),
                         KEY(latitude),
                         KEY(longitude),
                         KEY(hitcount),
-                        KEY(pier),
-                        KEY(mapcategory),
-                        UNIQUE KEY(page_title, pier, mapcategory)
+                        KEY(pier_id),
+                        KEY(category_id),
+                        UNIQUE KEY(page_title, pier_id, category_id)
                          )""" % tablename)
 
 def create_category_table(cursor, tablename):
     cursor.execute("""CREATE TABLE %s (
-                        category VARBINARY(255),
-                        categoryindex INT,
-                        UNIQUE KEY(category),
-                        UNIQUE KEY(categoryindex)
+                        category_name VARBINARY(255),
+                        category_id INT,
+                        UNIQUE KEY(category_name),
+                        UNIQUE KEY(category_id)
                          )""" % tablename)
 
 def create_pier_table(cursor, tablename):
     cursor.execute("""CREATE TABLE %s (
-                        pier VARBINARY(255),
-                        pierindex INT,
-                        UNIQUE KEY(pier),
-                        UNIQUE KEY(pierindex)
+                        pier_name VARBINARY(255),
+                        pier_id INT,
+                        UNIQUE KEY(pier_name),
+                        UNIQUE KEY(pier_id)
                          )""" % tablename)
 
 def overwrite_table(createfun, cursor, tablename):
@@ -102,7 +102,7 @@ def importpois():
             reader= csv.DictReader(f)   #, ("page_title", "latitude", "longitude", "hitcount"))
             for row in reader:
                 try:
-                    cursor.execute("INSERT INTO %s_new (page_title, latitude, longitude, hitcount, pier, mapcategory)" % SQL_POITABLE +
+                    cursor.execute("INSERT INTO %s_new (page_title, latitude, longitude, hitcount, pier_id, category_id)" % SQL_POITABLE +
                                    "VALUES(%s, %s, %s, %s, %s, %s)", (row['page_title'], row['latitude'], row['longitude'], row['hitcount'], pierindex, categoryindex))
                 except MySQLdb.IntegrityError as e:
                     if e.args[0]==1062:
@@ -112,11 +112,11 @@ def importpois():
     
     overwrite_table(create_category_table, cursor, "%s_new" % SQL_CATEGORYTABLE)
     for i in range(len(mapcategories)):
-        cursor.execute('INSERT INTO %s_new' % SQL_CATEGORYTABLE + '(category, categoryindex) VALUES (%s, %s)', (mapcategories[i], i))
+        cursor.execute('INSERT INTO %s_new' % SQL_CATEGORYTABLE + '(category_name, category_id) VALUES (%s, %s)', (mapcategories[i], i))
 
     overwrite_table(create_pier_table, cursor, "%s_new" % SQL_PIERTABLE)
     for i in piers:
-        cursor.execute('INSERT INTO %s_new' % SQL_PIERTABLE + '(pier, pierindex) VALUES (%s, %s)', (piers[i], i))
+        cursor.execute('INSERT INTO %s_new' % SQL_PIERTABLE + '(pier_name, pier_id) VALUES (%s, %s)', (piers[i], i))
     
     print("renaming tables")
     move_table(cursor, SQL_POITABLE+'_new', SQL_POITABLE)
