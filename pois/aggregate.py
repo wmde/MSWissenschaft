@@ -10,7 +10,7 @@ import requests
 
 
 def aggregatefoo(query, station, stationindex, address, category, maxresults):
-    filename= ("rawpois/%02d-%s-%s-%s.csv" % (stationindex, station.replace('/', '_'), address.replace('/', '_'), category))
+    filename= ("rawpois/%02d.%s.%s.%s.csv" % (stationindex, station.replace('/', '_'), address.replace('/', '_'), category))
     if os.path.exists(filename):
         #~ print("skipping existing file: %s" % filename)
         return
