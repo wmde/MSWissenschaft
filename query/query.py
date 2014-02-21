@@ -3,6 +3,8 @@ import MySQLdb, MySQLdb.cursors
 import json
 import flask
 from flask import Flask
+
+
 app = Flask(__name__)
 
 # todo merge stuff
@@ -14,10 +16,18 @@ SQL_PIERTABLE= 'pier'
 
 
 def getCursor():
-    # todo cache per-thread or something
-    conn= MySQLdb.connect( read_default_file=os.path.expanduser(SQL_DEFAULTS_FILE), use_unicode=False, cursorclass=MySQLdb.cursors.DictCursor )
-    cursor= conn.cursor()
-    cursor.execute("USE %s" % SQL_DB)
+    # 'flask.g' is totally useless here since the application context in flask is essentially the same as the request context: it's destroyed after each request
+    # maybe use PySQLPool instead or something
+    if flask.g.get('conn', None)==None:
+        app.logger.debug('creating new db connection')
+        conn= MySQLdb.connect( read_default_file=os.path.expanduser(SQL_DEFAULTS_FILE), use_unicode=False, cursorclass=MySQLdb.cursors.DictCursor )
+        cursor= conn.cursor()
+        cursor.execute("USE %s" % SQL_DB)
+        flask.g.conn= conn
+        flask.g.cursor= conn
+    else:
+        app.logger.debug('reusing db connection')
+        cursor= flask.g.userdb.cursor
     return cursor
 
 @app.route('/')
@@ -26,7 +36,6 @@ def site_map():
     rules= sorted(app.url_map.iter_rules())
     for rule in rules:
         if "GET" in rule.methods:
-            app.logger.debug(repr(rule))
             links.append(flask.escape(repr(rule)))
     return '<br>'.join(links)
 
