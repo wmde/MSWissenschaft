@@ -8,6 +8,7 @@ import MySQLdb, MySQLdb.cursors
 
 POIDIR= '../pois/editedpois'
 PIERDESCFILE= '../pois/Geokoordinaten Stationen MS Wissenschaft.csv'
+
 SQL_DEFAULTS_FILE= '~/.my.cnf'
 SQL_DB= 'mswissenschaft_map'
 SQL_POITABLE= 'poi'

@@ -1,6 +1,24 @@
+import os
+import MySQLdb, MySQLdb.cursors
+import json
 import flask
 from flask import Flask
 app = Flask(__name__)
+
+# todo merge stuff
+SQL_DEFAULTS_FILE= '~/.my.cnf'
+SQL_DB= 'mswissenschaft_map'
+SQL_POITABLE= 'poi'
+SQL_CATEGORYTABLE= 'category'
+SQL_PIERTABLE= 'pier'
+
+
+def getCursor():
+    # todo cache per-thread or something
+    conn= MySQLdb.connect( read_default_file=os.path.expanduser(SQL_DEFAULTS_FILE), use_unicode=False, cursorclass=MySQLdb.cursors.DictCursor )
+    cursor= conn.cursor()
+    cursor.execute("USE %s" % SQL_DB)
+    return cursor
 
 @app.route('/')
 def site_map():
@@ -9,8 +27,6 @@ def site_map():
     for rule in rules:
         if "GET" in rule.methods:
             app.logger.debug(repr(rule))
-            #~ foo= "%s%s" % (rule.rule, '/'.join(rule.arguments))
-            #~ links.append(foo)
             links.append(flask.escape(repr(rule)))
     return '<br>'.join(links)
 
@@ -20,8 +36,12 @@ def get_pois(pier_id, categories):
     
 @app.route('/piers')
 def get_piers():
-    return '...JSON about piers from the database...'
+    cursor= getCursor()
+    cursor.execute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
+    piers= list()
+    for row in cursor.fetchall():
+        piers.append(row)
+    return json.dumps(piers)
     
 if __name__ == '__main__':
     app.run(debug= True)
-    
