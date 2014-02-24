@@ -30,6 +30,12 @@ def getCursor():
         cursor= flask.g.userdb.cursor
     return cursor
 
+# maybe will use PySQLPool or something later, so all code doing SQL stuff should use this function
+def sqlExecute(cmd, args= None):
+    cursor= getCursor()
+    cursor.execute(cmd, args)
+    return cursor.fetchall()
+
 @app.route('/')
 def site_map():
     links = []
@@ -39,18 +45,32 @@ def site_map():
             links.append(flask.escape(repr(rule)))
     return '<br>'.join(links)
 
-@app.route('/pois/<int:pier_id>/<categories>')
-def get_pois(pier_id, categories):
-    return '...POI data for pier ID %s for categories "%s"...' % (pier_id, categories)
+@app.route('/pois-for-pier/<int:pier_id>/<categories>')
+def get_pois_for_pier(pier_id, categories):
+    categories= categories.split(',')
+    catstr= ' OR '.join( "category.category_name = %s" for cat in categories )
+    args= [pier_id]
+    args.extend(categories)
+    rows= sqlExecute('SELECT * FROM %s ' % SQL_POITABLE + 
+                     'JOIN category JOIN pier ' +
+                     'WHERE poi.pier_id=%s AND (' + catstr + ') ORDER BY hitcount', args)
+    return json.dumps(rows)
+    
+@app.route('/pois-by-date/<string:date>/<categories>')
+def get_pois_by_date(date, categories):
+    categories= categories.split(',')
+    catstr= ' OR '.join( "category.category_name = %s" for cat in categories )
+    args= [date, date]
+    args.extend(categories)
+    rows= sqlExecute('SELECT * FROM %s ' % SQL_POITABLE + 
+                     'JOIN category JOIN pier ' +
+                     'WHERE (pier.pier_date_start<=%s AND pier.pier_date_end>=%s) AND (' + catstr + ') ORDER BY hitcount', args)
+    return json.dumps(rows)
     
 @app.route('/piers')
 def get_piers():
-    cursor= getCursor()
-    cursor.execute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
-    piers= list()
-    for row in cursor.fetchall():
-        piers.append(row)
-    return json.dumps(piers)
+    rows= sqlExecute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
+    return json.dumps(rows)
     
 if __name__ == '__main__':
     app.run(debug= True)
