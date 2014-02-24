@@ -61,8 +61,9 @@ def aggregaterow(row, index):
         if row[k]!='': empty= False
     if empty: return
     
-    bbox= row['Koordinaten'].split(',')
-    center= [ (float(bbox[0])+float(bbox[2]))/2, (float(bbox[1])+float(bbox[3]))/2 ]
+    #~ bbox= row['Koordinaten'].split(',')
+    #~ center= [ (float(bbox[0])+float(bbox[2]))/2, (float(bbox[1])+float(bbox[3]))/2 ]
+    center= [ row['Laenge'], row['Breite'] ]
     geoq= "geobbox#%s,%s,4" % (center[1], center[0])
     for cat in [ 
                 { 'name': 'Kultur', 'query': '%s; +Kultur' % geoq, 'querydepth': 4 },
