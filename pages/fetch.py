@@ -95,8 +95,6 @@ if __name__ == '__main__':
         
         if len(errqueue):
             print("%d errors" % len(errqueue))
-            #~ for x in errqueue: queue.append(x)
-            #~ errqueue.clear()
             queue= errqueue
             errqueue= deque()
         else:
