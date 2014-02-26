@@ -25,7 +25,7 @@ def unfuck_encoding(filename):
     os.rename(res[0], filename)
 
 def getArticle(title):
-    t= title    #.replace(' ', '_')  #.replace('/', '\/')
+    t= title
     if os.path.exists(os.path.join('de.wikipedia.org/wiki', t)):
         return True
     try:
