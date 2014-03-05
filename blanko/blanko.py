@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import subprocess
 import re
+import time
 
 #this script waits for the screensaver to blank, then kills chromium-browser, which resets the state of the web app.
 
@@ -9,5 +10,5 @@ if __name__ == '__main__':
     while True:
         line= proc.stdout.readline()
         if re.match('^BLANK.*', line):
-            subprocess.call('killall chromium-browser', shell= True)
+            subprocess.call('kill $(pgrep chromium)', shell= True)
             
