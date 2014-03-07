@@ -1,0 +1,18 @@
+
+
+Icons: Wirtschaft, Kultur, Politik und Bildung
+    Map Icons Collection
+    Creative Commons 3.0 BY-SA
+    Author : Nicolas Mollet & Keith Younger
+
+http://mapicons.nicolasmollet.com/markers/offices/city-services/parliament/?custom_color=0d4ba8
+http://mapicons.nicolasmollet.com/markers/health-education/education/university/?custom_color=7e0db3
+http://mapicons.nicolasmollet.com/markers/industry/factory/?custom_color=bf0d0d
+mapicons.nicolasmollet.com/markers/culture-entertainment/entertainment/outdoor-activities/public-art/?custom_color=1dab1d
+
+
+OKF: CC-BY
+https://commons.wikimedia.org/wiki/File%3AOKFN_Main_logo.png
+
+WMDE: © & ™ All rights reserved, Wikimedia Foundation, Inc.
+https://commons.wikimedia.org/wiki/File%3AWikimedia_Deutschland-Logo.svg
