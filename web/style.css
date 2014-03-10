@@ -100,6 +100,7 @@ h6 {
 
 .timeline-outer {
 	position: relative;
+	height: 200px;
 	overflow: hidden;
 	border: 0px;
 	padding: 0px;
@@ -120,7 +121,7 @@ h6 {
 
 div.olControlLayerSwitcher {
     position: absolute;
-    top: 120px;
+    top: 150px;
     right: 0px;
     border-radius: 4px;
     padding: 2px;
@@ -128,13 +129,13 @@ div.olControlLayerSwitcher {
 
 div.olControlZoomPanel {
     position: absolute;
-    top: 185px;
+    top: 220px;
     padding: 2px;
 }
 
 div.olControlPanPanel {
     position: absolute;
-    top: 128px;
+    top: 160px;
     padding: 2px;
 }
 

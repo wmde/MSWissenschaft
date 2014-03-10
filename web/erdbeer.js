@@ -274,7 +274,6 @@ function init(){
 }
 
 function getConfig(name, defaultValue) {
-    //~ if(config[name]) return config[name];
     if(config.hasOwnProperty(name)) return config[name];
     return defaultValue;
 }

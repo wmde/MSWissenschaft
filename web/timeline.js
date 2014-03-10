@@ -16,7 +16,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var barY= 60;
+var barY= 120;
 var eventXScale= getConfig('timelineScaling', 2);
 var timelineMin= getConfig('timelineMin', -50);
 var timelineMax= getConfig('timelineMax', 565);
@@ -141,7 +141,7 @@ function createLabelText(text, xpos_int, angle, origin) {
 }
 
 function createEventLabelText(elem, text, xpos) {
-	var label= createLabelText(text, xpos, -12.25, "-50px 0px");
+	var label= createLabelText(text, xpos, -22, "-25px 25px");
 	var rect= elem.getBoundingClientRect();
 	var height= rect.bottom-rect.top;
 	var bottomDist= height - barY;
@@ -228,7 +228,7 @@ function createTimeline() {
 
 	var len= events.length;
 	for(var i= 0; i<len; i++)
-		createLabel(inner, events[i][0], events[i][1]);
+		createLabel(inner, events[i]['title'], events[i]['time']);
 	
 	var bar= document.createElement('div');
 	bar.style.cssText= 'position: absolute; ' +
@@ -240,8 +240,11 @@ function createTimeline() {
 	inner.appendChild(bar);
 	outer.appendChild(bar);
 	
-	for(var i= timelineMarkerBegin; i<=timelineMarkerEnd; i+= timelineMarkerStep)
-		createTimelineMarker(inner, i);
+    if(timelineMarkerStep>0)
+    {
+        for(var i= timelineMarkerBegin; i<=timelineMarkerEnd; i+= timelineMarkerStep)
+            createTimelineMarker(inner, i);
+    }
 	
 	/*
 	var img= document.createElement('img');
