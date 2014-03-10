@@ -18,19 +18,19 @@
 
 var barY= 60;
 var eventXScale= getConfig('timelineScaling', 2);
-var minYear= getConfig('timelineMinYear', -50);
-var maxYear= getConfig('timelineMaxYear', 565);
-var timelineInitialYear= getConfig('timelineInitialYear', 125);
+var timelineMin= getConfig('timelineMin', -50);
+var timelineMax= getConfig('timelineMax', 565);
+var timelineInitial= getConfig('timelineInitial', 125);
 
 var dragBegin= 0;
-var dragBeginYear= 0;
+var dragBeginPoint= 0;
 var dragging= false;
 
-function timelineSetYear(selectedYear) {
+function timelineSetTime(selectedTime) {
 	var outer= document.getElementById('timeline-outer'); 
 	var outerClientRect= outer.getBoundingClientRect();
-	document.getElementById('timeline-inner').style.left= ((outerClientRect.right-outerClientRect.left)*.5 - selectedYear*eventXScale) + "px";
-	document.getElementById('year-display').innerHTML= '' + Math.round(selectedYear);
+	document.getElementById('timeline-inner').style.left= ((outerClientRect.right-outerClientRect.left)*.5 - selectedTime*eventXScale) + "px";
+	document.getElementById('time-display').innerHTML= '' + Math.round(selectedTime);
 }
 
 function returnfalse() {
@@ -41,25 +41,25 @@ function timelineClick(evt) {
 	if(!evt) var evt= window.event;
 	var inner= document.getElementById('timeline-inner'); 
 	var innerClientRect= inner.getBoundingClientRect();
-	var selectedYear= Math.round((evt.clientX-innerClientRect.left)/eventXScale);
+	var selectedTime= Math.round((evt.clientX-innerClientRect.left)/eventXScale);
 	var y= evt.clientY-innerClientRect.top;
 	if(y>=barY-10 && y<=barY+20)
 	{
-		timelineSetYear(selectedYear);
-		setPOILayerYear(selectedYear);
+		timelineSetTime(selectedTime);
+		setPOILayerTime(selectedTime);
 	}
 	return false;
 }
 
 var moveTimeoutHandle;
-function moveTimeout(year) {
-	timelineSetYear(year);
-	setPOILayerYear(year);
+function moveTimeout(time) {
+	timelineSetTime(time);
+	setPOILayerTime(time);
 	moveTimeoutHandle= false;
 }
-function timelineSetMoveTimeout(year) {
+function timelineSetMoveTimeout(time) {
 	if(moveTimeoutHandle) clearInterval(moveTimeoutHandle);
-	moveTimeoutHandle= setTimeout(function() { moveTimeout(year) }, 250);
+	moveTimeoutHandle= setTimeout(function() { moveTimeout(time) }, 250);
 }
 
 function timelineMousedown(evt) {
@@ -67,13 +67,13 @@ function timelineMousedown(evt) {
 	var outer= document.getElementById('timeline-outer'); 
 	var outerClientRect= outer.getBoundingClientRect();
 	dragBegin= (evt.clientX-outerClientRect.left);
-	var selectedYear= Math.round(((evt.clientX-outerClientRect.left))/eventXScale);
+	var selectedTime= Math.round(((evt.clientX-outerClientRect.left))/eventXScale);
 	var y= evt.clientY-outerClientRect.top;
 	if(y>=barY-10 && y<=barY+20)
 	{
-		//timelineSetYear(selectedYear);
+		//timelineSetTime(selectedTime);
 		dragging= true;
-		dragBeginYear= timerCurrYear;
+		dragBeginPoint= timerCurrTime;
 		//if(outer.setCapture) outer.setCapture();
 	}
 	return false;
@@ -86,11 +86,11 @@ function timelineMousemove(evt) {
     if(timerID) timerStop();
 	var outer= document.getElementById('timeline-outer'); 
 	var outerClientRect= outer.getBoundingClientRect();
-	var selectedYear= Math.round((dragBegin-(evt.clientX-outerClientRect.left))/eventXScale) + dragBeginYear;
-	selectedYear= Math.min( Math.max(selectedYear, minYear), maxYear );
-	timelineSetYear(selectedYear);
-	//setPOILayerYear(selectedYear);
-	timelineSetMoveTimeout(selectedYear);
+	var selectedTime= Math.round((dragBegin-(evt.clientX-outerClientRect.left))/eventXScale) + dragBeginPoint;
+	selectedTime= Math.min( Math.max(selectedTime, timelineMin), timelineMax );
+	timelineSetTime(selectedTime);
+	//setPOILayerTime(selectedTime);
+	timelineSetMoveTimeout(selectedTime);
 	return false;
 }
 
@@ -101,16 +101,16 @@ function timelineMouseup(evt) {
 	if(!evt) var evt= window.event;
 	dragging= false;
 	var outerClientRect= outer.getBoundingClientRect();
-	var selectedYear= Math.round((dragBegin-(evt.clientX-outerClientRect.left))/eventXScale) + dragBeginYear;
-	selectedYear= Math.min( Math.max(selectedYear, minYear), maxYear );
-	timelineSetYear(selectedYear);
-	setPOILayerYear(selectedYear);
+	var selectedTime= Math.round((dragBegin-(evt.clientX-outerClientRect.left))/eventXScale) + dragBeginPoint;
+	selectedTime= Math.min( Math.max(selectedTime, timelineMin), timelineMax );
+	timelineSetTime(selectedTime);
+	setPOILayerTime(selectedTime);
 	return false;
 }
 /*
 function timelineMouseout(evt) {
 	dragging= false;
-	timelineSetYear(timerCurrYear);
+	timelineSetTime(timerCurrTime);
 }
 */
 
@@ -166,7 +166,7 @@ function createLabelIndicator(xpos) {
 	return indicator;
 }
 
-function createCenturyIndicator(xpos) {
+function createTimelineIndicator(xpos) {
 	var indicator= document.createElement('div');
 	indicator.style.cssText= 'float: left; ' + 
 			'position: absolute; ' +
@@ -184,11 +184,11 @@ function createLabel(elem, text, xpos) {
 }
 
 function timelineOnresize() {
-	timelineSetYear(timerCurrYear);
+	timelineSetTime(timerCurrTime);
 }
 
-function createCenturyMarker(elem, xpos) {
-	elem.appendChild(createCenturyIndicator(xpos*eventXScale));
+function createTimelineMarker(elem, xpos) {
+	elem.appendChild(createTimelineIndicator(xpos*eventXScale));
 	var label= createLabelText(xpos+'', xpos*eventXScale-50, 0, "0px 0px");
 	label.style.cssText+= 
 		'width: 100px; ' +
@@ -199,12 +199,7 @@ function createCenturyMarker(elem, xpos) {
 }
 
 function createTimeline() {
-	var events= getConfig('timelineEvents', [ 	
-		[ "Beginn Fr&uuml;hkaiserzeit", -30 ], 
-		[ "Beginn Hohe Kaiserzeit ", 69 ],
-		[ "Beginn Sp&auml;tkaiserzeit", 180 ],
-		[ "Beginn Sp&auml;tantike", 284 ],
-	]);
+	var events= getConfig('timelineEvents', []);
     var timelineMarkerBegin= getConfig('timelineMarkerBegin', -100);
     var timelineMarkerEnd= getConfig('timelineMarkerEnd', 600);
     var timelineMarkerStep= getConfig('timelineMarkerStep', 100);
@@ -246,7 +241,7 @@ function createTimeline() {
 	outer.appendChild(bar);
 	
 	for(var i= timelineMarkerBegin; i<=timelineMarkerEnd; i+= timelineMarkerStep)
-		createCenturyMarker(inner, i);
+		createTimelineMarker(inner, i);
 	
 	/*
 	var img= document.createElement('img');
@@ -290,5 +285,5 @@ function createTimeline() {
 	body.onmousemove= timelineMousemove;
 	body.onmouseup= timelineMouseup;
 	
-	timelineSetYear(timelineInitialYear);
+	timelineSetTime(timelineInitial);
 }

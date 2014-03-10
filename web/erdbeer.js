@@ -150,19 +150,19 @@ function createPOILayer(title) {
 	return layer;
 }
 
-function setPOILayerYear(year) {
+function setPOILayerTime(time) {
     var layerConfig= getConfig('POILayers', '');
     for(var i= 0; i<POILayers.length; i++) {
         POILayers[i].protocol= new OpenLayers.Protocol.HTTP({
-                url: baseUrl + '?ranges=' + layerConfig[i].ranges + '&year=' + year,
+                url: baseUrl + '?ranges=' + layerConfig[i].ranges + '&time=' + time,
                 format: new OpenLayers.Format.Text()
             });
         POILayers[i].refresh({force:true});
         POILayers[i].redraw();
     }
 	
-	if(document.getElementById("year-display")) document.getElementById("year-display").innerHTML= year; 
-	timerCurrYear= year;
+	if(document.getElementById("time-display")) document.getElementById("time-display").innerHTML= time; 
+	timerCurrTime= time;
 }
 
 function init(){
@@ -259,22 +259,23 @@ function init(){
     {
         focusFeature= unescape(args.focus).replace('_', ' ');
         var req= new XMLHttpRequest();
-        var str= baseUrl + "?getfocusyearforobject=" + args.focus + "&range=verified";
+        var str= baseUrl + "?getfocustimeforobject=" + args.focus + "&range=verified";
         console.log(str);
         req.open("GET", str, false);
         req.send();
         response= JSON.parse(req.responseText);
-        setPOILayerYear(response.focusyear);
+        setPOILayerTime(response.focustime);
         map.zoomTo(0);
     }
     else {
-        setPOILayerYear(timelineInitialYear);
+        setPOILayerTime(timelineInitial);
         map.zoomToMaxExtent();
     }
 }
 
 function getConfig(name, defaultValue) {
-    if(config[name]) return config[name];
+    //~ if(config[name]) return config[name];
+    if(config.hasOwnProperty(name)) return config[name];
     return defaultValue;
 }
 
@@ -332,24 +333,24 @@ function onFeatureUnselect(evt) {
 	}
 }
 
-function writeYearSelectors(from, to, step) {
-	document.write('<span id="yearsel">\n');
+function writeTimeSelectors(from, to, step) {
+	document.write('<span id="timesel">\n');
 	for(var i= from; i<=to; i+= step) {
-		document.write('<a href="#" onClick="javaScript: setPOILayerYear(' + i + ')" title=' + i + ' alt=' + i + '>' + 
+		document.write('<a href="#" onClick="javaScript: setPOILayerTime(' + i + ')" title=' + i + ' alt=' + i + '>' + 
 			(i%100? '-': '|') + ' </a>\n');
 	}
 	document.write('</span>');
 }
 
-var timerCurrYear= getConfig('timelineMinYear', -50), timerMinYear= getConfig('timelineMinYear', -50), timerMaxYear= getConfig('timelineMaxYear', 565), 
+var timerCurrTime= getConfig('timelineMin', -50), timerMinTime= getConfig('timelineMin', -50), timerMaxTime= getConfig('timelineMax', 565), 
     timerStep= getConfig('animationDefaultStep', 3), timerInterval= 1000, timerID= null;
 
-function timeJump(relYear) {
-	timerCurrYear+= relYear;
-	if(timerCurrYear>timerMaxYear) timerCurrYear= timerMinYear;
-	if(timerCurrYear<timerMinYear) timerCurrYear= timerMaxYear;
-	timelineSetYear(timerCurrYear);
-	setPOILayerYear(timerCurrYear);
+function timeJump(relTime) {
+	timerCurrTime+= relTime;
+	if(timerCurrTime>timerMaxTime) timerCurrTime= timerMinTime;
+	if(timerCurrTime<timerMinTime) timerCurrTime= timerMaxTime;
+	timelineSetTime(timerCurrTime);
+	setPOILayerTime(timerCurrTime);
 }
 
 function timerFunc() {
