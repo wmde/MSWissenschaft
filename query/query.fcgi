@@ -73,10 +73,18 @@ def get_pois_by_date(date, categories):
             'AND longitude>=%s AND latitude>=%s ' + \
             'AND longitude<=%s AND latitude<=%s ' + \
             'AND (' + catstr + ') ORDER BY -hitcount LIMIT 25'
-    #~ return "%s -- %s" % (sqlstr, str(args))
     rows= sqlExecute(sqlstr, args)
     
+    #~ hitcountMax= rows[0]['hitcount']
+    #~ hitcountMin= rows[-1]['hitcount']
+    #~ hitcountD= hitcountMax-hitcountMin
+    #~ if not hitcountD: hitcountD= 1
+    
     features= []
+    radiusMax= 25
+    radiusMin= 10
+    radius= radiusMax
+    radiusStep= float(radiusMax-radiusMin)/len(rows)
     for row in rows:
         features.append( {
             "type": "Feature", 
@@ -87,11 +95,13 @@ def get_pois_by_date(date, categories):
             "properties": { 
                 "category": row['category_name'],
                 "hitcount": row['hitcount'],
+                "page_title": row['page_title'],
+                "pointRadius": radius,
             }
         } )
+        radius-= radiusStep
 
-    
-    #~ return json.dumps(rows)
+    features= list(reversed(features))  # so that larger icons will end up with higher z-order than smaller ones
     return json.dumps( { 
                 "type": "FeatureCollection",
                 "features": features,

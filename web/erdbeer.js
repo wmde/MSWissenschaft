@@ -131,8 +131,10 @@ function poiLoadend(evt) {
 }
 
 function createPOILayer(title) {
-    var styleMap = new OpenLayers.StyleMap({pointRadius: 10,
-                             externalGraphic: 'img/icon-${category}.png'});
+    var styleMap = new OpenLayers.StyleMap({
+            pointRadius: '${pointRadius}',
+            externalGraphic: 'img/icon-${category}.png'
+        });
 	var layer= new OpenLayers.Layer.Vector(title, {
 		strategies: [ 
 			new OpenLayers.Strategy.BBOX({resFactor: 1.1})
