@@ -1,0 +1,24 @@
+sudo apt-get install lighttpd
+
+cat <<END | sudo tee /etc/lighttpd/conf-available/10-myfastcgi.conf
+fastcgi.debug = 1
+fastcgi.server += ( "/poi-query" =>
+    ((
+        "socket" => "/tmp/poi-query-fcgi.sock",
+        "bin-path" => "/home/johannesk/code/mswstuff/MSWissenschaft/query/query.fcgi",
+        "check-local" => "disable",
+        "max-procs" => 1,
+    ))
+)
+END
+
+sudo lighty-enable-mod myfastcgi 
+sudo lighty-enable-mod accesslog
+sudo service lighttpd restart
+
+echo Creating www-data mysql user.
+echo "drop user 'www-data'" | mysql --user=root mysql
+cat <<END | mysql --user=root mysql 
+create user 'www-data';
+grant select on *.* to 'www-data';
+END

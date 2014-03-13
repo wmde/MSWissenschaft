@@ -1,11 +1,11 @@
+#!/usr/bin/python
 import os
 import MySQLdb, MySQLdb.cursors
 import json
 import flask
 from flask import Flask
+from flup.server.fcgi import WSGIServer
 
-
-app = Flask(__name__)
 
 # todo merge stuff
 SQL_DEFAULTS_FILE= '~/.my.cnf'
@@ -45,7 +45,7 @@ def site_map():
             links.append(flask.escape(repr(rule)))
     return '<br>'.join(links)
 
-@app.route('/pois-for-pier/<int:pier_id>/<categories>')
+@app.route('/poi-query/pois-for-pier/<int:pier_id>/<categories>')
 def get_pois_for_pier(pier_id, categories):
     categories= categories.split(',')
     catstr= ' OR '.join( "category.category_name = %s" for cat in categories )
@@ -67,10 +67,10 @@ def get_pois_by_date(date, categories):
                      'WHERE (pier.pier_date_start<=%s AND pier.pier_date_end>=%s) AND (' + catstr + ') ORDER BY hitcount', args)
     return json.dumps(rows)
     
-@app.route('/piers')
+@app.route('/poi-query/piers')
 def get_piers():
     rows= sqlExecute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
     return json.dumps(rows)
     
 if __name__ == '__main__':
-    app.run(debug= True)
+    WSGIServer(app).run(debug= True)

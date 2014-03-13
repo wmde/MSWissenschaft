@@ -131,6 +131,8 @@ function poiLoadend(evt) {
 }
 
 function createPOILayer(title) {
+    var styleMap = new OpenLayers.StyleMap({pointRadius: 10,
+                             externalGraphic: 'img/icon-${category}.png'});
 	var layer= new OpenLayers.Layer.Vector(title, {
 		strategies: [ 
 			new OpenLayers.Strategy.BBOX({resFactor: 1.1})
@@ -138,7 +140,8 @@ function createPOILayer(title) {
 		protocol: new OpenLayers.Protocol.HTTP({
 			url: baseUrl,
 			format: new OpenLayers.Format.Text()
-		})
+		}),
+        styleMap: styleMap
 	});
 	layer.events.on({
 		'featureselected': onFeatureSelect,
@@ -150,13 +153,24 @@ function createPOILayer(title) {
 	return layer;
 }
 
+function dateToYMD(date) {
+    var d = date.getDate();
+    var m = date.getMonth() + 1;
+    var y = date.getFullYear();
+    return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+}
+
 function setPOILayerTime(time) {
+    console.log("setPOILayerTime " + time);
     var layerConfig= getConfig('POILayers', '');
     for(var i= 0; i<POILayers.length; i++) {
         POILayers[i].protocol= new OpenLayers.Protocol.HTTP({
-                url: baseUrl + '?ranges=' + layerConfig[i].ranges + '&time=' + time,
-                format: new OpenLayers.Format.Text()
+                //~ url: baseUrl + '?categories=' + layerConfig[i].categories+ '&time=' + time,
+                url: baseUrl + '/' + dateToYMD(new Date(beginDate+time*(1000/*seconds*/ * 60 /*minutes*/ * 60 /*hours*/ * 24 /*days*/))) + '/' + layerConfig[i].categories,
+                //~ format: new OpenLayers.Format.Text()
+                format: new OpenLayers.Format.GeoJSON()
             });
+        console.log(POILayers[i].protocol['url']);
         POILayers[i].refresh({force:true});
         POILayers[i].redraw();
     }

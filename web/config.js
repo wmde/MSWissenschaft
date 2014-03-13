@@ -55,28 +55,28 @@ config= {
 		{"lat": "49.02", "time": DayOffset('2014-09-22'), "lon": "12.11", "title": "Regensburg<br/>Werftstra\u00dfe, Anleger \u201cWili\u201d"},
 		{"lat": "49.73", "time": DayOffset('2014-09-26'), "lon": "11.05", "title": "Forchheim<br/>Main-Donau-Kanal, Austra\u00dfe"},
 	],
-    "POIBase": "../query/query.py",
+    "POIBase": "/poi-query/pois-by-date",
     "POILayers": [
         {
             "title": "<img src='img/icon-Politik.png' style='margin: 4px;' align='right'> Politik",
-            "categories": "Politik",
+            "categories": "Politik,Kultur,Bildung,Wirtschaft",
             "visible": true
         },
-        {
-            "title": "<img src='img/icon-Kultur.png' style='margin: 4px;' align='right'> Kultur",
-            "categories": "Kultur",
-            "visible": true
-        },
-        {
-            "title": "<img src='img/icon-Bildung.png' style='margin: 4px;' align='right'> Bildung",
-            "categories": "Bildung",
-            "visible": true
-        },
-        {
-            "title": "<img src='img/icon-Wirtschaft.png' style='margin: 4px;' align='right'> Wirtschaft",
-            "categories": "Wirtschaft",
-            "visible": true
-        }
+        //~ {
+            //~ "title": "<img src='img/icon-Kultur.png' style='margin: 4px;' align='right'> Kultur",
+            //~ "categories": "Kultur",
+            //~ "visible": true
+        //~ },
+        //~ {
+            //~ "title": "<img src='img/icon-Bildung.png' style='margin: 4px;' align='right'> Bildung",
+            //~ "categories": "Bildung",
+            //~ "visible": true
+        //~ },
+        //~ {
+            //~ "title": "<img src='img/icon-Wirtschaft.png' style='margin: 4px;' align='right'> Wirtschaft",
+            //~ "categories": "Wirtschaft",
+            //~ "visible": true
+        //~ }
     ],
     "animationDefaultStep": 5,
     "dom": {
