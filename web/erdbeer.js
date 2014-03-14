@@ -133,7 +133,8 @@ function poiLoadend(evt) {
 function createPOILayer(title) {
     var styleMap = new OpenLayers.StyleMap({
             pointRadius: '${pointRadius}',
-            externalGraphic: 'img/icon-${category}.png'
+            externalGraphic: 'img/icon-${category}.png',
+            //~ title: '<a href="../pages/data/de.wikipedia.org/wiki/${page_title}">${page_title}</a>'
         });
 	var layer= new OpenLayers.Layer.Vector(title, {
 		strategies: [ 
@@ -141,7 +142,8 @@ function createPOILayer(title) {
 			],
 		protocol: new OpenLayers.Protocol.HTTP({
 			url: baseUrl,
-			format: new OpenLayers.Format.Text()
+			//~ format: new OpenLayers.Format.Text()
+			format: new OpenLayers.Format.GeoJSON()
 		}),
         styleMap: styleMap
 	});
@@ -496,8 +498,10 @@ function showDlg(contentHTML) {
 	frame.innerHTML= contentHTML;
 	var bgrc= document.body.getBoundingClientRect();
 	var framerc= frame.getBoundingClientRect();
-	frame.style.left= (((bgrc.right - bgrc.left) - (framerc.right - framerc.left)) / 2) + "px";
-	frame.style.top= (((bgrc.bottom - bgrc.top) - (framerc.bottom - framerc.top))  / 2) + "px";
+	//~ frame.style.left= (((bgrc.right - bgrc.left) - (framerc.right - framerc.left)) / 2) + "px";
+	//~ frame.style.top= (((bgrc.bottom - bgrc.top) - (framerc.bottom - framerc.top))  / 2) + "px";
+    frame.style.top= "50px";
+    frame.style.height= (bgrc.bottom - bgrc.top) - 100 + "px";
 	frame.style.visibility= 'visible';
 	frame.onclick= closeDlg;
 	bg.onclick= closeDlg;

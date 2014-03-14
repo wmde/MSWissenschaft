@@ -64,21 +64,16 @@ def get_pois_by_date(date, categories):
     #~ return str(bbox)
     categories= categories.split(',')
     catstr= ' OR '.join( "category.category_name = %s" for cat in categories )
-    args= [date, date]
+    args= []    #[date, date]
     args.extend(bbox)
     args.extend(categories)
     sqlstr= 'SELECT page_title,longitude,latitude,hitcount,category_name FROM %s ' % SQL_POITABLE + \
             'JOIN category ON poi.category_id=category.category_id JOIN pier ON poi.pier_id=pier.pier_id ' + \
-            'WHERE (pier.pier_date_start<=%s AND pier.pier_date_end>=%s) ' + \
-            'AND longitude>=%s AND latitude>=%s ' + \
+            'WHERE longitude>=%s AND latitude>=%s ' + \
             'AND longitude<=%s AND latitude<=%s ' + \
             'AND (' + catstr + ') ORDER BY -hitcount LIMIT 25'
     rows= sqlExecute(sqlstr, args)
-    
-    #~ hitcountMax= rows[0]['hitcount']
-    #~ hitcountMin= rows[-1]['hitcount']
-    #~ hitcountD= hitcountMax-hitcountMin
-    #~ if not hitcountD: hitcountD= 1
+            #~ 'WHERE (pier.pier_date_start<=%s AND pier.pier_date_end>=%s) AND ' + \
     
     features= []
     radiusMax= 25
@@ -95,8 +90,10 @@ def get_pois_by_date(date, categories):
             "properties": { 
                 "category": row['category_name'],
                 "hitcount": row['hitcount'],
-                "page_title": row['page_title'],
                 "pointRadius": radius,
+                "page_title": row['page_title'],
+                "title": '<a href="javascript:openPOI(\'%s\')">%s</a>' % (row['page_title'], row['page_title']),
+                #~ "description": row['page_title'],
             }
         } )
         radius-= radiusStep

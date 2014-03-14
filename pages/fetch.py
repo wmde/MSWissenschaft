@@ -26,7 +26,7 @@ def unfuck_encoding(filename):
 
 def getArticle(title):
     t= title
-    if os.path.exists(os.path.join('de.wikipedia.org/wiki', t)):
+    if os.path.exists(os.path.join('de.wikipedia.org/wiki', t + ".html")):
         return True
     try:
         subprocess.check_call(FETCH_CMD_TEMPLATE % t, shell=True)
@@ -46,6 +46,7 @@ def getArticle(title):
         except:
             pass
         return False
+    os.rename(os.path.join('de.wikipedia.org/wiki', t), os.path.join('de.wikipedia.org/wiki', t + ".html"))
     return True
 
 queue= deque()
