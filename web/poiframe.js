@@ -19,7 +19,7 @@ function showDisabledIframefoo(contentHTML) {
     var dlgfoo= document.getElementById("dlgfoo");
     dlgfoo.style.position= frame.childNodes[0].style.position;
     dlgfoo.style.left= frame.childNodes[0].style.left;
-    dlgfoo.style.width= (framerc.right-framerc.left) - 16 + "px";
+    dlgfoo.style.width= (framerc.right-framerc.left) - 32 + "px";
     dlgfoo.style.top= frame.childNodes[0].style.top;
     dlgfoo.style.height= frame.childNodes[0].style.height;
     dlgfoo.style.zIndex= 20000;
