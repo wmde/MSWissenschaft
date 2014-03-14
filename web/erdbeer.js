@@ -496,9 +496,12 @@ function showDlg(contentHTML) {
 	var frame= document.getElementById('dlgframe');
 	var bg= document.getElementById('dlgbackground');
 	frame.innerHTML= contentHTML;
+    //~ frame= frame.childNodes[0];
 	var bgrc= document.body.getBoundingClientRect();
-	var framerc= frame.getBoundingClientRect();
-	//~ frame.style.left= (((bgrc.right - bgrc.left) - (framerc.right - framerc.left)) / 2) + "px";
+	var framerc= frame.childNodes[0].getBoundingClientRect();
+    //~ console.log(bgrc.left, bgrc.top, bgrc.right, bgrc.bottom);
+    //~ console.log(framerc.left, framerc.top, framerc.right, framerc.bottom);
+	frame.childNodes[0].style.left= (((bgrc.right - bgrc.left) - (framerc.right - framerc.left)) / 2) + "px";
 	//~ frame.style.top= (((bgrc.bottom - bgrc.top) - (framerc.bottom - framerc.top))  / 2) + "px";
     frame.style.top= "50px";
     frame.style.height= (bgrc.bottom - bgrc.top) - 100 + "px";
