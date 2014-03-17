@@ -1,4 +1,4 @@
-sudo apt-get install lighttpd
+sudo apt-get install lighttpd mysql-server
 
 cat <<END | sudo tee /etc/lighttpd/conf-available/10-myfastcgi.conf
 fastcgi.debug = 1
@@ -16,10 +16,9 @@ sudo lighty-enable-mod myfastcgi
 sudo lighty-enable-mod accesslog
 sudo service lighttpd restart
 
-sudo apt-get install mysql-server
 echo Creating www-data mysql user.
-echo "drop user 'www-data'" | mysql --user=root mysql
-cat <<END | mysql --user=root mysql 
+echo "drop user 'www-data'" | mysql --user=root mysql --password 
+cat <<END | mysql --user=root mysql --password 
 create user 'www-data';
 grant select on *.* to 'www-data';
 END
