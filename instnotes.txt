@@ -1,11 +1,11 @@
-sudo apt-get install lighttpd mysql-server python-requests python-mysqldb
+sudo apt-get install lighttpd mysql-server python-requests python-mysqldb python-flask
 
 cat <<END | sudo tee /etc/lighttpd/conf-available/10-myfastcgi.conf
 fastcgi.debug = 1
 fastcgi.server += ( "/poi-query" =>
     ((
         "socket" => "/tmp/poi-query-fcgi.sock",
-        "bin-path" => "/home/johannesk/code/mswstuff/MSWissenschaft/query/query.fcgi",
+        "bin-path" => "$(pwd)/query/query.fcgi",
         "check-local" => "disable",
         "max-procs" => 1,
     ))
