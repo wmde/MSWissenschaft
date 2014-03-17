@@ -13,8 +13,7 @@ fastcgi.server += ( "/poi-query" =>
 )
 END
 
-sudo lighty-enable-mod myfastcgi 
-sudo lighty-enable-mod accesslog
+sudo lighty-enable-mod fastcgi myfastcgi accesslog
 sudo service lighttpd restart
 
 echo Creating www-data mysql user.
@@ -26,3 +25,6 @@ sudo ln -sf $(pwd) /var/www/MSWissenschaft
 
 
 # echo "Now you need to create ~/.my.cnf, create a mysql user with write access, then run dbimport.py, import QR codes, download html pages"
+
+# yeah, whatever!
+sudo dbus-send --system --type=method_call --print-reply --dest=org.freedesktop.Accounts /org/freedesktop/Accounts/User1000 org.freedesktop.Accounts.User.SetXSession string:xfce

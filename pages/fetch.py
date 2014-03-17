@@ -29,9 +29,9 @@ def getArticle(title):
     if os.path.exists(os.path.join('de.wikipedia.org/wiki', t + ".html")):
         return True
     try:
-        subprocess.check_call(FETCH_CMD_TEMPLATE % t, shell=True)
+        subprocess.call(FETCH_CMD_TEMPLATE % t, shell=True)
         if not os.path.exists(os.path.join('de.wikipedia.org/wiki', t)):
-            print("wget succeeded but file doesn't exist, checking for fucked up encoding")
+            print("fetched file doesn't exist, checking for fucked up encoding")
             foo= ''
             for x in os.path.join('de.wikipedia.org/wiki', t).split('/'):
                 foo= os.path.join(foo, x)
