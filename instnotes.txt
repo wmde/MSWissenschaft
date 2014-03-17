@@ -1,4 +1,4 @@
-sudo apt-get install lighttpd mysql-server
+sudo apt-get install lighttpd mysql-server python-requests python-mysqldb
 
 cat <<END | sudo tee /etc/lighttpd/conf-available/10-myfastcgi.conf
 fastcgi.debug = 1
@@ -25,3 +25,7 @@ END
 
 echo "creating symlink: /var/www/MSWissenschaft => $(pwd)"
 sudo ln -sf $(pwd) /var/www/MSWissenschaft
+
+
+
+# echo "Now you need to create ~/.my.cnf, create a mysql user with write access, then run dbimport.py, import QR codes, download html pages"
