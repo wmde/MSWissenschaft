@@ -97,7 +97,7 @@ clone_repo() {
 }
 
 install_xfce_config() {
-    sudo -u $APPUSR sh -c "rm -rf $(appuserdir)/.config/xfce4 && cp -r $(appdir)/setup/dotconfig $(appuserdir)/.config/xfce4; git pull" || exit 1
+    sudo -u $APPUSR sh -c "rm -rf $(appuserdir)/.config/xfce4 && cp -r $(appdir)/setup/dotconfig-xfce4 $(appuserdir)/.config/xfce4; git pull" || exit 1
 }
 
 
