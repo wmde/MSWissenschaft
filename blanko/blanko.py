@@ -2,13 +2,32 @@
 import subprocess
 import re
 import time
-
-#this script waits for the screensaver to blank, then kills chromium-browser, which resets the state of the web app.
+import thread
 
 if __name__ == '__main__':
-    proc= subprocess.Popen(['xscreensaver-command', '-watch'], stdout= subprocess.PIPE)
-    while True:
-        line= proc.stdout.readline()
-        if re.match('^BLANK.*', line):
-            subprocess.call('kill $(pgrep chromium)', shell= True)
-            
+    # this waits for the screensaver to blank, then kills chromium-browser, which resets the state of the web app.
+    def WatchScreensaver():
+        while True:
+            proc= subprocess.Popen(['xscreensaver-command', '-watch'], stdout= subprocess.PIPE)
+            while True:
+                line= proc.stdout.readline()
+                if re.match('^BLANK.*', line):
+                    subprocess.call('kill $(pgrep chromium)', shell= True)
+    
+    # endlessly restart chromium
+    def EndlessChromium():
+        while True:
+            subprocess.call("chromium-browser --user-data-dir=$HOME/.config/chromium-mswissenschaft --kiosk 'http://localhost/MSWissenschaft/web'", shell=True)
+            time.sleep(0.5)
+    
+    # endlessly restart unclutter (which shouldn't ever exit...)
+    def StartUnclutter():
+        while True:
+            subprocess.call("unclutter -idle 0.1'", shell=True)
+            time.sleep(0.5)
+    
+    thread.start_new_thread(EndlessChromium, ())
+    thread.start_new_thread(WatchScreensaver, ())
+    
+    StartUnclutter()
+    
