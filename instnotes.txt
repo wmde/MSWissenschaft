@@ -1,5 +1,5 @@
-sudo apt-get install lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev
-sudo pip install requests flask flup MySQL-python
+sudo apt-get install chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver-gl unclutter xfce4 || exit 1
+sudo pip install requests flask flup MySQL-python qrcode || exit 1
 
 cat <<END | sudo tee /etc/lighttpd/conf-available/10-myfastcgi.conf
 fastcgi.debug = 1
@@ -13,14 +13,14 @@ fastcgi.server += ( "/poi-query" =>
 )
 END
 
-sudo lighty-enable-mod fastcgi myfastcgi accesslog
-sudo service lighttpd restart
+sudo lighty-enable-mod fastcgi myfastcgi accesslog || exit 1
+sudo service lighttpd restart || exit 1
 
 echo Creating www-data mysql user.
-echo "GRANT SELECT ON *.* TO 'www-data'@localhost;" | mysql --user=root mysql --password 
+echo "GRANT SELECT ON *.* TO 'www-data'@localhost;" | mysql --user=root mysql --password  || exit 1
 
 echo "creating symlink: /var/www/MSWissenschaft => $(pwd)"
-sudo ln -sf $(pwd) /var/www/MSWissenschaft
+sudo ln -sf $(pwd) /var/www/MSWissenschaft || exit 1
 
 
 

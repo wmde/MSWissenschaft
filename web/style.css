@@ -199,11 +199,6 @@ div {
     padding-bottom: 0.5em;
 }
 
-.handcursor {
-	cursor: pointer;
-	cursor: hand;
-}
-
 .aboutlogo {
 	vertical-align: bottom;
 	margin: 5px;
@@ -278,3 +273,16 @@ body {
     -webkit-text-size-adjust: none;
 }
 
+.handcursor {
+	cursor: pointer;
+	cursor: hand;
+}
+
+/* 
+stuff like this goes to config.css (only for the exhibit version):
+.handcursor { cursor: none; }
+* { cursor: none; } 
+*/
+.handcursor { cursor: none; }
+* { cursor: none; } 
+@import url("config.css")
