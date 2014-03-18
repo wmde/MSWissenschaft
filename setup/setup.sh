@@ -10,7 +10,7 @@ appdir() {
 
 install_packages() {
     sudo apt-get remove gnome-screensaver
-    sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal || exit 1
+    sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal vim || exit 1
     sudo pip install requests flask flup MySQL-python qrcode || exit 1
 }
 
@@ -73,7 +73,7 @@ add_appuser_sql() {
 }
 
 setup_autologin() {
-    XSESSION=xfce
+    XSESSION=msw-kiosk
     echo Setting up autologin...
     sudo /usr/lib/lightdm/lightdm-set-defaults --autologin $APPUSR
     sudo /usr/lib/lightdm/lightdm-set-defaults --session $XSESSION $APPUSR
