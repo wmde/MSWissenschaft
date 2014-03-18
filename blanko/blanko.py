@@ -20,11 +20,8 @@ if __name__ == '__main__':
             subprocess.call("chromium-browser --user-data-dir=$HOME/.config/chromium-mswissenschaft --kiosk 'http://localhost/MSWissenschaft/web'", shell=True)
             time.sleep(0.5)
     
-    # endlessly restart unclutter (which shouldn't ever exit...)
     def StartUnclutter():
-        while True:
-            subprocess.call("unclutter -idle 0.1'", shell=True)
-            time.sleep(0.5)
+        subprocess.call("unclutter -idle 0.1", shell=True)
     
     thread.start_new_thread(EndlessChromium, ())
     thread.start_new_thread(WatchScreensaver, ())
