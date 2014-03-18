@@ -8,6 +8,10 @@ appdir() {
     sh -c "echo ~$APPUSR/MSWissenschaft"
 }
 
+appuserdir() {
+    sh -c "echo ~$APPUSR"
+}
+
 install_packages() {
     sudo apt-get remove gnome-screensaver
     sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal vim || exit 1
@@ -73,7 +77,7 @@ add_appuser_sql() {
 }
 
 setup_autologin() {
-    XSESSION=msw-kiosk
+    XSESSION=xfce
     echo Setting up autologin...
     sudo /usr/lib/lightdm/lightdm-set-defaults --autologin $APPUSR
     sudo /usr/lib/lightdm/lightdm-set-defaults --session $XSESSION $APPUSR
@@ -92,6 +96,10 @@ clone_repo() {
     )
 }
 
+install_xfce_config() {
+    sudo -u $APPUSR sh -c "rm -rf $(appuserdir)/.config/xfce4 && cp -r $(appdir)/setup/dotconfig $(appuserdir)/.config/xfce4; git pull" || exit 1
+}
+
 
 install_packages
 add_adminuser
@@ -102,6 +110,7 @@ clone_repo
 configure_lighttpd
 create_www_symlink
 setup_autologin
+install_xfce_config
 
 echo
 echo "All seems ok."
