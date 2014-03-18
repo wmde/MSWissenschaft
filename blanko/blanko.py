@@ -21,6 +21,7 @@ if __name__ == '__main__':
             time.sleep(0.5)
     
     def StartUnclutter():
+        subprocess.call("killall unclutter", shell=True)
         subprocess.call("unclutter -idle 0.1", shell=True)
     
     thread.start_new_thread(EndlessChromium, ())
