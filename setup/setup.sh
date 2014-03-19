@@ -14,7 +14,7 @@ appuserdir() {
 
 install_packages() {
     sudo apt-get remove gnome-screensaver apport
-    sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal vim || exit 1
+    sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal vim perl libwww-perl || exit 1
     sudo pip install requests flask flup MySQL-python qrcode || exit 1
 }
 
@@ -101,6 +101,24 @@ install_xfce_config() {
     sudo -u $APPUSR sh -c "rm -rf $(appuserdir)/.config/autostart && cp -r $(appdir)/setup/dotconfig/autostart $(appuserdir)/.config/autostart" || exit 1
 }
 
+install_screensaver() {
+    echo Installing screensaver config...
+    sudo -u $APPUSR sh -c "cp dotxscreensaver $(appuserdir)/.xscreensaver"
+}
+
+install_update_cronjob() {
+    echo Installing crontab for $APPUSR...
+    cat << END | sudo -u $APPUSR crontab
+# m h  dom mon dow   command
+0   *  *   *   *     sh -c "cd $HOME/MSWissenschaft/update && ./update-appusr.py"
+END
+    echo Installing crontab for $ADMINUSR...
+    cat << END | sudo -u $ADMINUSR crontab
+# m h  dom mon dow   command
+0   *  *   *   *     sh -c "cd $HOME/MSWissenschaft/update && ./update-adminusr.py"
+END
+}
+
 
 install_packages
 add_adminuser
@@ -112,6 +130,8 @@ configure_lighttpd
 create_www_symlink
 setup_autologin
 install_xfce_config
+install_screensaver
+install_update_cronjob
 
 echo
 echo "All seems ok."
