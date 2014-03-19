@@ -283,4 +283,4 @@ stuff like this goes to config.css (only for the exhibit version):
 .handcursor { cursor: none; }
 * { cursor: none; } 
 */
-@import url("config.css")
+/* @import url("config.css") */
