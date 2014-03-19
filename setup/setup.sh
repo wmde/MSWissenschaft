@@ -13,7 +13,7 @@ appuserdir() {
 }
 
 install_packages() {
-    sudo apt-get remove gnome-screensaver
+    sudo apt-get remove gnome-screensaver apport
     sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal vim || exit 1
     sudo pip install requests flask flup MySQL-python qrcode || exit 1
 }
