@@ -152,8 +152,8 @@ div {
 }
 
 ::-webkit-scrollbar {
-    height: 32px;
-    width: 32px;
+    height: 48px;
+    width: 48px;
 	background-color: #d0e0ff;
 }
 ::-webkit-scrollbar-thumb {

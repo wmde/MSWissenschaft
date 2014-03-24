@@ -184,14 +184,14 @@ function setPOILayerTime(time) {
 }
 
 function init(){
-	var layerswitcher= new OpenLayers.Control.LayerSwitcher({roundedCornerColor: "#575757"});
+	//~ var layerswitcher= new OpenLayers.Control.LayerSwitcher({roundedCornerColor: "#575757"});
 	map= new OpenLayers.Map('map', { 
 		maxExtent: new OpenLayers.Bounds(-20037508,-20037508,20037508,20037508),
 		controls: [
-			layerswitcher, 
+			//~ layerswitcher, 
 			//new OpenLayers.Control.Permalink('permalink'),  //doesn't work
 			//new OpenLayers.Control.PanZoomBar(),
-			new OpenLayers.Control.PanPanel(),
+			//~ new OpenLayers.Control.PanPanel(),
 			new OpenLayers.Control.ZoomPanel(),
 			new OpenLayers.Control.Navigation(),
 			//new OpenLayers.Control.EditingToolbar(),
@@ -286,7 +286,7 @@ function init(){
         map.zoomTo(0);
     }
     else {
-        setPOILayerTime(timelineInitial);
+        //~ setPOILayerTime(timelineInitial);
         map.zoomToMaxExtent();
     }
 }

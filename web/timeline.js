@@ -33,6 +33,12 @@ function timelineSetTime(selectedTime) {
 	document.getElementById('time-display').innerHTML= '' + Math.round(selectedTime);
 }
 
+function timelineGotoDate(date) {
+    var time= Math.floor((date-beginDate) / (1000*60*60*24));
+    timelineSetTime(time);
+    setPOILayerTime(time);
+}
+
 function returnfalse() {
 	return false;
 }
@@ -288,5 +294,6 @@ function createTimeline() {
 	body.onmousemove= timelineMousemove;
 	body.onmouseup= timelineMouseup;
 	
-	timelineSetTime(timelineInitial);
+	//~ timelineSetTime(10); //timelineInitial);
+    timelineGotoDate(Date.now() + 60 * (1000*60*60*24));
 }
