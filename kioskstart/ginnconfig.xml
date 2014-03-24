@@ -1,12 +1,16 @@
-<wish gesture="Drag" fingers="2">
-    <action name="zoom_in" when="update">
-        <trigger prop="delta y" min="10" max="100"/>
-        <button>5</button>
-    </action>
-</wish>
-<wish gesture="Drag" fingers="2">
-    <action name="zoom_out" when="update">
-        <trigger prop="delta y" min="-100" max="-10"/>
-        <button>6</button>
-    </action>
-</wish>
+<ginn>
+    <global>
+        <wish gesture="Drag" fingers="2">
+            <action name="zoom_in" when="update">
+                <trigger prop="delta y" min="10" max="100"/>
+                <button>5</button>
+            </action>
+        </wish>
+        <wish gesture="Drag" fingers="2">
+            <action name="zoom_out" when="update">
+                <trigger prop="delta y" min="-100" max="-10"/>
+                <button>6</button>
+            </action>
+        </wish>
+    </global>
+</ginn>
