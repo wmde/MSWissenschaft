@@ -20,12 +20,19 @@ if __name__ == '__main__':
             subprocess.call("chromium-browser --user-data-dir=$HOME/.config/chromium-mswissenschaft --kiosk 'http://localhost/MSWissenschaft/web'", shell=True)
             time.sleep(0.5)
     
+    # ginn should never exit, but restart it endlessly, just in case...
+    def EndlessGinn():
+        while True:
+            subprocess.call("ginn ginnconfig.xml", shell=True)
+            time.sleep(0.5)
+    
     def StartUnclutter():
         subprocess.call("killall unclutter", shell=True)
         subprocess.call("unclutter -idle 0.1", shell=True)
     
     thread.start_new_thread(EndlessChromium, ())
     thread.start_new_thread(WatchScreensaver, ())
+    thread.start_new_thread(EndlessGinn, ())
     
     StartUnclutter()
     
