@@ -93,6 +93,7 @@ def get_pois_by_date(date, categories):
                 "pointRadius": radius,
                 "page_title": row['page_title'],
                 "title": '<a href="javascript:openPOI(\'%s\')">%s</a>' % (row['page_title'], row['page_title']),
+                "description": '<a href="javascript:openPOI(\'%s\')"><img src="../qr/data/%s.svg" width=128 height=128/></a>' % (row['page_title'], row['page_title']),
                 #~ "description": row['page_title'],
             }
         } )
@@ -109,6 +110,18 @@ def get_pois_by_date(date, categories):
 def get_piers():
     rows= sqlExecute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
     return json.dumps(rows)
+    
+@app.route('/pier-for-date/<string:date>')
+def get_pier_for_date(date):
+    #~ rows= sqlExecute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
+    #~ return json.dumps(rows)
+    
+    # transition
+    # select * from pier where pier_date_end > "2014-05-26" and pier_date_start > "2014-05-26" order by pier_date_start limit 1;
+    
+    #~ select * from pier where pier_date_start <= %s and pier_date_end >= %s
+    pass
+    
     
 if __name__ == '__main__':
     app.debug= True
