@@ -28,7 +28,7 @@ def getCursor():
         flask.g.cursor= conn
     else:
         app.logger.debug('reusing db connection')
-        cursor= flask.g.userdb.cursor
+        cursor= flask.g.cursor
     return cursor
 
 # maybe will use PySQLPool or something later, so all code doing SQL stuff should use this function
@@ -74,6 +74,8 @@ def get_pois_by_date(date, categories):
             'AND (' + catstr + ') ORDER BY -hitcount LIMIT 25'
     rows= sqlExecute(sqlstr, args)
             #~ 'WHERE (pier.pier_date_start<=%s AND pier.pier_date_end>=%s) AND ' + \
+    if not len(rows): 
+        return ""
     
     features= []
     radiusMax= 25
@@ -113,14 +115,14 @@ def get_piers():
     
 @app.route('/pier-for-date/<string:date>')
 def get_pier_for_date(date):
-    #~ rows= sqlExecute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
-    #~ return json.dumps(rows)
+    rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_start <= %s and pier_date_end >= %s limit 1", (date, date))
+    if len(rows): return json.dumps(rows[0])
     
-    # transition
-    # select * from pier where pier_date_end > "2014-05-26" and pier_date_start > "2014-05-26" order by pier_date_start limit 1;
+    # transition. return nearest/last pier
+    rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_end > %s and pier_date_start > %s order by pier_date_start limit 1", (date, date))
+    if len(rows): return json.dumps(rows[0])
     
-    #~ select * from pier where pier_date_start <= %s and pier_date_end >= %s
-    pass
+    return '{}' # blah
     
     
 if __name__ == '__main__':

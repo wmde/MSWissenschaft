@@ -141,7 +141,7 @@ function createPOILayer(title) {
 			new OpenLayers.Strategy.BBOX({resFactor: 1.1})
 			],
 		protocol: new OpenLayers.Protocol.HTTP({
-			url: baseUrl,
+			url: baseUrl + "/asdf/Kultur,Politik,Wirtschaft,Wissenschaft+Bildung",
 			//~ format: new OpenLayers.Format.Text()
 			format: new OpenLayers.Format.GeoJSON()
 		}),
@@ -181,12 +181,37 @@ function setPOILayerTime(time) {
 	
 	if(document.getElementById("time-display")) document.getElementById("time-display").innerHTML= time; 
 	timerCurrTime= time;
+    
+    zoomToCurrentPier();
+}
+
+function zoomToCurrentPier() {
+    console.log("zoomToCurrentPier");
+    var date= dateToYMD(new Date(beginDate+timerCurrTime*(1000/*seconds*/ * 60 /*minutes*/ * 60 /*hours*/ * 24 /*days*/)));
+    var req= new XMLHttpRequest();
+    var str= "//localhost/poi-query/pier-for-date/" + date;
+    console.log(str);
+    req.open("GET", str, false);
+    req.send();
+    console.log(req.responseText);
+    response= JSON.parse(req.responseText);
+    var lat= response['pier_latitude'];
+    var lon= response['pier_longitude'];
+    console.log(lat, lon);
+    if(map) {
+        var center= new OpenLayers.LonLat(parseFloat(lon), parseFloat(lat)).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+        //~ console.log("map center: ", map.center.lon, map.center.lat);
+        //~ console.log("new center: ", center.lon, center.lat);
+        map.setCenter(center, 13, false, false);
+    }
+
 }
 
 function init(){
+    console.log("init()");
 	//~ var layerswitcher= new OpenLayers.Control.LayerSwitcher({roundedCornerColor: "#575757"});
 	map= new OpenLayers.Map('map', { 
-		maxExtent: new OpenLayers.Bounds(-20037508,-20037508,20037508,20037508),
+		//~ maxExtent: new OpenLayers.Bounds(-20037508,-20037508,20037508,20037508),
 		controls: [
 			//~ layerswitcher, 
 			//new OpenLayers.Control.Permalink('permalink'),  //doesn't work
@@ -287,7 +312,8 @@ function init(){
     }
     else {
         //~ setPOILayerTime(timelineInitial);
-        map.zoomToMaxExtent();
+        //~ map.zoomToMaxExtent();
+        zoomToCurrentPier();
     }
 }
 

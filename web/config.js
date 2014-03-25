@@ -59,7 +59,7 @@ config= {
     "POILayers": [
         {
             "title": "<img src='img/icon-Politik.png' style='margin: 4px;' align='right'> Politik",
-            "categories": "Politik,Kultur,Bildung,Wirtschaft",
+            "categories": "Politik,Kultur,Wissenschaft+Bildung,Wirtschaft",
             "visible": true
         },
         //~ {
