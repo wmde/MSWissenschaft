@@ -95,7 +95,7 @@ def get_pois_by_date(date, categories):
                 "pointRadius": radius,
                 "page_title": row['page_title'],
                 "title": '<a href="javascript:openPOI(\'%s\')">%s</a>' % (row['page_title'], row['page_title']),
-                "description": '<a href="javascript:openPOI(\'%s\')"><img src="../qr/data/%s.svg" width=128 height=128/></a>' % (row['page_title'], row['page_title']),
+                "description": '<a href="javascript:openPOI(\'%s\')"><img src="../qr/data/%s.svg" width=128 height=128/></a><br/><small>http://de.wikipedia.org/wiki/%s' % (row['page_title'], row['page_title'], row['page_title'].replace(' ', '_')),
                 #~ "description": row['page_title'],
             }
         } )
