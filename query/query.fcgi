@@ -25,7 +25,7 @@ def getCursor():
         cursor= conn.cursor()
         cursor.execute("USE %s" % SQL_DB)
         flask.g.conn= conn
-        flask.g.cursor= conn
+        flask.g.cursor= cursor
     else:
         app.logger.debug('reusing db connection')
         cursor= flask.g.cursor
@@ -118,9 +118,9 @@ def get_pier_for_date(date):
     rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_start <= %s and pier_date_end >= %s limit 1", (date, date))
     if len(rows): return json.dumps(rows[0])
     
-    # transition. return nearest/last pier
-    rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_end > %s and pier_date_start > %s order by pier_date_start limit 1", (date, date))
-    if len(rows): return json.dumps(rows[0])
+    #~ # transition. return nearest/last pier
+    #~ rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_end > %s and pier_date_start > %s order by pier_date_start limit 1", (date, date))
+    #~ if len(rows): return json.dumps(rows[0])
     
     return '{}' # blah
     

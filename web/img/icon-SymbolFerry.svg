@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="146.84756" height="146.57051" id="svg1875" sodipodi:version="0.32" inkscape:version="0.44.1" version="1.0" sodipodi:docbase="C:\Dokumente und Einstellungen\Stefan Fussan\Eigene Dateien\WikiVoyage\Symbole" sodipodi:docname="SymbolFerry.svg">
+  <defs id="defs1877"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="2.8" inkscape:cx="160.59249" inkscape:cy="44.367758" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" inkscape:window-width="1067" inkscape:window-height="835" inkscape:window-x="99" inkscape:window-y="72"/>
+  <metadata id="metadata1880">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>Symbol Ferry</dc:title>
+        <dc:date>04. Dec. 2006</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Stefan Fussan</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Map</rdf:li>
+            <rdf:li>Symbol</rdf:li>
+            <rdf:li>Wikivoyage</rdf:li>
+            <rdf:li>jetty</rdf:li>
+            <rdf:li>ferry</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Symbol for Wikivoyage maps: ferry</dc:description>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/2.5/"/>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Stefan Fussan</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Stefan Fussan</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/by-sa/2.5/">
+        <cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+        <cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+        <cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+        <cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Kasten" inkscape:groupmode="layer" id="layer1" transform="translate(836.2809,29.4945)">
+    <path style="opacity:1;color:black;fill:#1e0059;fill-opacity:1;fill-rule:evenodd;stroke:black;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:2.52529125;stroke-opacity:1;visibility:visible;display:inline;overflow:visible" d="M -833.50388,-26.994501 L -691.93336,-26.717457 L -691.93336,114.57601 L -833.78092,114.29897 L -833.50388,-26.994501 z " id="path1900"/>
+  </g>
+  <g inkscape:groupmode="layer" id="layer2" inkscape:label="Schiff" style="opacity:1" transform="translate(2e-5,10e-7)">
+    <g id="g2823" transform="matrix(1.049949,0,0,1.048031,-6.992404,0.681033)">
+      <path sodipodi:nodetypes="ccccccccccccccccccccccsccscscc" id="path1908" d="M 16.041583,77.058375 L 51.803734,76.944483 L 55.448285,69.997058 L 72.418222,69.769275 L 76.290558,62.480172 L 59.89008,62.366282 L 67.634749,49.154785 L 84.832473,49.040893 L 103.3969,19.542814 L 107.04145,19.428921 L 104.8775,26.718022 L 111.93882,26.718022 L 111.93882,31.615386 L 103.51079,31.615386 L 97.474507,46.535265 L 97.474507,50.065924 L 103.51079,55.191072 L 135.23743,55.419003 L 135.12457,62.415641 L 92.349358,62.480172 L 89.843728,69.655382 L 135.19351,69.516737 C 135.18919,78.532481 135.19947,106.98949 135.12023,107.90947 C 135.03654,108.88116 133.35437,109.79467 132.33852,110.1315 C 122.58769,110.99863 119.20913,105.82226 112.90196,102.02552 C 112.90196,102.02552 99.068998,109.06208 88.590914,109.06208 C 78.112833,109.06208 65.015229,101.65909 65.015229,101.65909 C 65.015229,101.65909 61.256787,105.18975 54.764932,107.01202 C 48.273075,108.8343 39.845053,108.8343 39.845053,108.8343 L 16.041583,77.058375 z " style="color:black;fill:white;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25252914;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:2.52529125;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"/>
+      <path sodipodi:nodetypes="cscsccccscscc" id="path1910" d="M 16.497152,109.28987 C 16.497152,109.28987 30.392001,116.92064 40.414514,116.57897 C 50.437028,116.23729 65.015229,108.94819 65.015229,108.94819 C 65.015229,108.94819 77.315587,116.80675 89.160375,116.57897 C 101.00517,116.35118 113.6472,109.17598 113.6472,109.17598 C 118.19352,111.96243 127.9111,117.2068 135.00855,115.13537 L 135.02093,120.74585 C 128.87217,122.40764 121.16993,120.85317 113.30552,116.35118 C 113.30552,116.35118 104.08025,123.64028 90.982652,123.52639 C 77.885048,123.4125 64.673553,116.23729 64.673553,116.23729 C 64.673553,116.23729 55.676068,123.29861 41.553435,123.4125 C 27.430803,123.52639 16.38326,116.35118 16.38326,116.35118 L 16.497152,109.28987 z " style="color:black;fill:white;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25252914;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:2.52529125;stroke-opacity:1;visibility:visible;display:inline;overflow:visible"/>
+    </g>
+  </g>
+</svg>

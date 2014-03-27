@@ -21,6 +21,7 @@ var POILayers= new Array();
 var baseUrl= getConfig('POIBase', "../db/pois.py");
 var initialPOIsLoaded= false;
 var selectFeature;
+var currentPier;    // dict returned by '/poi-query/pier-for-date/<string:date>'
 
 /**
 * Parse hash bang parameters from a URL as key value object.
@@ -127,7 +128,10 @@ function poiLoadend(evt) {
             map.zoomToExtent(POILayers[0].getDataExtent());
         }
 	}
-    searchtextChanged();
+    //~ searchtextChanged();
+    
+    console.log("poiloadend()");
+    addCurrentPierPOI();
 }
 
 function createPOILayer(title) {
@@ -185,26 +189,44 @@ function setPOILayerTime(time) {
     zoomToCurrentPier();
 }
 
+function addCurrentPierPOI() {
+    var lat= currentPier['pier_latitude'];
+    var lon= currentPier['pier_longitude'];
+    var center= new OpenLayers.LonLat(parseFloat(lon), parseFloat(lat)).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+    var point= new OpenLayers.Geometry.Point(center.lon, center.lat);
+    var pointFeature = new OpenLayers.Feature.Vector(point,null,null);
+    pointFeature.attributes.category= "SymbolFerry";
+    pointFeature.attributes.hitcount= 10000000;
+    pointFeature.attributes.pointRadius= 20;
+    pointFeature.attributes.page_title= currentPier['pier_city'];
+    pointFeature.attributes.title= "Station: " + currentPier['pier_city'];
+    var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+    var dateStart= new Date(Date.parse(currentPier['pier_date_start'])).toLocaleDateString('de-DE', options);
+    var dateEnd= new Date(Date.parse(currentPier['pier_date_end'])).toLocaleDateString('de-DE', options);
+    pointFeature.attributes.description= currentPier['pier_address'] + '<br/>' + "Ankunft: " + dateStart + '<br/>' + "Abfahrt: " + dateEnd;
+    console.log("currentPier: ", currentPier);
+    //~ console.log("center: ", center);
+    //~ console.log("point: ", point);
+    //~ console.log("pointFeature: ", pointFeature);
+    //~ console.log("POILayers[0].features: ", POILayers[0].features);
+    POILayers[0].addFeatures([pointFeature]);
+}
+
 function zoomToCurrentPier() {
-    console.log("zoomToCurrentPier");
     var date= dateToYMD(new Date(beginDate+timerCurrTime*(1000/*seconds*/ * 60 /*minutes*/ * 60 /*hours*/ * 24 /*days*/)));
     var req= new XMLHttpRequest();
-    var str= "//localhost/poi-query/pier-for-date/" + date;
-    console.log(str);
+    var str= "/poi-query/pier-for-date/" + date;
     req.open("GET", str, false);
     req.send();
-    console.log(req.responseText);
+    //~ console.log(req.responseText);
     response= JSON.parse(req.responseText);
-    var lat= response['pier_latitude'];
-    var lon= response['pier_longitude'];
-    console.log(lat, lon);
+    currentPier= response;
     if(map) {
+        var lat= response['pier_latitude'];
+        var lon= response['pier_longitude'];
         var center= new OpenLayers.LonLat(parseFloat(lon), parseFloat(lat)).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-        //~ console.log("map center: ", map.center.lon, map.center.lat);
-        //~ console.log("new center: ", center.lon, center.lat);
-        map.setCenter(center, 13, false, false);
+        map.setCenter(center, 15, false, false);
     }
-
 }
 
 function init(){
