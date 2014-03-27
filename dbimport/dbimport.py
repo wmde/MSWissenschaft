@@ -139,9 +139,9 @@ def importpois():
             m= re.match('([0-9]+)\.([0-9]+)\.([0-9]+)', d.strip())
             return '%04s-%02s-%02s' % (m.group(3), m.group(2), m.group(1))
         for row in reader:
-            cmd= ('UPDATE %s_new ' % SQL_PIERTABLE) + "SET pier_latitude=%s, pier_longitude=%s, pier_date_start=%s, pier_date_end=%s WHERE pier_city=%s"
+            cmd= ('UPDATE %s_new ' % SQL_PIERTABLE) + "SET pier_latitude=%s, pier_longitude=%s, pier_date_start=%s, pier_date_end=%s WHERE pier_city=%s AND pier_address=%s"
             #~ print(cmd)
-            cursor.execute(cmd, (float(row['Breite']), float(row['Laenge']), fmtdate(row['Datum Ankunft']), fmtdate(row['Datum Abreise']), row['Station']))
+            cursor.execute(cmd, (float(row['Breite']), float(row['Laenge']), fmtdate(row['Datum Ankunft']), fmtdate(row['Datum Abreise']), row['Station'], row['Adresse']))
     
     print("renaming tables")
     move_table(cursor, SQL_POITABLE+'_new', SQL_POITABLE)

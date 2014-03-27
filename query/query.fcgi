@@ -115,7 +115,9 @@ def get_piers():
     
 @app.route('/pier-for-date/<string:date>')
 def get_pier_for_date(date):
-    rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_start <= %s and pier_date_end >= %s limit 1", (date, date))
+    # XXX todo: check whether this works reliably 
+    
+    rows= sqlExecute("select * from %s" % SQL_PIERTABLE + " where pier_date_start <= %s and pier_date_end >= %s order by -pier_date_start limit 1", (date, date))
     if len(rows): return json.dumps(rows[0])
     
     #~ # transition. return nearest/last pier

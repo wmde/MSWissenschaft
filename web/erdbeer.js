@@ -205,10 +205,6 @@ function addCurrentPierPOI() {
     var dateEnd= new Date(Date.parse(currentPier['pier_date_end'])).toLocaleDateString('de-DE', options);
     pointFeature.attributes.description= currentPier['pier_address'] + '<br/>' + "Ankunft: " + dateStart + '<br/>' + "Abfahrt: " + dateEnd;
     console.log("currentPier: ", currentPier);
-    //~ console.log("center: ", center);
-    //~ console.log("point: ", point);
-    //~ console.log("pointFeature: ", pointFeature);
-    //~ console.log("POILayers[0].features: ", POILayers[0].features);
     POILayers[0].addFeatures([pointFeature]);
 }
 
