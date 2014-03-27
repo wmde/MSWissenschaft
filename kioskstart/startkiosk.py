@@ -37,5 +37,5 @@ if __name__ == '__main__':
     thread.start_new_thread(WatchScreensaver, ())
     thread.start_new_thread(EndlessGinn, ())
     
-    StartUnclutter()
+    EndlessUnclutter()
     
