@@ -248,7 +248,10 @@ function createTimeline() {
 
 	var len= events.length;
 	for(var i= 0; i<len; i++)
-		createLabel(inner, events[i]['title'], events[i]['time']);
+    {
+        var txt= '<a href="javascript:timelineSetTime(' + events[i]['time'] + '); setPOILayerTime(' + events[i]['time'] + '); ">' + events[i]['title'] + '</a>';
+		createLabel(inner, txt, events[i]['time']);
+    }
 	
 	var bar= document.createElement('div');
 	bar.style.cssText= 'position: absolute; ' +
@@ -290,9 +293,11 @@ function createTimeline() {
 	*/
 	
 	//outer.onclick= timelineClick;
+    /* deactivated for ms wissenschaft
 	grabr.onmousedown= timelineMousedown;
 	grabr.onmousemove= timelineMousemove;
 	grabr.onmouseup= timelineMouseup;
+    */
 	//outer.onmouseout= timelineMouseout;
 	grabr.ondoubleclick= returnfalse;
 	
