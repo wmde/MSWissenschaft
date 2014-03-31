@@ -166,7 +166,8 @@ function createEventLabelText(elem, text, xpos) {
 	var height= rect.bottom-rect.top;
 	var bottomDist= height - barY;
 	label.style.cssText+= 
-			'font-size: 11px; ' +
+			'font-size: 12px; ' +
+            'line-height: 12px; ' + 
 			'text-decoration: underline; ' +
 			'white-space: nowrap; ' +
 			'text-align: left; ' +
