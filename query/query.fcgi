@@ -61,8 +61,10 @@ def get_pois_for_pier(pier_id, categories):
 @app.route('/pois-by-date/<string:date>/<categories>')
 def get_pois_by_date(date, categories):
     
-    specialIconCats= { 'Wikimedia Deutschland': '460px-Wikimedia_Deutschland-Logo',
-                       'Open Knowledge Foundation': 'OKFN_Main_logo' }
+    specialIconProperties= { 'Wikimedia Deutschland': 
+                                { 'category': 'Wikimedia-logo', 'pointRadius': 32 },
+                             'Open Knowledge Foundation': 
+                                { 'category': 'OKFN-logo', 'pointRadius': 32 } }
     
     bbox= [ float(x) for x in flask.request.args.get('bbox', '-1000,-1000,1000,1000').split(',') ]
     #~ return str(bbox)
@@ -103,8 +105,11 @@ def get_pois_by_date(date, categories):
                 #~ "description": row['page_title'],
             }
         }
-        if(row['page_title']) in specialIconCats:
-            featureOptions['properties']['category']= specialIconCats[row['page_title']]
+        if row['page_title'] in specialIconProperties:
+            #~ featureOptions['properties']['category']= specialIconProperties[row['page_title']]
+            for p in specialIconProperties[row['page_title']]:
+                featureOptions['properties'][p]= specialIconProperties[row['page_title']][p]
+                
         features.append( featureOptions )
         radius-= radiusStep
 
