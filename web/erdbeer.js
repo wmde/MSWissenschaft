@@ -183,7 +183,7 @@ function setPOILayerTime(time) {
         POILayers[i].redraw();
     }
 	
-	if(document.getElementById("time-display")) document.getElementById("time-display").innerHTML= time; 
+	//~ if(document.getElementById("time-display")) document.getElementById("time-display").innerHTML= time; 
 	timerCurrTime= time;
     
     zoomToCurrentPier();

@@ -60,6 +60,10 @@ def get_pois_for_pier(pier_id, categories):
     
 @app.route('/pois-by-date/<string:date>/<categories>')
 def get_pois_by_date(date, categories):
+    
+    specialIconCats= { 'Wikimedia Deutschland': '460px-Wikimedia_Deutschland-Logo',
+                       'Open Knowledge Foundation': 'OKFN_Main_logo' }
+    
     bbox= [ float(x) for x in flask.request.args.get('bbox', '-1000,-1000,1000,1000').split(',') ]
     #~ return str(bbox)
     categories= categories.split(',')
@@ -83,7 +87,7 @@ def get_pois_by_date(date, categories):
     radius= radiusMax
     radiusStep= float(radiusMax-radiusMin)/len(rows)
     for row in rows:
-        features.append( {
+        featureOptions= {
             "type": "Feature", 
             "geometry": {
                 "type": "Point", 
@@ -95,10 +99,13 @@ def get_pois_by_date(date, categories):
                 "pointRadius": radius,
                 "page_title": row['page_title'],
                 "title": '<a href="javascript:openPOI(\'%s\')">%s</a>' % (row['page_title'], row['page_title']),
-                "description": '<a href="javascript:openPOI(\'%s\')"><img src="../qr/data/%s.svg" width=128 height=128/></a><br/><small>http://de.wikipedia.org/wiki/%s' % (row['page_title'], row['page_title'], row['page_title'].replace(' ', '_')),
+                "description": '<a href="javascript:openPOI(\'%s\')"><img src="../qr/data/%s.svg" width=128 height=128/></a><br/><small>http://de.qrwp.org/%s' % (row['page_title'], row['page_title'], row['page_title'].replace(' ', '_')),
                 #~ "description": row['page_title'],
             }
-        } )
+        }
+        if(row['page_title']) in specialIconCats:
+            featureOptions['properties']['category']= specialIconCats[row['page_title']]
+        features.append( featureOptions )
         radius-= radiusStep
 
     features= list(reversed(features))  # so that larger icons will end up with higher z-order than smaller ones

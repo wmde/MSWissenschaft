@@ -21,16 +21,30 @@ var eventXScale= getConfig('timelineScaling', 2);
 var timelineMin= getConfig('timelineMin', -50);
 var timelineMax= getConfig('timelineMax', 565);
 var timelineInitial= getConfig('timelineInitial', 125);
+var timelineUnit= getConfig('timelineUnit', 'years');
 
 var dragBegin= 0;
 var dragBeginPoint= 0;
 var dragging= false;
 
+function timelineFormatTime(selectedTime) {
+    if(timelineUnit=='days') {
+        var options= {month: "numeric", day: "numeric", "year": "numeric"};
+        var dateMS= new Date(beginDate + Math.round(selectedTime) * 1000*60*60*24);
+        var fmt= new Date(Date.parse(dateMS)).toLocaleDateString('de-DE', options);
+        return fmt;
+    }
+    else {
+        return '' + Math.round(selectedTime);
+    }
+}
+
 function timelineSetTime(selectedTime) {
 	var outer= document.getElementById('timeline-outer'); 
 	var outerClientRect= outer.getBoundingClientRect();
 	document.getElementById('timeline-inner').style.left= ((outerClientRect.right-outerClientRect.left)*.5 - selectedTime*eventXScale) + "px";
-	document.getElementById('time-display').innerHTML= '' + Math.round(selectedTime);
+	//~ document.getElementById('time-display').innerHTML= '' + Math.round(selectedTime);
+	document.getElementById('time-display').innerHTML= timelineFormatTime(selectedTime);
 }
 
 function timelineGotoDate(date) {
