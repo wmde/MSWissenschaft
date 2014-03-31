@@ -123,6 +123,7 @@ def get_pois_by_date(date, categories):
 @app.route('/piers')
 def get_piers():
     rows= sqlExecute("SELECT * FROM %s ORDER BY pier_id" % SQL_PIERTABLE)
+    # XXX todo: format pier information same way as config.js
     return json.dumps(rows)
     
 @app.route('/pier-for-date/<string:date>')

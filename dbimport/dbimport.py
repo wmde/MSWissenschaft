@@ -98,7 +98,7 @@ def importpois():
         m= re.match('([0-9]{2})\.([^\.]*)\.(.*)\.(.*).csv', file)
         pierindex= m.group(1)
         piercity= m.group(2)
-        pieraddress= m.group(3)
+        pieraddress= m.group(3).replace('_', '/')
         mapcategory= m.group(4)
         
         piers[pierindex]= (piercity, pieraddress)
