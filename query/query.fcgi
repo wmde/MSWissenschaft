@@ -61,16 +61,19 @@ def get_pois_for_pier(pier_id, categories):
 def createPOIDescription(row):
     imghtml= '''<a href="javascript:openPOI('%s')">
 <img style="position:absolute; top:35px; " src="../pages/data/upload.wikimedia.org/wikipedia/commons/e/ec/Wikipedia-logo-v2-de.png">
-<img style="position:absolute; top:175px;" src="../qr/data/%s.svg" width=128 height=128/></a>
-<br/>''' % (row['page_title'], row['page_title'])
+<img style="position:absolute; top:195px; left:10px;" src="../qr/data/%s.svg" width=128 height=128/>
+<br/>
+<p style="position:absolute; top:310px; left:0px; font-size:6.5px; width:150px; text-align: center;">de.qrwp.org/%s</p>
+</a>
+''' % (row['page_title'], row['page_title'], row['page_title'].replace(' ', '_'))
     subdiv= """<div style="width:100%; height:100%; position:absolute; top:0px; left:0px; z-index: -1000; overflow: hidden;">
 <iframe width="1000px" height="800px" src="../pages/data/de.wikipedia.org/wiki/""" + row['page_title'] + """.html" 
-style="position:absolute; top: -20px; left: 50px; overflow: hidden; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;">
+style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;">
 </iframe>
 <div style="position:absolute; top:0px; left: 0px; width: 100%; height: 50px; background-color: #fff;"> </div>
 <div style="position:absolute; top:0px; left: 0px; width: 150px; height: 100%; background-color: #fff;"> </div>
 </div>"""
-    return '<div style="width: 500px; height: 250px;">' + str(subdiv) + str(imghtml) + '</div>' 
+    return '<div style="width: 500px; height: 280px;" onClick="javaScript:openPOI(\'%s\')">' % row['page_title'] + str(subdiv) + str(imghtml) + '</div>' 
     
 @app.route('/pois-by-date/<string:date>/<categories>')
 def get_pois_by_date(date, categories):
