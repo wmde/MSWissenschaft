@@ -73,6 +73,7 @@ style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-tran
 <div style="position:absolute; top:0px; left: 0px; width: 100%; height: 50px; background-color: #fff;"> </div>
 <div style="position:absolute; top:0px; left: 0px; width: 150px; height: 100%; background-color: #fff;"> </div>
 <div style="position:absolute; top:0px; left: 0px; width: 100%; height: 100%;"> </div>
+<div style="position:absolute; bottom:0px; left: 0px; width: 100%; height: 40px; background: url('img/vertgrad.png'); background-size: 100% 100%;">&nbsp;</div>
 </div>"""
     return '<div style="width: 500px; height: 280px;" onClick="javaScript:openPOI(\'%s\')">' % row['page_title'] + str(subdiv) + str(imghtml) + '</div>' 
     
