@@ -252,8 +252,6 @@ function createTimeline() {
 	var len= events.length;
 	for(var i= 0; i<len; i++)
     {
-        var actionTxt= 'timelineSetTime(' + events[i]['time'] + '); setPOILayerTime(' + events[i]['time'] + ');';
-        var txt= '<a href="javascript:timelineSetTime(' + events[i]['time'] + '); setPOILayerTime(' + events[i]['time'] + '); ">' + events[i]['title'] + '</a>';
         function mktimesetter(time) { var mytime= time; return function() { timelineSetTime(mytime); setPOILayerTime(mytime); }; }
 		createLabel(inner, events[i]['title'], events[i]['time'], mktimesetter(events[i]['time']));
     }
