@@ -66,12 +66,13 @@ def createPOIDescription(row):
 <p style="position:absolute; top:310px; left:0px; font-size:6.5px; width:150px; text-align: center;">de.qrwp.org/%s</p>
 </a>
 ''' % (row['page_title'], row['page_title'], row['page_title'].replace(' ', '_'))
-    subdiv= """<div style="width:100%; height:100%; position:absolute; top:0px; left:0px; z-index: -1000; overflow: hidden;">
+    subdiv= """<div style="width:100%; height:100%; position:absolute; top:0px; left:0px; z-index: -1000; overflow: hidden; onClick=\"javaScript:openPOI('""" + row['page_title'] + """')\"">
 <iframe width="1000px" height="800px" src="../pages/data/de.wikipedia.org/wiki/""" + row['page_title'] + """.html" 
-style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;">
+style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0; -moz-transform: scale(0.5); -moz-transform-origin: 0 0; ">
 </iframe>
 <div style="position:absolute; top:0px; left: 0px; width: 100%; height: 50px; background-color: #fff;"> </div>
 <div style="position:absolute; top:0px; left: 0px; width: 150px; height: 100%; background-color: #fff;"> </div>
+<div style="position:absolute; top:0px; left: 0px; width: 100%; height: 100%;"> </div>
 </div>"""
     return '<div style="width: 500px; height: 280px;" onClick="javaScript:openPOI(\'%s\')">' % row['page_title'] + str(subdiv) + str(imghtml) + '</div>' 
     
@@ -119,11 +120,9 @@ def get_pois_by_date(date, categories):
                 "page_title": row['page_title'],
                 "title": '<a href="javascript:openPOI(\'%s\')">%s</a>' % (row['page_title'], row['page_title']),
                 "description": createPOIDescription(row),
-                #~ "description": row['page_title'],
             }
         }
         if row['page_title'] in specialIconProperties:
-            #~ featureOptions['properties']['category']= specialIconProperties[row['page_title']]
             for p in specialIconProperties[row['page_title']]:
                 featureOptions['properties'][p]= specialIconProperties[row['page_title']][p]
                 
