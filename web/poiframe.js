@@ -13,7 +13,7 @@ function showDisabledIframefoo(contentHTML) {
     frame.style.height= (bgrc.bottom - bgrc.top) - 100 + "px";
 	frame.style.visibility= 'visible';
 	frame.onclick= closeDlg;
-	bg.onclick= closeDlg;
+	//~ bg.onclick= closeDlg;
 	bg.style.visibility= 'visible';
         
     var dlgfoo= document.getElementById("dlgfoo");
