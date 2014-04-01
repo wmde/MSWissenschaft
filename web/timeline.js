@@ -199,8 +199,10 @@ function createTimelineIndicator(xpos) {
 	return indicator;
 }
 
-function createLabel(elem, text, xpos) {
-	elem.appendChild(createEventLabelText(elem, text, xpos*eventXScale));
+function createLabel(elem, text, xpos, onClick) {
+    var lbltxt= createEventLabelText(elem, text, xpos*eventXScale)
+    if(onClick) lbltxt.onclick= onClick;
+	elem.appendChild(lbltxt);
 	elem.appendChild(createLabelIndicator(xpos*eventXScale));
 }
 
@@ -250,8 +252,10 @@ function createTimeline() {
 	var len= events.length;
 	for(var i= 0; i<len; i++)
     {
+        var actionTxt= 'timelineSetTime(' + events[i]['time'] + '); setPOILayerTime(' + events[i]['time'] + ');';
         var txt= '<a href="javascript:timelineSetTime(' + events[i]['time'] + '); setPOILayerTime(' + events[i]['time'] + '); ">' + events[i]['title'] + '</a>';
-		createLabel(inner, txt, events[i]['time']);
+        function mktimesetter(time) { var mytime= time; return function() { timelineSetTime(mytime); setPOILayerTime(mytime); }; }
+		createLabel(inner, events[i]['title'], events[i]['time'], mktimesetter(events[i]['time']));
     }
 	
 	var bar= document.createElement('div');
