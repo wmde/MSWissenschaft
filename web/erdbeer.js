@@ -575,3 +575,9 @@ function showAboutDlg() {
 		'</div>'
 		);
 }
+
+function showHideMapkey() {
+    var key= document.getElementById("mapkey");
+    if(key.className=="mapkey-slideout") { key.className= "mapkey-slidein"; }
+    else { key.className= "mapkey-slideout"; }
+}

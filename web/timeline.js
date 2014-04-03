@@ -307,7 +307,7 @@ function createTimeline() {
 	// prevent browser from creating stupid selection 
 	// might be better to somehow chain events to the map
 	//~ outer.onmousemove= returnfalse;
-	outer.onmousedown= returnfalse;
+	//~ outer.onmousedown= returnfalse;
 	//~ outer.onmouseup= returnfalse;
 	
 	
@@ -317,5 +317,5 @@ function createTimeline() {
 	body.onmouseup= timelineMouseup;
 	
 	//~ timelineSetTime(10); //timelineInitial);
-    timelineGotoDate(Date.now() + 60 * (1000*60*60*24));
+    timelineGotoDate(Date.now() + 60 * (1000*60*60*24));    // XXXXXXXXXXXX change to Date.now() when finished
 }

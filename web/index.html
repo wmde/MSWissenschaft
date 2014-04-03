@@ -31,7 +31,7 @@
         <script src="timeline.js"></script>
         <script src="poiframe.js"></script>
     </head>
-    <body onload="javascript: createTimeline(); init();">
+    <body onload="javascript: createTimeline(); init();" style="overflow:hidden;">
 		<div id="dlgbackground" class="dlgbackground">
 			<div id="dlgframe" class="dlgframe"></div>
 			<div id="dlgfoo" style="background: url(img/blank.gif)"></div>
@@ -99,7 +99,24 @@
 						</div>
 					</div>
 				</div>
+                
 			</div>
+        </div>
+        <div id="mapkey" class="mapkey-slidein" style="position:absolute; bottom:0px; width:400px; height:318px; z-index:1000; color:#fff;" onClick="javascript:showHideMapkey();">
+            <div id="mapkeyHandle" style="position:relative; left:0px; top:0px; width:32px; height:100%; background:rgba(0, 32, 64, 0.8); color:#fff; float:left;">
+            <div style="-moz-transform:rotate(-90deg);-webkit-transform:rotate(-90deg); position:relative; top:280px; z-index:2000; font-size:16px;">
+            Legende
+            </div>
+            </div>
+            <div id="mapkeyContent" style="position:relative; left:0px; top:0px; height:100%; background:rgba(0, 32, 64, 0.8); color:#fff;">
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-SymbolFerry.png" />Heutige Position der MS Wissenschaft</div>
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-Kultur.png" />Wikipedia-Kategorie <i>Kultur</i></div>
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-Politik.png" />Wikipedia-Kategorie <i>Politik</i></div>
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-Wirtschaft.png" />Wikipedia-Kategorie <i>Wirtschaft</i></div>
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-Wissenschaft+Bildung.png" />Wikipedia-Kategorien <i>Wissenschaft</i> und <i>Bildung</i></div>
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-Wikimedia-logo.png" />Wikimedia Deutschland Gesch&auml;ftsstelle</div>
+                <div class="keyitem"><img class="keyitem-image" src="img/icon-OKFN-logo.png" />Open Knowledge Foundation</div>
+            </div>
         </div>
     </body>
 </html>
