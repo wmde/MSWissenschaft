@@ -12,7 +12,7 @@ if __name__ == '__main__':
             while True:
                 line= proc.stdout.readline()
                 if re.match('^BLANK.*', line):
-                    subprocess.call('kill $(pgrep chromium)', shell= True)
+                    subprocess.call('kill -9 $(pgrep chromium)', shell= True)
     
     # endlessly restart chromium
     def EndlessChromium():
