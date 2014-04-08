@@ -1,3 +1,4 @@
 pages/data/*.wikipedia.org
 pages/data/*.wikimedia.org
 qr/data/*
+mapproxy/cache_data

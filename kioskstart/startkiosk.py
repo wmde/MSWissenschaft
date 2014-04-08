@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import subprocess
+import os
 import re
 import time
 import thread
@@ -33,9 +34,18 @@ if __name__ == '__main__':
             time.sleep(0.5)
             subprocess.call("unclutter -idle 0.1", shell=True)
     
+    # run MapProxy which caches tiles from OSM servers
+    def EndlessMapProxy():
+        mypath= os.path.dirname(os.path.abspath(sys.argv[0]))
+        os.chdir(os.path.join(mypath, "mapproxy"))
+        while True:
+            subprocess.call("mapproxy-util serve-develop mapproxy.yaml", shell=True)
+            time.sleep(0.5)
+    
     thread.start_new_thread(EndlessChromium, ())
     thread.start_new_thread(WatchScreensaver, ())
     thread.start_new_thread(EndlessGinn, ())
+    thread.start_new_thread(EndlessMapProxy, ())
     
     EndlessUnclutter()
     

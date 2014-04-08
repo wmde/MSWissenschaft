@@ -144,6 +144,7 @@ function createPOILayer(title) {
 		strategies: [ 
 			new OpenLayers.Strategy.BBOX({resFactor: 1.1})
 			],
+        projection: "EPSG:4326",
 		protocol: new OpenLayers.Protocol.HTTP({
 			url: baseUrl + "/asdf/Kultur,Politik,Wirtschaft,Wissenschaft+Bildung",
 			//~ format: new OpenLayers.Format.Text()
@@ -225,10 +226,34 @@ function zoomToCurrentPier() {
     }
 }
 
+function long2tile(lon,zoom) { return (Math.floor((lon+180)/360*Math.pow(2,zoom))); }
+function lat2tile(lat,zoom)  { return (Math.floor((1-Math.log(Math.tan(lat*Math.PI/180) + 1/Math.cos(lat*Math.PI/180))/Math.PI)/2 *Math.pow(2,zoom))); }
+
+function get_my_url (bounds) {
+
+    var res = map.getResolution();
+    var x = Math.round ((bounds.left - this.maxExtent.left) / (res * 256));
+    var y = Math.round ((this.maxExtent.top - bounds.top) / (res * 256));
+    var z = map.getZoom();
+    
+    console.log(map.layers[0].getXYZ(bounds));
+    console.log(x,y,z);
+
+    var path = z + "/" + x + "/" + y + "." + this.type; 
+    var url = this.url;
+    if (url instanceof Array) {
+        url = this.selectUrl(path, url);
+    }
+    return url + path;
+    
+}
+
 function init(){
     console.log("init()");
+            OpenLayers.Util.onImageLoadErrorColor = "transparent";
+    /*
 	//~ var layerswitcher= new OpenLayers.Control.LayerSwitcher({roundedCornerColor: "#575757"});
-	map= new OpenLayers.Map('map', { 
+    map= new OpenLayers.Map('map', { 
 		//~ maxExtent: new OpenLayers.Bounds(-20037508,-20037508,20037508,20037508),
 		controls: [
 			//~ layerswitcher, 
@@ -240,6 +265,21 @@ function init(){
 			//new OpenLayers.Control.EditingToolbar(),
 			//new OpenLayers.Control.Graticule()
 		] } );
+	selectFeature= new OpenLayers.Control.SelectFeature();
+	map.addControl(selectFeature);
+    */
+    
+    map = new OpenLayers.Map('map', {
+        maxResolution: 156543.033928,
+        maxExtent: new OpenLayers.Bounds(-20037508.3428, -20037508.3428, 20037508.3428, 20037508.3428),
+        //~ projection: new OpenLayers.Projection("EPSG:4326")
+        projection: new OpenLayers.Projection("EPSG:3857"),
+        numZoomLevels: 20,
+        //~ controls: [
+			//~ new OpenLayers.Control.ZoomPanel(),
+			//~ new OpenLayers.Control.Navigation()
+        //~ ]
+    });
 	selectFeature= new OpenLayers.Control.SelectFeature();
 	map.addControl(selectFeature);
 	
@@ -260,38 +300,62 @@ function init(){
 							 attribution: landscapeattrib, transitionEffect: 'resize'});
 */
 
-	var landscape = new OpenLayers.Layer.OSM("Landscape",
-										 ["http://a.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png",
-										 "http://b.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png",
-										 "http://c.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png"],
-										 { displayOutsideMaxExtent: true,
-										 attribution: landscapeattrib, transitionEffect: 'resize'});
-	map.addLayer(landscape);
+	//~ var landscapeattrib = '<b>Gravitystorm Landscape Map</b> '
+				//~ + '<a href="http://www.thunderforest.com">Developer Information</a>';
+	//~ var landscape = new OpenLayers.Layer.OSM("Landscape",
+										 //~ [
+                                         //~ "http://a.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png",
+										 //~ "http://b.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png",
+										 //~ "http://c.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png"
+										 //~ //"http://localhost/MSWissenschaft/tiles/${z}/${x}/${y}.png"
+                                         //~ ],
+										 //~ { displayOutsideMaxExtent: true,
+										 //~ attribution: landscapeattrib, transitionEffect: 'resize'});
+	//~ map.addLayer(landscape);
+    
+    //~ var layer = new OpenLayers.Layer.XYZ(
+        //~ "tiles", // name for display in LayerSwitcher
+        //~ "http://localhost/MSWissenschaft/tiles/", // service endpoint
+        //~ {layername: "tiles", type: "png" /*, "getURL": get_my_url*/ } // required properties
+    //~ );
+    //~ map.addLayer(layer);
+    //~ var layer = new OpenLayers.Layer.OSM(
+        //~ "My Layer", // name for display in LayerSwitcher
+        //~ [ "http://localhost/MSWissenschaft/tiles/${z}/${x}/${y}.png" ]
+    //~ );
+    //~ map.addLayer(layer);
+    
+        var layer = new OpenLayers.Layer.WMS( "WMS osm",
+            "http://localhost:8080/service?",
+            {layers: "osm", format: "image/png", srs:"EPSG:3857",
+             exceptions: "application/vnd.ogc.se_inimage"},
+            {/*singleTile: true, */ratio: 1, isBaseLayer: true, transitionEffect: 'resize'} );
+
+        map.addLayer(layer);
 	
-	var osm= new OpenLayers.Layer.OSM()
+	//~ var osm= new OpenLayers.Layer.OSM()
 
-	map.addLayer(osm);
+	//~ map.addLayer(osm);
 
-	var cycleattrib = '<b>Base layer: OpenCycleMap.org - the <a href="http://www.openstreetmap.org">OpenStreetMap</a> Cycle Map</b><br />';
-	var transportattrib = '<b>Gravitystorm Transport Map</b> '
-			+ '<a href="http://www.thunderforest.com">Developer Information</a>';
-	var landscapeattrib = '<b>Gravitystorm Landscape Map</b> '
-				+ '<a href="http://www.thunderforest.com">Developer Information</a>';
-	var cycle = new OpenLayers.Layer.OSM("OpenCycleMap",
-										["http://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
-										 "http://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
-										 "http://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"],
-										{ displayOutsideMaxExtent: true,
-										  attribution: cycleattrib, transitionEffect: 'resize'});
-	map.addLayer(cycle);
+	//~ var cycleattrib = '<b>Base layer: OpenCycleMap.org - the <a href="http://www.openstreetmap.org">OpenStreetMap</a> Cycle Map</b><br />';
+	//~ var transportattrib = '<b>Gravitystorm Transport Map</b> '
+			//~ + '<a href="http://www.thunderforest.com">Developer Information</a>';
+	//~ var cycle = new OpenLayers.Layer.OSM("OpenCycleMap",
+										//~ ["http://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+										 //~ "http://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png",
+										 //~ "http://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png"],
+										//~ { displayOutsideMaxExtent: true,
+										  //~ attribution: cycleattrib, transitionEffect: 'resize'});
+	//~ map.addLayer(cycle);
 
-	var transport = new OpenLayers.Layer.OSM("Transport",
-										 ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png",
-										 "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png",
-										 "http://c.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"],
-										 { displayOutsideMaxExtent: true,
-										 attribution: transportattrib, transitionEffect: 'resize'});
-	map.addLayer(transport);
+	//~ var transport = new OpenLayers.Layer.OSM("Transport",
+										 //~ ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png",
+										 //~ "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png",
+										 //~ "http://c.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"],
+										 //~ { displayOutsideMaxExtent: true,
+										 //~ attribution: transportattrib, transitionEffect: 'resize'});
+	//~ map.addLayer(transport);
+
 
 /*
 	var wms= new OpenLayers.Layer.WMS(
@@ -307,7 +371,6 @@ function init(){
         POILayers.push(layer);
     }
     
-	// Interaction stuff
 	selectControl = new OpenLayers.Control.SelectFeature(POILayers);
 	map.addControl(selectControl);
 	selectControl.activate();
