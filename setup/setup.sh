@@ -16,7 +16,7 @@ install_packages() {
     echo Installing packages...
     sudo apt-get remove gnome-screensaver apport zeitgeist zeitgeist-core zeitgeist-datahub rhythmbox-plugin-zeitgeist ubuntuone-client ubuntuone-couch ubuntuone-installer python-ubuntuone-client python-ubuntuone-storageprotocol rhythmbox-ubuntuone 
     sudo apt-get install git openssh-server chromium-browser lighttpd mysql-server python-pip build-essential python-dev libmysqlclient-dev xscreensaver xscreensaver-gl unclutter xfce4 xfce4-terminal vim perl libwww-perl || exit 1
-    sudo apt-get install build-essential python-dev libjpeg-dev zlib1g-dev libfreetype6-dev || exit 1
+    sudo apt-get install build-essential python-dev libjpeg-dev zlib1g-dev libfreetype6-dev libproj0 || exit 1
     sudo apt-get autoremove
     sudo pip install requests flask flup MySQL-python qrcode Pillow PyYAML MapProxy || exit 1
 }
