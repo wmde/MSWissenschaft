@@ -309,12 +309,18 @@ body {
 	-webkit-animation-duration: .33s;
 	-webkit-animation-name: mapkey-slidein;
 	-webkit-animation-fill-mode: forwards;
+	-moz-animation-duration: .33s;
+	-moz-animation-name: mapkey-slidein;
+	-moz-animation-fill-mode: forwards;
 }
 
 .mapkey-slideout {
 	-webkit-animation-duration: .33s;
 	-webkit-animation-name: mapkey-slideout;
 	-webkit-animation-fill-mode: forwards;
+	-moz-animation-duration: .33s;
+	-moz-animation-name: mapkey-slideout;
+	-moz-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes mapkey-slidein {
@@ -327,6 +333,24 @@ body {
 }
 
 @-webkit-keyframes mapkey-slideout {
+	from {
+		right: 0px;
+	}
+	to {
+		right: -368px;
+	}
+}
+
+@-moz-keyframes mapkey-slidein {
+	from {
+		right: -368px;
+	}
+	to {
+		right: 0px;
+	}
+}
+
+@-moz-keyframes mapkey-slideout {
 	from {
 		right: 0px;
 	}
