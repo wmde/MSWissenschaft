@@ -286,7 +286,7 @@ function init(){
 	selectFeature= new OpenLayers.Control.SelectFeature();
 	map.addControl(selectFeature);
     
-    document.getElementById("OpenLayers.Control.Zoom_5").style.top= '161px'; 
+    document.getElementById("OpenLayers.Control.Zoom_5").style.top= "247px"; //'161px'; 
     document.getElementById("OpenLayers.Control.Zoom_5").style.left= '17px'; 
 	
 	//map.events.register('zoomend', null, searchtextChanged);
