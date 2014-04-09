@@ -184,7 +184,7 @@ function createLabelIndicator(xpos) {
 			'top: ' + (barY-10) + 'px; ' +
 			'width: 2px; ' +
 			'height: 10px; ' +
-			'background-color: #888; ';
+			'background-color: #fff; ';
 	return indicator;
 }
 
@@ -196,7 +196,7 @@ function createTimelineIndicator(xpos) {
 			'top: ' + barY + 'px; ' +
 			'width: 2px; ' +
 			'height: 10px; ' +
-			'background-color: #000; ';
+			'background-color: #fff; ';
 	return indicator;
 }
 
@@ -236,7 +236,8 @@ function createTimeline() {
 		'top: ' + (barY-6) + 'px; ' +
 		'width: 100%; ' +
 		'height: 28px; ' +
-		'background-color: #ddf; ';
+        'background:rgba(0, 32, 64, 1); ';
+		//'background-color: #ddf; ';
 	outer.appendChild(grabr);
 
 	// and another one, transparent but with cursor:move and higher z-index...
@@ -263,7 +264,7 @@ function createTimeline() {
 			'top: ' + barY + 'px; ' +
 			'width: 100%; ' +
 			'height: 2px; ' +
-			'background-color: #000000; ';
+			'background-color: #fff; ';
 	inner.appendChild(bar);
 	outer.appendChild(bar);
 	
