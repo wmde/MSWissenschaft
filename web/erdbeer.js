@@ -277,11 +277,11 @@ function init(){
     
     //~ var b= new OpenLayers.Bounds(910484.34146126, 7011144.8835821, 922443.39435552, 7004520.7648463);
     //~ b.transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:3857"));
-    var bounds= new OpenLayers.Bounds();
-    bounds.extend(54.547, 1.670);
-    bounds.extend(44.965, 18.809);
-    bounds.transform(new OpenLayers.Projection("EPSG:3857"));
-    console.log(bounds);
+    //~ var bounds= new OpenLayers.Bounds();
+    //~ bounds.extend(54.547, 1.670);
+    //~ bounds.extend(44.965, 18.809);
+    //~ bounds.transform(new OpenLayers.Projection("EPSG:3857"));
+    //~ console.log(bounds);
     map= new OpenLayers.Map('map', {
         maxResolution: 156543.033928 ,
         //~ maxResolution: 5000,
