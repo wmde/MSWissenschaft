@@ -126,6 +126,10 @@ h6 {
 	line-height: 42px !important;
 }
 
+div.olControlZoom a:hover {
+    background: none repeat scroll 0% 0% rgba(0, 60, 136, 0.5) !important;
+}
+
 div.olControlLayerSwitcher {
     position: absolute;
     top: 150px;
