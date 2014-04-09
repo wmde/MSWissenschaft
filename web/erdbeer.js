@@ -116,6 +116,12 @@ function poiLoadend(evt) {
 	//document.getElementById("loadstatus").innerHTML= "&nbsp;";
 	setLoadingState(false);
 	
+        //~ map.maxExtent= POILayers[0].getDataExtent();
+        //~ map.restrictedExtent= POILayers[0].getDataExtent();
+        //~ var e= POILayers[0].getDataExtent();
+        //~ console.log(e.left, e.top, e.right, e.bottom);
+        //~ console.log(map.maxExtent);
+
 	if(!initialPOIsLoaded && POILayers[0].getDataExtent()!=null) {
 		initialPOIsLoaded= true;
         if(focusFeature) {
@@ -130,7 +136,6 @@ function poiLoadend(evt) {
 	}
     //~ searchtextChanged();
     
-    console.log("poiloadend()");
     addCurrentPierPOI();
 }
 
@@ -222,10 +227,11 @@ function zoomToCurrentPier() {
         var lat= response['pier_latitude'];
         var lon= response['pier_longitude'];
         var center= new OpenLayers.LonLat(parseFloat(lon), parseFloat(lat)).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-        map.setCenter(center, 15, false, false);
+        map.setCenter(center, 14, false, false);
     }
 }
 
+/*
 function long2tile(lon,zoom) { return (Math.floor((lon+180)/360*Math.pow(2,zoom))); }
 function lat2tile(lat,zoom)  { return (Math.floor((1-Math.log(Math.tan(lat*Math.PI/180) + 1/Math.cos(lat*Math.PI/180))/Math.PI)/2 *Math.pow(2,zoom))); }
 
@@ -245,8 +251,8 @@ function get_my_url (bounds) {
         url = this.selectUrl(path, url);
     }
     return url + path;
-    
 }
+*/
 
 function init(){
     console.log("init()");
@@ -269,12 +275,24 @@ function init(){
 	map.addControl(selectFeature);
     */
     
-    map = new OpenLayers.Map('map', {
-        maxResolution: 156543.033928,
+    //~ var b= new OpenLayers.Bounds(910484.34146126, 7011144.8835821, 922443.39435552, 7004520.7648463);
+    //~ b.transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:3857"));
+    var bounds= new OpenLayers.Bounds();
+    bounds.extend(54.547, 1.670);
+    bounds.extend(44.965, 18.809);
+    bounds.transform(new OpenLayers.Projection("EPSG:3857"));
+    console.log(bounds);
+    map= new OpenLayers.Map('map', {
+        maxResolution: 156543.033928 ,
+        //~ maxResolution: 5000,
+        //~ restrictedExtent: bounds,
         maxExtent: new OpenLayers.Bounds(-20037508.3428, -20037508.3428, 20037508.3428, 20037508.3428),
+        restrictedExtent: new OpenLayers.Bounds(200000, 5500000, 2100000, 7500000),
+        //~ restrictedExtent: new OpenLayers.Bounds(1000000, 1000000, 20000000, 20000000),
         //~ projection: new OpenLayers.Projection("EPSG:4326")
         projection: new OpenLayers.Projection("EPSG:3857"),
         numZoomLevels: 20,
+        zoom: 10,
         //~ controls: [
             //~ new OpenLayers.Control.ZoomBar(),
         //~ ]
