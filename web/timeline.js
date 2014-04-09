@@ -171,7 +171,8 @@ function createEventLabelText(elem, text, xpos) {
 			'text-decoration: underline; ' +
 			'white-space: nowrap; ' +
 			'text-align: left; ' +
-			'bottom: ' + bottomDist + 'px; ';
+			'bottom: ' + bottomDist + 'px; ' +
+            'color: #fff;';
 	return label;
 }
 
