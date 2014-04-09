@@ -297,11 +297,9 @@ function createTimeline() {
 	*/
 	
 	//outer.onclick= timelineClick;
-    /* deactivated for ms wissenschaft
 	grabr.onmousedown= timelineMousedown;
 	grabr.onmousemove= timelineMousemove;
 	grabr.onmouseup= timelineMouseup;
-    */
 	//outer.onmouseout= timelineMouseout;
 	grabr.ondoubleclick= returnfalse;
 	
