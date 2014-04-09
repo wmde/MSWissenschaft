@@ -222,6 +222,10 @@ function createTimelineMarker(elem, xpos) {
 	elem.appendChild(label);
 }
 
+function timelineReset() {
+    timelineGotoDate(Date.now() + 60 * (1000*60*60*24));    // XXXXXXXXXXXX change to Date.now() when finished
+}
+
 function createTimeline() {
 	var events= getConfig('timelineEvents', []);
     var timelineMarkerBegin= getConfig('timelineMarkerBegin', -100);
@@ -317,5 +321,5 @@ function createTimeline() {
 	body.onmouseup= timelineMouseup;
 	
 	//~ timelineSetTime(10); //timelineInitial);
-    timelineGotoDate(Date.now() + 60 * (1000*60*60*24));    // XXXXXXXXXXXX change to Date.now() when finished
+    timelineReset();
 }
