@@ -168,7 +168,7 @@ function createEventLabelText(elem, text, xpos) {
 	label.style.cssText+= 
 			'font-size: 12px; ' +
             'line-height: 12px; ' + 
-			'text-decoration: underline; ' +
+			//~ 'text-decoration: underline; ' +
 			'white-space: nowrap; ' +
 			'text-align: left; ' +
 			'bottom: ' + bottomDist + 'px; ' +
