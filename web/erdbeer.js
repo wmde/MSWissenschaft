@@ -276,12 +276,18 @@ function init(){
         projection: new OpenLayers.Projection("EPSG:3857"),
         numZoomLevels: 20,
         //~ controls: [
+            //~ new OpenLayers.Control.ZoomBar(),
+        //~ ]
+        //~ controls: [
 			//~ new OpenLayers.Control.ZoomPanel(),
 			//~ new OpenLayers.Control.Navigation()
         //~ ]
     });
 	selectFeature= new OpenLayers.Control.SelectFeature();
 	map.addControl(selectFeature);
+    
+    document.getElementById("OpenLayers.Control.Zoom_5").style.top= '161px'; 
+    document.getElementById("OpenLayers.Control.Zoom_5").style.left= '17px'; 
 	
 	//map.events.register('zoomend', null, searchtextChanged);
 	

@@ -119,6 +119,13 @@ h6 {
 	/*background-color: #80F0A0;*/
 }
 
+.olButton {
+	width: 50px !important;
+	height: 50px !important;
+	font-size: 42px !important;
+	line-height: 42px !important;
+}
+
 div.olControlLayerSwitcher {
     position: absolute;
     top: 150px;
