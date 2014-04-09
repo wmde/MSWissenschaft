@@ -40,7 +40,7 @@ if __name__ == '__main__':
         mypath= os.path.dirname(os.path.abspath(sys.argv[0]))
         os.chdir(os.path.join(mypath, "..", "mapproxy"))
         while True:
-            subprocess.call("mapproxy-util serve-develop mapproxy.yaml", shell=True)
+            subprocess.call("mapproxy-util serve-develop -b 0.0.0.0:8080 mapproxy.yaml", shell=True)
             time.sleep(0.5)
     
     thread.start_new_thread(EndlessMapProxy, ())
