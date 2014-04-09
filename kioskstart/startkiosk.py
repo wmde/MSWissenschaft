@@ -19,6 +19,7 @@ if __name__ == '__main__':
     # endlessly restart chromium
     def EndlessChromium():
         while True:
+            subprocess.call("rm -rf $HOME/.config/chromium-mswissenschaft", shell=True)
             subprocess.call("chromium-browser --user-data-dir=$HOME/.config/chromium-mswissenschaft --kiosk 'http://localhost/MSWissenschaft/web'", shell=True)
             time.sleep(0.5)
     
