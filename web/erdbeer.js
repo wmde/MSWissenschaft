@@ -326,7 +326,8 @@ function init(){
     //~ map.addLayer(layer);
     
         var layer = new OpenLayers.Layer.WMS( "WMS osm",
-            "http://localhost:8080/service?",
+            //~ "http://localhost:8080/service?",
+            "//" + window.location.hostname + ":8080/service?",
             {layers: "osm", format: "image/png", srs:"EPSG:3857",
              exceptions: "application/vnd.ogc.se_inimage"},
             {/*singleTile: true, */ratio: 1, isBaseLayer: true, transitionEffect: 'resize'} );
