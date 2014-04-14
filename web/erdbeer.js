@@ -282,6 +282,7 @@ function init(){
     //~ bounds.extend(44.965, 18.809);
     //~ bounds.transform(new OpenLayers.Projection("EPSG:3857"));
     //~ console.log(bounds);
+
     map= new OpenLayers.Map('map', {
         maxResolution: 156543.033928 ,
         //~ maxResolution: 5000,
@@ -303,6 +304,12 @@ function init(){
     });
 	selectFeature= new OpenLayers.Control.SelectFeature();
 	map.addControl(selectFeature);
+    
+    map.isValidZoomLevel= function(zoomLevel) {
+       return ( (zoomLevel != null) &&
+          (zoomLevel >= 9) &&
+          (zoomLevel <= 20) );
+    }
     
     document.getElementById("OpenLayers.Control.Zoom_5").style.top= "247px"; //'161px'; 
     document.getElementById("OpenLayers.Control.Zoom_5").style.left= '17px'; 
