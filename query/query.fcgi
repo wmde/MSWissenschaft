@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding:utf-8 -*-
 import os
 import MySQLdb, MySQLdb.cursors
 import json
@@ -66,7 +67,7 @@ def createPOIDescription(row):
 <p style="position:absolute; top:310px; left:0px; font-size:6.5px; width:150px; text-align: center;">de.qrwp.org/%s</p>
 </a>
 ''' % (row['page_title'], row['page_title'], row['page_title'].replace(' ', '_'))
-    subdiv= """<div style="width:100%; height:100%; position:absolute; top:0px; left:0px; z-index: -1000; overflow: hidden; onClick=\"javaScript:openPOI('""" + row['page_title'] + """')\"">
+    subdiv= """<div style="width:100%; height:320px; position:absolute; top:0px; left:0px; z-index: -1000; overflow: hidden; onClick=\"javaScript:openPOI('""" + row['page_title'] + """')\"">
 <iframe width="1000px" height="800px" src="../pages/data/de.wikipedia.org/wiki/""" + row['page_title'] + """.html" 
 style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0; -moz-transform: scale(0.5); -moz-transform-origin: 0 0; ">
 </iframe>
@@ -75,7 +76,10 @@ style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-tran
 <div style="position:absolute; top:0px; left: 0px; width: 100%; height: 100%;"> </div>
 <div style="position:absolute; bottom:0px; left: 0px; width: 100%; height: 40px; background: url('img/vertgrad.png'); background-size: 100% 100%;">&nbsp;</div>
 </div>"""
-    return '<div style="width: 500px; height: 280px;" onClick="javaScript:openPOI(\'%s\')">' % row['page_title'] + str(subdiv) + str(imghtml) + '</div>' 
+    footer= """<div style="width:500px; vertical-align:bottom; text-align:center; padding-top:15px; font-size:8px; overflow:hidden;">
+Wikipedia ist ein Projekt zum Aufbau einer Enzyklop&auml;die aus Freien Inhalten in &uuml;ber 280 Sprachen. Sie wird gemeinsam von Freiwilligen auf der ganzen Welt erstellt und alle k&ouml;nnen mit ihrem Wissen dazu beitragen.
+</div>"""
+    return '<div style="width: 500px; height: 280px;" onClick="javaScript:openPOI(\'%s\')">' % row['page_title'] + str(subdiv) + str(imghtml) + '</div>' + footer 
     
 @app.route('/pois-by-date/<string:date>/<categories>')
 def get_pois_by_date(date, categories):
