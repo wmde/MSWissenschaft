@@ -1,27 +1,130 @@
-# ---------------------------------------
-# MapProxy example seeding configuration.
-# ---------------------------------------
-#
-# This is a minimal MapProxy seeding configuration.
-# See full_seed_example.yaml and the documentation for more options.
-#
-
 seeds:
   myseed1:
     caches: [osm_cache]
     # grids: []
-    # coverages: []
+    coverages: [00_Berlin, 01_Potsdam, 02_Magdeburg, 03_Magdeburg, 04_Dessau, 05_Haldensleben, 06_Bremen, 07_Nienburg, 08_Oldenburg, 09_Papenburg, 10_M__nster, 11_Datteln, 12_Dortmund, 13_Oberhausen, 14_Duisburg, 15_Bonn, 16_Bonn, 17_Andernach, 18_Cochem, 19_Trier, 20_Mettlach, 21_Saarbr__cken, 22_Saarburg, 23_Bernkastel-Kues, 24_Koblenz, 25_Gernsheim, 26_Mannheim, 27_Wiesbaden, 28_Frankfurt, 29_Miltenberg, 30_Lohr, 31_W__rzburg, 32_Schweinfurt, 33_Bamberg, 34_Linz, 35_Krems, 36_Wien, 37_Deggendorf, 38_Regensburg, 39_Forchheim]
     levels:
-      to: 10
-    refresh_before:
-      time: 2013-10-10T12:35:00
+      from: 9
+      to: 20
 
-cleanups:
-  myclean1:
-    caches: [osm_cache]
-    remove_before:
-      days: 14
-    levels:
-        from: 11
-
-coverages:
+coverages: 
+  00_Berlin:
+    bbox: [13.3240, 52.4844, 13.4422, 52.5563]
+    srs: "EPSG:4326" 
+  01_Potsdam:
+    bbox: [12.9704, 52.3507, 13.0883, 52.4226]
+    srs: "EPSG:4326" 
+  02_Magdeburg:
+    bbox: [11.6008, 52.1103, 11.7181, 52.1822]
+    srs: "EPSG:4326" 
+  03_Magdeburg:
+    bbox: [11.5889, 52.0965, 11.7061, 52.1685]
+    srs: "EPSG:4326" 
+  04_Dessau:
+    bbox: [12.1590, 51.8209, 12.2755, 51.8929]
+    srs: "EPSG:4326" 
+  05_Haldensleben:
+    bbox: [11.3434, 52.2454, 11.4610, 52.3173]
+    srs: "EPSG:4326" 
+  06_Bremen:
+    bbox: [8.7491, 53.0357, 8.8689, 53.1076]
+    srs: "EPSG:4326" 
+  07_Nienburg:
+    bbox: [9.1443, 52.6088, 9.2629, 52.6808]
+    srs: "EPSG:4326" 
+  08_Oldenburg:
+    bbox: [8.1638, 53.1045, 8.2837, 53.1765]
+    srs: "EPSG:4326" 
+  09_Papenburg:
+    bbox: [7.3193, 53.0535, 7.4391, 53.1255]
+    srs: "EPSG:4326" 
+  10_M__nster:
+    bbox: [7.5882, 51.9149, 7.7050, 51.9868]
+    srs: "EPSG:4326" 
+  11_Datteln:
+    bbox: [7.3046, 51.6179, 7.4206, 51.6899]
+    srs: "EPSG:4326" 
+  12_Dortmund:
+    bbox: [7.3839, 51.4892, 7.4995, 51.5612]
+    srs: "EPSG:4326" 
+  13_Oberhausen:
+    bbox: [6.8023, 51.4574, 6.9179, 51.5294]
+    srs: "EPSG:4326" 
+  14_Duisburg:
+    bbox: [6.7030, 51.4015, 6.8185, 51.4735]
+    srs: "EPSG:4326" 
+  15_Bonn:
+    bbox: [7.0513, 50.7009, 7.1649, 50.7729]
+    srs: "EPSG:4326" 
+  16_Bonn:
+    bbox: [7.0688, 50.6842, 7.1825, 50.7561]
+    srs: "EPSG:4326" 
+  17_Andernach:
+    bbox: [7.3463, 50.4062, 7.4593, 50.4781]
+    srs: "EPSG:4326" 
+  18_Cochem:
+    bbox: [7.1148, 50.1193, 7.2271, 50.1912]
+    srs: "EPSG:4326" 
+  19_Trier:
+    bbox: [6.5780, 49.7284, 6.6894, 49.8004]
+    srs: "EPSG:4326" 
+  20_Mettlach:
+    bbox: [6.5246, 49.4552, 6.6353, 49.5271]
+    srs: "EPSG:4326" 
+  21_Saarbr__cken:
+    bbox: [6.9382, 49.1963, 7.0484, 49.2682]
+    srs: "EPSG:4326" 
+  22_Saarburg:
+    bbox: [6.5026, 49.5738, 6.6136, 49.6457]
+    srs: "EPSG:4326" 
+  23_Bernkastel-Kues:
+    bbox: [7.0179, 49.8799, 7.1297, 49.9518]
+    srs: "EPSG:4326" 
+  24_Koblenz:
+    bbox: [7.5461, 50.3275, 7.6589, 50.3994]
+    srs: "EPSG:4326" 
+  25_Gernsheim:
+    bbox: [8.4203, 49.7185, 8.5317, 49.7905]
+    srs: "EPSG:4326" 
+  26_Mannheim:
+    bbox: [8.4070, 49.4400, 8.5178, 49.5119]
+    srs: "EPSG:4326" 
+  27_Wiesbaden:
+    bbox: [8.1812, 49.9997, 8.2932, 50.0717]
+    srs: "EPSG:4326" 
+  28_Frankfurt:
+    bbox: [8.6259, 50.0715, 8.7380, 50.1434]
+    srs: "EPSG:4326" 
+  29_Miltenberg:
+    bbox: [9.2078, 49.6814, 9.3191, 49.7534]
+    srs: "EPSG:4326" 
+  30_Lohr:
+    bbox: [9.5250, 49.9572, 9.6369, 50.0292]
+    srs: "EPSG:4326" 
+  31_W__rzburg:
+    bbox: [9.8682, 49.7623, 9.9796, 49.8343]
+    srs: "EPSG:4326" 
+  32_Schweinfurt:
+    bbox: [10.1840, 50.0083, 10.2960, 50.0803]
+    srs: "EPSG:4326" 
+  33_Bamberg:
+    bbox: [10.7265, 49.8886, 10.8382, 49.9606]
+    srs: "EPSG:4326" 
+  34_Linz:
+    bbox: [14.2328, 48.2743, 14.3410, 48.3463]
+    srs: "EPSG:4326" 
+  35_Krems:
+    bbox: [15.5341, 48.3664, 15.6424, 48.4384]
+    srs: "EPSG:4326" 
+  36_Wien:
+    bbox: [16.3345, 48.2052, 16.4425, 48.2771]
+    srs: "EPSG:4326" 
+  37_Deggendorf:
+    bbox: [12.8988, 48.7917, 13.0081, 48.8636]
+    srs: "EPSG:4326" 
+  38_Regensburg:
+    bbox: [12.0495, 48.9849, 12.1592, 49.0569]
+    srs: "EPSG:4326" 
+  39_Forchheim:
+    bbox: [10.9977, 49.6926, 11.1090, 49.7645]
+    srs: "EPSG:4326" 
