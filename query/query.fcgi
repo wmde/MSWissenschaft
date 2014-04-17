@@ -10,7 +10,7 @@ from flup.server.fcgi import WSGIServer
 app = Flask(__name__)
 
 # todo merge stuff
-SQL_DEFAULTS_FILE= '~/.my.cnf'
+SQL_DEFAULTS_FILE= '/home/exhibit/.my.cnf'
 SQL_DB= 'mswissenschaft_map'
 SQL_POITABLE= 'poi'
 SQL_CATEGORYTABLE= 'category'
