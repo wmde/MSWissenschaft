@@ -44,6 +44,7 @@ sources:
      type: tile
      url: http://c.tile.openstreetmap.org/%(tms_path)s.%(format)s
      grid: osm_grid #the grid to use for the osm tiles. This is really important. It is specified below.
+     seed_only: true
 
 grids:
   osm_grid:
