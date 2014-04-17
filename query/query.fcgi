@@ -76,7 +76,7 @@ style="position:absolute; top: -25px; left: 55px; overflow: hidden; -webkit-tran
 <div style="position:absolute; top:0px; left: 0px; width: 100%; height: 100%;"> </div>
 <div style="position:absolute; bottom:0px; left: 0px; width: 100%; height: 40px; background: url('img/vertgrad.png'); background-size: 100% 100%;">&nbsp;</div>
 </div>"""
-    footer= """<div style="width:510px; vertical-align:bottom; text-align:center; padding-top:15px; font-size:8px; overflow:hidden;">
+    footer= """<div style="width:510px; vertical-align:bottom; text-align:center; padding-top:15px; font-size:9px; overflow:hidden;">
 Wikipedia ist ein Projekt zum Aufbau einer Enzyklop&auml;die aus Freien Inhalten in &uuml;ber 280 Sprachen. Sie wird gemeinsam von Freiwilligen auf der ganzen Welt erstellt und alle k&ouml;nnen mit ihrem Wissen dazu beitragen.
 </div>"""
     return '<div style="width: 500px; height: 280px;" onClick="javaScript:openPOI(\'%s\')">' % row['page_title'] + str(subdiv) + str(imghtml) + '</div>' + footer 
