@@ -659,7 +659,10 @@ function showOSMDlg() {
         '<p>F&uuml;r weitere Informationen besuchen Sie bitte http://www.openstreetmap.org/copyright</p>' +
         '<p></p>' +
         '<p>Diese Anwendung verwendet OpenLayers, http://openlayers.org/</p>' +
-        '<p><img src="img/qr-openlayers.png" width=100 height=100 style="padding:20px;"><img src="img/qr-osm-copyright.png" width=100 height=100 style="padding:20px;"></p>' +
+        '<div style="text-align:center;">' +
+           '<div style="float:left;padding-left:10px;padding-right:10px;font-size:9pt;"><img src="img/qr-openlayers.png" width=100 height=100 style="padding:0px;"><br/>http://openlayers.org/</div>' +
+           '<div style="float:left;padding-left:10px;padding-right:10px;font-size:9pt;"><img src="img/qr-osm-copyright.png" width=100 height=100 style="padding:0px;"><br/>http://openstreetmap.org/copyright</div>' +
+        '</div>' +
         '</div>' +
         '</div>'
 		);
