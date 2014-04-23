@@ -12,6 +12,7 @@ table, td, th {vertical-align:middle;}
 blockquote:before, blockquote:after, q:before, q:after {content:"";}
 blockquote, q {quotes:"" "";}
 a img {border:none;}
+p { padding-bottom: .5em; }
 
 html {
 	height: 100%;
