@@ -319,8 +319,6 @@ function createTimeline() {
 	body.onresize= timelineOnresize;
 	body.onmousemove= timelineMousemove;
 	body.onmouseup= timelineMouseup;
-    body.onmousedown= function() {}
-    body.ondoubleclick= function() {}
 	
 	//~ timelineSetTime(10); //timelineInitial);
     timelineReset();
