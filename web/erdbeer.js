@@ -654,11 +654,12 @@ function showOSMDlg() {
 	showDisabledIframefoo(
 		'<div style="position: absolute; width: 60%; height: 100%; text-align: center;">' +
 		'<div style="position: absolute; inner-width: 100%; inner-height: 100%; background-color: #fff; text-align: center; font-size: 11pt; margin-top:25%; margin-bottom:25%; padding:10px">' +
-        '<p>Das in dieser Anwendung verwendete Kartenmaterial steht unter der Open Data Commons Open Database License (ODbL) zur Verf&uuml;gung.</p>' +
+        '<p style="padding-top:20px;">Das in dieser Anwendung verwendete Kartenmaterial steht unter der Open Data Commons Open Database License (ODbL) zur Verf&uuml;gung.</p>' +
         '<p>Die Kartographie in den von der Karte genutzten Bildern (Tiles) sowie die OpenStreetMap-Dokumentation sind lizensiert unter der Creative Commons Attribution-ShareAlike 2.0-Lizenz (CC BY-SA). </p>' +
         '<p>F&uuml;r weitere Informationen besuchen Sie bitte http://www.openstreetmap.org/copyright</p>' +
         '<p></p>' +
         '<p>Diese Anwendung verwendet OpenLayers, http://openlayers.org/</p>' +
+        '<p><img src="img/qr-openlayers.png" width=100 height=100 style="padding:20px;"><img src="img/qr-osm-copyright.png" width=100 height=100 style="padding:20px;"></p>' +
         '</div>' +
         '</div>'
 		);
