@@ -660,8 +660,8 @@ function showOSMDlg() {
         '<p></p>' +
         '<p>Diese Anwendung verwendet OpenLayers, http://openlayers.org/</p>' +
         '<div style="text-align:center; padding:10px;">' +
-           '<div style="display:inline-block;padding-left:20px;padding-right:20px;font-size:9pt;"><img src="img/qr-openlayers.png" width=100 height=100 style="padding:0px;"><br/>http://openlayers.org/</div>' +
-           '<div style="display:inline-block;padding-left:20px;padding-right:20px;font-size:9pt;"><img src="img/qr-osm-copyright.png" width=100 height=100 style="padding:0px;"><br/>http://openstreetmap.org/copyright</div>' +
+           '<div style="display:inline-block;padding-left:20px;padding-right:80px;font-size:9pt;"><img src="img/qr-openlayers.png" width=100 height=100 style="padding:0px;"><br/>http://openlayers.org/</div>' +
+           '<div style="display:inline-block;padding-left:80px;padding-right:20px;font-size:9pt;"><img src="img/qr-osm-copyright.png" width=100 height=100 style="padding:0px;"><br/>http://openstreetmap.org/copyright</div>' +
         '</div>' +
         '</div>' +
         '</div>'
