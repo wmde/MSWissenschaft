@@ -23,6 +23,7 @@ function showDisabledIframefoo(contentHTML) {
     dlgfoo.style.top= frame.childNodes[0].style.top;
     dlgfoo.style.height= frame.childNodes[0].style.height;
     dlgfoo.style.zIndex= 20000;
+    dlgfoo.onclick= function() {}
     
 
     //~ var idx= 0;
