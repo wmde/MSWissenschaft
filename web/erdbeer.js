@@ -659,6 +659,8 @@ function showOSMDlg() {
         '<p>Das in dieser Anwendung verwendete Kartenmaterial steht unter der Open Data Commons Open Database License (ODbL) zur Verf&uuml;gung.</p>' +
         '<p>Die Kartographie in den von der Karte genutzten Bildern (Tiles) sowie die OpenStreetMap-Dokumentation sind lizensiert unter der Creative Commons Attribution-ShareAlike 2.0-Lizenz (CC BY-SA). </p>' +
         '<p>F&uuml;r weitere Informationen besuchen Sie bitte http://www.openstreetmap.org/copyright</p>' +
+        '<p></p>' +
+        '<p>Diese Anwendung verwendet OpenLayers, http://openlayers.org/</p>' +
         '</div>' +
         '</div>'
 		);
