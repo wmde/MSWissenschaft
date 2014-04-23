@@ -21,7 +21,7 @@ SEEDTEMPLATE= """seeds:
 coverages:"""
 
 def process_row(row, count):
-    bblat, bblon= geobbox.bounding_box(float(row['Breite']), float(row['Laenge']), 4.5)
+    bblat, bblon= geobbox.bounding_box(float(row['Breite']), float(row['Laenge']), 6.5)
     mangled_name= ''.join( [ (char if ord(char)<127 and char!=' ' else '_') for char in row['Station'] ] )
     covg_name= "%02d_%s" % (count, mangled_name)
     covg_desc= """
