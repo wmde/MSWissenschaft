@@ -311,7 +311,7 @@ function init(){
           (zoomLevel <= 20) );
     }
     
-    document.getElementById("OpenLayers.Control.Zoom_5").style.top= "247px"; //'161px'; 
+    document.getElementById("OpenLayers.Control.Zoom_5").style.top= "253px"; //"247px"; //'161px'; 
     document.getElementById("OpenLayers.Control.Zoom_5").style.left= '17px'; 
 	
 	//map.events.register('zoomend', null, searchtextChanged);

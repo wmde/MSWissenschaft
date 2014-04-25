@@ -397,3 +397,7 @@ stuff like this goes to config.css (only for the exhibit version):
 * { cursor: none; } 
 */
 /* @import url("config.css") */
+
+a.olControlZoomHome {
+    border-radius: 4px 4px 4px 4px;
+}
