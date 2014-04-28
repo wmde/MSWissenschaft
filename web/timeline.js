@@ -223,7 +223,7 @@ function createTimelineMarker(elem, xpos) {
 }
 
 function timelineReset() {
-    timelineGotoDate(Date.now() + 60 * (1000*60*60*24));    // XXXXXXXXXXXX change to Date.now() when finished
+    timelineGotoDate(Date.now()); // + 60 * (1000*60*60*24));    // XXXXXXXXXXXX change to Date.now() when finished
 }
 
 function createTimeline() {
