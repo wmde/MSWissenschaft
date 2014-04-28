@@ -44,6 +44,9 @@ if __name__ == '__main__':
             subprocess.call("mapproxy-util serve-develop -b 0.0.0.0:8080 mapproxy.yaml >lastlog.txt 2>&1", shell=True)
             time.sleep(0.5)
     
+    subprocess.call("DISPLAY=:0 xrandr --output HDMI1 --primary", shell=True)
+    subprocess.call("DISPLAY=:0 xrandr --output HDMI1 --preferred", shell=True)
+    
     thread.start_new_thread(EndlessMapProxy, ())
     time.sleep(3)
     thread.start_new_thread(WatchScreensaver, ())
