@@ -47,7 +47,7 @@ if __name__ == '__main__':
     def SSHTunnel():
         while True:
             subprocess.call("../sshtunnel.sh >> ~/sshtunnel.log 2>&1", shell=True)
-            time.sleep(5)
+            time.sleep(30)
     
     subprocess.call("DISPLAY=:0 xrandr --output HDMI1 --primary", shell=True)
     subprocess.call("DISPLAY=:0 xrandr --output HDMI1 --preferred", shell=True)
