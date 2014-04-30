@@ -44,6 +44,11 @@ if __name__ == '__main__':
             subprocess.call("mapproxy-util serve-develop -b 0.0.0.0:8080 mapproxy.yaml >lastlog.txt 2>&1", shell=True)
             time.sleep(0.5)
     
+    def SSHTunnel():
+        while True:
+            subprocess.call("../sshtunnel.sh >> ~/sshtunnel.log 2>&1", shell=True)
+            time.sleep(5)
+    
     subprocess.call("DISPLAY=:0 xrandr --output HDMI1 --primary", shell=True)
     subprocess.call("DISPLAY=:0 xrandr --output HDMI1 --preferred", shell=True)
     
@@ -52,6 +57,7 @@ if __name__ == '__main__':
     thread.start_new_thread(WatchScreensaver, ())
     time.sleep(3)
     thread.start_new_thread(EndlessChromium, ())
+    thread.start_new_thread(SSHTunnel, ())
     #~ thread.start_new_thread(EndlessGinn, ())
     
     EndlessUnclutter()
